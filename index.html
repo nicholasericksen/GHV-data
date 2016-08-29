@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>html-page</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="main-content-container">
+			<div id="main-content">
+                <div id="header">
+                    <div id="GHV-logo">
+                        <img src="./imgs/GHV-logo.png" />
+                    </div>
+
+                    <ul id="nav-controls" class="nav nav-pills">
+                      <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          Options <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>Home</li>
+                            <li>Weather</li>
+                            <li>Water</li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+
+				<div id="main-options" class="row">
+                    <div id="river-category-btn" class="col-md-6">
+                        <h2>River</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, sea movet luptatum cu, nam ut brute illud. Nonumy mentitum at vis, ea dolore iudicabit explicari vis. Vim impedit dissentiunt ea, eos et partem definitionem, ubique disputationi eam at. Duo affert diceret delicatissimi et, modus fastidii mel a
+                        </p>
+                        <a href="#"class="enter-btn river">
+                            <div>
+                                <span>Enter</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="weather-category" class="col-md-6">
+                        <h2>Weather</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, sea movet luptatum cu, nam ut brute illud. Nonumy mentitum at vis, ea dolore iudicabit explicari vis. Vim impedit dissentiunt ea, eos et partem definitionem, ubique disputationi eam at. Duo affert diceret delicatissimi et, modus fastidii mel a
+                        </p>
+                        <a href="#"class="enter-btn weather">
+                            <div>
+                                <span>Enter</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+			</div>
+
+		</div>
+        <div id="footer">
+            Copyright. Disclaimer. Etc. 2016
+        </div>
+        <script>
+        jQuery(document).ready(function($){
+            console.log("innn");
+
+            $('.enter-btn').on('click', function() {
+                $('#weather-category').empty();
+                $('#weather-category').load("/test.html");
+            });
+        });
+
+        </script>
+	</body>
+</html>
