@@ -5,11 +5,11 @@ body {
 }
 
 #header-content {
-    height: 20%;
+    height: 15%;
 }
 
 #wrapper{
-    height: 80%;
+    height: 85%;
 }
 
 .link-list-container {
@@ -17,11 +17,12 @@ body {
     overflow-y: auto;
 }
 .link-container {
-    border: 5px solid black;
+    /*border: 5px solid black;*/
     border-radius: 15px;
     height: 144px;
-    margin: 2% 10%;
+    margin: 2% 15%;
     text-align: center;
+    padding-top: 20px;
 }
 
 .link-container a {
@@ -29,16 +30,34 @@ body {
     height: 100%;
     vertical-align: middle;
     font-size: 36px;
+    border-radius: 15px;
+    box-shadow: 0 10px #27496d;
+    color: #fff;
+    background-color: #3c6c9c;
+    border: none;
+    padding-top: 25px;
 }
 
-a:hover {
+.link-container a:active {
+    background-color: #417cb8;
+    box-shadow: 0 5px #27496d;
+    transform: translateY(5px);
+}
+
+
+
+.link-container a:hover {
     cursor: pointer;
+    /*background-color: #bfc8d0;*/
+    background-color: #193f67;
+    color: #FFF;
+    text-decoration: none;
 }
 
 #footer {
     height: 5%;
 }
 
-a {
+/*a {
   color: #00B7FF;
-}
+}*/
