@@ -1,6 +1,42 @@
 body {
-  padding: 50px;
+  /*padding: 50px;*/
+  height: 100vh;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#header-content {
+    height: 20%;
+}
+
+#wrapper{
+    height: 80%;
+}
+
+.link-list-container {
+    height: 95%;
+    overflow-y: auto;
+}
+.link-container {
+    border: 5px solid black;
+    border-radius: 15px;
+    height: 144px;
+    margin: 2% 10%;
+    text-align: center;
+}
+
+.link-container a {
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 36px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#footer {
+    height: 5%;
 }
 
 a {
