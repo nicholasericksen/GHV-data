@@ -5,11 +5,11 @@ body {
 }
 
 #header-content {
-    height: 15%;
+    height: 18%;
 }
 
 #wrapper{
-    height: 85%;
+    height: 82%;
 }
 
 .link-list-container {
@@ -20,9 +20,11 @@ body {
     /*border: 5px solid black;*/
     border-radius: 15px;
     height: 144px;
-    margin: 2% 15%;
     text-align: center;
     padding-top: 20px;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .link-container a {
