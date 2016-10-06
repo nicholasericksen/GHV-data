@@ -1,0 +1,13 @@
+#side-rail {
+    width: 20%;
+    position: relative;
+    float: left;
+}
+
+#main-content {
+    width: 80%;
+    position: relative;
+    float: left;
+}
+
+#logo { width: 100%; }
