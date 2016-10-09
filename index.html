@@ -20,15 +20,25 @@
 
     <div id="main-content-container">
         <div id="main-content">
-
+            <div class="menu-container">
+                <ul>
+                    <li onclick="renderTemplate('page', 'planting-zone-changes')" class="category-btn">Planting Zone Changes</li>
+                    <li onclick="renderTemplate('page', 'west-nile-migration')" class="category-btn">West Nile Migration</li>
+                    <li onclick="renderTemplate('page', 'species-migration')" class="category-btn">Species Migration</li>
+                    <li onclick="renderTemplate('page', 'polar-bears-habitat')" class="category-btn">Polar Bears Habitat Change</li>
+                </ul>
+            </div>
         </div>
     </div>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 
-    <script src="js/index.js"></script>
-    <script>init();</script>
+    <script src="js/templates.js"></script>
+    <script src="js/renderTemplates.js"></script>
+    <script src="js/index.js">init()</script>
+
+    <!-- <script>init();</script> -->
 </body>
 </html>

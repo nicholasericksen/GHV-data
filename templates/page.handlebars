@@ -1,0 +1,15 @@
+{{#each sections}}
+<h1>{{title}}</h1>
+<p>
+    {{description}}
+</p>
+{{/each}}
+
+{{#each graphics}}
+<div class='img-container'>
+    <img src={{link}} />
+    <p class='img-description'>
+        {{description}}
+    </p>
+</div>
+{{/each}}

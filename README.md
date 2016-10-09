@@ -4,6 +4,6 @@ The intent of this application is to serve information related to weather and th
 # Instructions
 _*Prerequisites: nodeJs*_
 
-To start the application type `npm start`.
-
 To view the application go to `localhost:3000` in a browser
+
+Compile the templates with the following command `handlebars -m ./templates/ -f  ./js/templates.js`

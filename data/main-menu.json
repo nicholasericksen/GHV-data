@@ -1,0 +1,20 @@
+{
+    "buttons": [
+        {
+            "title": "Planting Zone Changes",
+            "datasrc": "planting-zone-changes"
+        },
+        {
+            "title": "West Nile Migration",
+            "datasrc": "west-nile-migration"
+        },
+        {
+            "title": "Species Migration",
+            "datasrc": "species-migration"
+        },
+        {
+            "title": "Polar Bears Habitat",
+            "datasrc": "polar-bears-habitat"
+        }
+    ]
+}
