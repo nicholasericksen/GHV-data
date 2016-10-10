@@ -1,3 +1,12 @@
+<div id="side-rail">
+    <div id="menu-btn-container">
+        <ul class="page-menu-list">
+            <li onclick="renderTemplate('submenu', '{{category}}')">Menu</li>
+            <li class="graph-btn">Graphs</li>
+        </ul>
+    </div>
+</div>
+
 {{#each sections}}
 <h1>{{title}}</h1>
 <p>
@@ -7,9 +16,23 @@
 
 {{#each graphics}}
 <div class='img-container'>
+    <div class="close-graphic-btn">X</div>
     <img src={{link}} />
     <p class='img-description'>
         {{description}}
     </p>
 </div>
 {{/each}}
+
+<script>
+$('.graph-btn').on('click', function() {
+    $('.img-container').css('display', 'block');
+});
+
+$('.close-graphic-btn').on('click', function() {
+    $('.img-container').css('display', 'none');
+});
+
+$('#main-content').css({"margin-top": "500px", "opacity": "0"});
+$('#main-content').animate({"margin-top": '0', "opacity": "1"}, 500);
+</script>

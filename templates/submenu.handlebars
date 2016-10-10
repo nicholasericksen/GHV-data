@@ -1,7 +1,7 @@
-<div class="main-menu menu-container">
+<div class="submenu menu-container">
     <ul>
         {{# each buttons }}
-            <li onclick="renderTemplate('submenu', '{{submenu}}')" class="category-btn">
+            <li onclick="renderTemplate('page', '{{datasrc}}')" class="category-btn">
                 <div class="menu-text">{{title}}</div>
             </li>
         {{/ each }}

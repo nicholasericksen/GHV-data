@@ -5,40 +5,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 </head>
+
 <body>
-
-    <div id="side-rail">
-        <div id="logo-container">
-            <img id="logo" src="imgs/GHV-logo.png" />
-        </div>
-        <div id="menu-btn-container">
-
-        </div>
-
+    <div id="logo-container">
+        <img class="logo" src="imgs/GHV-logo.png" />
     </div>
-
 
     <div id="main-content-container">
-        <div id="main-content">
-            <div class="menu-container">
-                <ul>
-                    <li onclick="renderTemplate('page', 'planting-zone-changes')" class="category-btn">Planting Zone Changes</li>
-                    <li onclick="renderTemplate('page', 'west-nile-migration')" class="category-btn">West Nile Migration</li>
-                    <li onclick="renderTemplate('page', 'species-migration')" class="category-btn">Species Migration</li>
-                    <li onclick="renderTemplate('page', 'polar-bears-habitat')" class="category-btn">Polar Bears Habitat Change</li>
-                </ul>
-            </div>
-        </div>
+        <div id="main-content"></div>
     </div>
 
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-
     <script src="js/templates.js"></script>
     <script src="js/renderTemplates.js"></script>
-    <script src="js/index.js">init()</script>
-
-    <!-- <script>init();</script> -->
+    <script src="js/index.js"></script>
+    <script>init();</script>
 </body>
 </html>

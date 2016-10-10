@@ -1,0 +1,20 @@
+{
+    "buttons": [
+        {
+            "title": "Diminishing Fresh Water",
+            "datasrc": "water/diminishing-fresh-water"
+        },
+        {
+            "title": "Rainfall and Drought",
+            "datasrc": "water/rainfall-and-drought"
+        },
+        {
+            "title": "Water Purification",
+            "datasrc": "water/water-purification"
+        },
+        {
+            "title": "Consumption of Water",
+            "datasrc": "water/consumption-of-water"
+        }
+    ]
+}

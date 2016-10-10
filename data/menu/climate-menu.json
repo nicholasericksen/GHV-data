@@ -1,0 +1,24 @@
+{
+    "buttons": [
+        {
+            "title": "NOAA Global Temperature",
+            "datasrc": "climate/noaa-global-temperature"
+        },
+        {
+            "title": "Sea Level Graphic",
+            "datasrc": "climate/sea-level-graphic"
+        },
+        {
+            "title": "Forecasting Its Role",
+            "datasrc": "climate/forecasting-its-role"
+        },
+        {
+            "title": "Data Library Track",
+            "datasrc": "climate/data-library-track"
+        },
+        {
+            "title": "Weather versus Climate",
+            "datasrc": "climate/weather-vs-climate"
+        }
+    ]
+}

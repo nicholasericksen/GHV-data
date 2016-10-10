@@ -1,0 +1,16 @@
+{
+    "buttons": [
+        {
+            "title": "Habitat",
+            "submenu": "menu/habitat-menu"
+        },
+        {
+            "title": "Climate",
+            "submenu": "menu/climate-menu"
+        },
+        {
+            "title": "Water",
+            "submenu": "menu/water-menu"
+        }
+    ]
+}
