@@ -10,7 +10,7 @@ p { font-size: 24px; }
     min-width: 175px;
     position: fixed;
     left: 0;
-    top: 135px;
+    top: 151px;
 }
 
 #main-content-container {
@@ -28,7 +28,7 @@ p { font-size: 24px; }
     height: 100%;
     position: fixed;
     z-index: 999;
-    background-color: #f7f7f7;
+    background-color: rgba(255, 255, 255, 0.9);
     top: 0;
     left: 0;
     display: none;
@@ -37,6 +37,7 @@ p { font-size: 24px; }
 .img-container img {
     display: block;
     margin: 0 auto;
+    padding-top: 75px;
 }
 
 .img-description {
@@ -51,8 +52,12 @@ p { font-size: 24px; }
     transition: all 1s;
 }
 
+#logo-container {
+    min-height: 125px;
+}
+
 .small-logo {
-    width: 30%;
+    width: 390px;
     margin: 0px;
 }
 
@@ -83,13 +88,15 @@ p { font-size: 24px; }
     border: 5px solid #4c88c3;
     /* border: none; */
     margin-top: 25px;
+    background-color: #256fbd;
+    color: #FFF;
+
 }
 
 .menu-container li:hover {
     cursor: pointer;
     /*background-color: #bfc8d0;*/
-    background-color: #256fbd;
-    color: #FFF;
+    background-color: #4386a0;
     text-decoration: none;
 }
 
@@ -100,7 +107,7 @@ p { font-size: 24px; }
 }
 
 .page-menu-list li {
-    margin: 25px 0;
+    margin: 25px 5px;
     border: 1px solid #00b152;
     width: 75%;
     border-radius: 15px;
@@ -110,6 +117,7 @@ p { font-size: 24px; }
 .page-menu-list li:hover {
     background-color: #00b152;
     cursor: pointer;
+    color: #FFF;
 }
 
 .close-graphic-btn {
