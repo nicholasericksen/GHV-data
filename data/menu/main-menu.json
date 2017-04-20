@@ -1,15 +1,15 @@
 {
     "buttons": [
         {
-            "title": "Habitat",
-            "submenu": "menu/habitat-menu"
-        },
-        {
-            "title": "Climate",
+            "title": "Climate Monitoring",
             "submenu": "menu/climate-menu"
         },
         {
-            "title": "Water",
+            "title": "Biotic Communities",
+            "submenu": "menu/biotic-menu"
+        },
+        {
+            "title": "Water Resources",
             "submenu": "menu/water-menu"
         }
     ]

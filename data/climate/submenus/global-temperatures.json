@@ -1,0 +1,24 @@
+{
+    "submenu": [
+        {
+            "title": "The Greenhouse Effect",
+            "datasrc": "climate/greenhouse-effect"
+        },
+        {
+            "title": "Global Temperature Interactive Map",
+            "datasrc": "climate/global-temperature"
+        },
+        {
+            "title": "CO2 and Temperature Correlation",
+            "datasrc": "climate/c02-temperature-correlation"
+        },
+        {
+            "title": "Modern Era C02 and Temperature",
+            "datasrc": "climate/modern-era"
+        },
+        {
+            "title": "Comparing Natural & Human Factors",
+            "datasrc": "climate/comparing-natural-and-human"
+        }
+    ]
+}

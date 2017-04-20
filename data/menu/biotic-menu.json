@@ -1,0 +1,20 @@
+{
+    "buttons": [
+        {
+            "title": "Climate Change and Agriculture",
+            "datasrc": "biotic/submenus/climate-change-and-agriculture"
+        },
+        {
+            "title": "Climate Change and Forest Cover",
+            "datasrc": "biotic/submenus/climate-change-and-forest-cover"
+        },
+        {
+            "title": "Climate Change and Species Ranges",
+            "datasrc": "biotic/submenus/climate-change-and-species-ranges"
+        },
+        {
+            "title": "Climate Change and Diease/Pest Species",
+            "datasrc": "biotic/submenus/climate-change-and-diease"
+        }
+    ]
+}

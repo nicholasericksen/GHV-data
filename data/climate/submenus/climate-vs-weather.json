@@ -1,0 +1,12 @@
+{
+    "submenu": [
+        {
+            "title": "What Is Climate",
+            "datasrc": "climate/what-is-climate"
+        },
+        {
+            "title": "Weather vs. Climate",
+            "datasrc": "climate/weather-vs-climate"
+        }
+    ]
+}

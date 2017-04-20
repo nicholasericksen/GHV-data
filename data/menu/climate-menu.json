@@ -1,24 +1,28 @@
 {
     "buttons": [
         {
-            "title": "NOAA Global Temperature",
-            "datasrc": "climate/noaa-global-temperature"
+            "title": "Real Time Climate Tracking",
+            "datasrc": "climate/submenus/real-time-climate-tracking"
         },
         {
-            "title": "Sea Level Graphic",
-            "datasrc": "climate/sea-level-graphic"
+            "title": "Polar Ice",
+            "datasrc": "climate/submenus/polar-ice"
         },
         {
-            "title": "Forecasting Its Role",
-            "datasrc": "climate/forecasting-its-role"
+            "title": "Sea Level Rise",
+            "datasrc": "climate/submenus/sea-level-rise"
         },
         {
-            "title": "Data Library Track",
-            "datasrc": "climate/data-library-track"
+            "title": "Climate vs. Weather",
+            "datasrc": "climate/submenus/climate-vs-weather"
         },
         {
-            "title": "Weather versus Climate",
-            "datasrc": "climate/weather-vs-climate"
+            "title": "Global Temperatures & Greenhouse Gas Contribution",
+            "datasrc": "climate/submenus/global-temperatures"
+        },
+        {
+            "title": "Climate Change & Extreme Weather",
+            "datasrc": "climate/submenus/climate-change-and-extreme-weather"
         }
     ]
 }

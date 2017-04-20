@@ -1,0 +1,16 @@
+{
+    "submenu": [
+        {
+            "title": "If Antarctica Melted",
+            "datasrc": "climate/antarctica-melted"
+        },
+        {
+            "title": "NOAA Interactive Map",
+            "datasrc": "climate/noaa-interactive"
+        },
+        {
+            "title": "Yonkers & Hudson Valley Coastline",
+            "datasrc": "climate/yonkers-hudson-valley"
+        }
+    ]
+}

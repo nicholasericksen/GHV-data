@@ -1,0 +1,20 @@
+{
+    "buttons": [
+        {
+            "title": "Deluge or Drought",
+            "datasrc": "water/diminishing-fresh-water"
+        },
+        {
+            "title": "Freshwater Availability & Consumption",
+            "iframe": "water/rainfall-and-drought"
+        },
+        {
+            "title": "Water Contamination",
+            "datasrc": "water/water-purification"
+        },
+        {
+            "title": "Water & Energy",
+            "datasrc": "water/weather-vs-climate"
+        }
+    ]
+}
