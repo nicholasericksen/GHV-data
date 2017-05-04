@@ -7,12 +7,24 @@
     </div>
 </div>
 
+{{#if submenu }}
+{{# each submenu }}
+    <li onclick="renderTemplate('page', '{{datasrc}}')" class="category-btn">
+        <div class="menu-text">{{title}}</div>
+    </li>
+{{/ each }}
+{{/ if }}
+
 {{#each sections}}
 <h1>{{title}}</h1>
 <p>
     {{description}}
 </p>
 {{/each}}
+
+{{#if iframe }}
+    <iframe class={{className}} src={{iframe}}></iframe>
+{{/if }}
 
 {{#each graphics}}
 <div class='img-container'>

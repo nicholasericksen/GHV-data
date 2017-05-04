@@ -1,0 +1,20 @@
+{
+    "submenu": [
+        {
+            "title": "Extreme Heat Waves",
+            "datasrc": "climate/extreme-heat-waves"
+        },
+        {
+            "title": "NOAA Drought Monitor USA",
+            "datasrc": "climate/noaa-drought"
+        },
+        {
+            "title": "Billon Dollar Weather Events",
+            "datasrc": "climate/billion-dollar"
+        },
+        {
+            "title": "Heavy Precipitation Events",
+            "datasrc": "climate/heavy-precipitation"
+        }
+    ]
+}

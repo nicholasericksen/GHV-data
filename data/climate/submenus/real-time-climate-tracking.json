@@ -1,0 +1,16 @@
+{
+    "submenu": [
+        {
+            "title": "Why Climate Data Matters",
+            "datasrc": "climate/why-climate-matters"
+        },
+        {
+            "title": "NOAA Global Climate Dashboard",
+            "datasrc": "climate/noaa-global-climate"
+        },
+        {
+            "title": "Ice Core Video",
+            "datasrc": "climate/ice-core"
+        }
+    ]
+}

@@ -1,15 +1,19 @@
 {
     "submenu": [
         {
-            "title": "The Changing Glacier Melt",
+            "title": "Increase in Wildfires",
             "datasrc": "https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska"
         },
         {
-            "title": "Antartic & Greenland Ice",
+            "title": "Global Deforestation",
             "datasrc": "https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska"
         },
         {
-            "title": "National Snow & Ice Data Center",
+            "title": "Forests: The Lungs of the Earth",
+            "datasrc": "climate/national-snow"
+        },
+        {
+            "title": "Projected Shifts in Forest Types",
             "datasrc": "climate/national-snow"
         }
     ]

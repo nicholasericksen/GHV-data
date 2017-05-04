@@ -1,16 +1,12 @@
 {
     "submenu": [
         {
-            "title": "The Changing Glacier Melt",
+            "title": "Species Range Change Interactive",
             "datasrc": "https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska"
         },
         {
-            "title": "Antartic & Greenland Ice",
+            "title": "Bees are Feeling the STING of Climate Change",
             "datasrc": "https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska"
-        },
-        {
-            "title": "National Snow & Ice Data Center",
-            "datasrc": "climate/national-snow"
         }
     ]
 }

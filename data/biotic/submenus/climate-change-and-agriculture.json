@@ -1,15 +1,15 @@
 {
     "submenu": [
         {
-            "title": "The Changing Glacier Melt",
+            "title": "USDA Plant Hardiness Zone Map",
             "datasrc": "https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska"
         },
         {
-            "title": "Antartic & Greenland Ice",
+            "title": "Projected Crop Yields 2050",
             "datasrc": "https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska"
         },
         {
-            "title": "National Snow & Ice Data Center",
+            "title": "Resilience for Farmers",
             "datasrc": "climate/national-snow"
         }
     ]

@@ -109,6 +109,7 @@ p { font-size: 24px; }
     margin-top: 25px;
     background-color: #256fbd;
     color: #FFF;
+    text-align: center;
 
 }
 
@@ -159,4 +160,17 @@ p { font-size: 24px; }
 
 .close-graphic-btn:hover {
     background: #0073c6;
+}
+
+/* iframe styles */
+
+.youtube-movie {
+    height: 400px;
+    width: 650px;
+    margin: 40px 0;
+}
+
+.ice-glacier-image {
+    height:500px;
+    width: 900px;
 }
