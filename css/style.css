@@ -14,7 +14,7 @@ p { font-size: 24px; }
 }
 
 #main-content-container {
-    width: 70%;
+    max-width: 875px;
     position: relative;
     margin:0 auto;
 }
@@ -65,12 +65,16 @@ p { font-size: 24px; }
     padding-right: 50px;
 }
 
+#main-content iframe {
+    margin-top: 35px;
+    margin-left: 70px;
+}
 .menu-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%
+    height: 100%;
 }
 
 .menu-container ul {

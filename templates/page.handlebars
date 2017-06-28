@@ -8,12 +8,17 @@
 </div>
 
 {{#if submenu }}
-{{# each submenu }}
-    <li onclick="renderTemplate('page', '{{datasrc}}')" class="category-btn">
-        <div class="menu-text">{{title}}</div>
-    </li>
-{{/ each }}
+<div class="menu-container">
+<ul>
+    {{# each submenu }}
+        <li onclick="renderTemplate('page', '{{datasrc}}')" class="category-btn">
+            <div class="menu-text">{{title}}</div>
+        </li>
+    {{/ each }}
+</ul>
+</div>
 {{/ if }}
+
 
 {{#each sections}}
 <h1>{{title}}</h1>
