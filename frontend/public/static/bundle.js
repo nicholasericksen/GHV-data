@@ -53,7 +53,7 @@
 
 	'use strict';
 
-	var _App = __webpack_require__(2);
+	var _App = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./App\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -70,136 +70,7 @@
 	_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('reactEntry'));
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(3);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var CLIMATE_MENU_LINKS = [{
-	    label: 'WHY Climate Data Matters',
-	    action: MAIN_MENU_LINKS
-	}, {
-	    label: 'NOAA Global Climate Dashboard',
-	    action: MAIN_MENU_LINKS
-	}, {
-	    label: 'Ice Core Video',
-	    action: MAIN_MENU_LINKS
-	}];
-	var MAIN_MENU_LINKS = [{
-	    label: 'Climate Monitoring',
-	    action: CLIMATE_MENU_LINKS
-	}, {
-	    label: 'Biotic Communities',
-	    action: BIOTIC_MENU_LINKS
-	}, {
-	    label: 'Water Resources',
-	    action: WATER_MENU_LINKS
-	}];
-
-	var BIOTIC_MENU_LINKS = [];
-	var WATER_MENU_LINKS = [];
-
-	var App = function (_React$Component) {
-	    _inherits(App, _React$Component);
-
-	    function App(props) {
-	        _classCallCheck(this, App);
-
-	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-	        _this.state = {
-	            btnMenu: MAIN_MENU_LINKS
-	        };
-
-	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
-	        return _this;
-	    }
-
-	    _createClass(App, [{
-	        key: 'handleButtonClick',
-	        value: function handleButtonClick(action) {
-	            console.log("HAHAH", action);
-
-	            this.setState({
-	                btnMenu: action
-	            });
-
-	            console.log("aACtion", this.state.btnMenu);
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-
-	            //TODO: refactor icon map, create component to reduce onCLick handlingz
-	            console.log(this.state.btnMenu);
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'header' },
-	                    _react2.default.createElement('img', { src: 'imgs/ghv-logo.png' })
-	                ),
-	                'Hello World',
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'main-content' },
-	                    '//tab button Component',
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'main-menu menu-container' },
-	                        _react2.default.createElement(
-	                            'ul',
-	                            null,
-	                            this.state.btnMenu.map(function (btn, index) {
-	                                console.log(btn);
-	                                return _react2.default.createElement(
-	                                    'li',
-	                                    { className: 'category-btn' },
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        {
-	                                            onClick: function onClick() {
-	                                                return _this2.handleButtonClick(btn.action);
-	                                            },
-	                                            className: 'menu-text'
-	                                        },
-	                                        btn.label
-	                                    )
-	                                );
-	                            })
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return App;
-	}(_react2.default.Component);
-
-	exports.default = App;
-
-/***/ }),
+/* 2 */,
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
