@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ButtonMenu from './ButtonMenu';
+
 import { MENUS } from '../constants/menus';
 
 export default class App extends React.Component {
@@ -15,15 +17,11 @@ export default class App extends React.Component {
     }
 
     handleButtonClick(action) {
-        console.log("ACTION", action);
         if (action !== 'OPEN_PAGE') {
             this.setState({
                 btnMenu: MENUS[action]
             });
         }
-
-        
-        // console.log("aACtion", this.state.btnMenu);i
     }
 
     render() {
@@ -39,23 +37,10 @@ export default class App extends React.Component {
                 <div className="main-content">
 
                     //tab button Component
-                    <div className="main-menu menu-container">
-                        <ul>
-                            {this.state.btnMenu.map((btn) => {
-                                return (
-
-                                <li key={btn.label} className="category-btn">
-                                    <div
-                                        onClick={() => this.handleButtonClick(btn.action)}
-                                        className="menu-text"
-                                    >
-                                        {btn.label}
-                                    </div>
-                                </li>
-                                )
-                            })}
-                        </ul>
-                    </div>
+                    <ButtonMenu
+                        btnMenu={this.state.btnMenu}
+                        handleButtonClick={this.handleButtonClick}
+                    />
 
                 </div>
             </div>
