@@ -1,0 +1,35 @@
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-container ul {
+    list-style: none;
+}
+
+.menu-container li {
+    height: 150px;
+    width: 100%;
+    border: 1px solid black;
+    vertical-align: middle;
+    font-size: 36px;
+    border-radius: 15px;
+    /* color: #fff; */
+    border: 5px solid #4c88c3;
+    /* border: none; */
+    margin-top: 25px;
+    background-color: #256fbd;
+    color: #FFF;
+    text-align: center;
+
+}
+
+.menu-container li:hover {
+    cursor: pointer;
+    /*background-color: #bfc8d0;*/
+    background-color: #4386a0;
+    text-decoration: none;
+}
