@@ -53,7 +53,7 @@
 
 	'use strict';
 
-	var _App = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./App\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _App = __webpack_require__(2);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -61,7 +61,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(160);
+	var _reactDom = __webpack_require__(161);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -70,7 +70,115 @@
 	_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('reactEntry'));
 
 /***/ }),
-/* 2 */,
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _menus = __webpack_require__(160);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var App = function (_React$Component) {
+	    _inherits(App, _React$Component);
+
+	    function App(props) {
+	        _classCallCheck(this, App);
+
+	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+	        _this.state = {
+	            btnMenu: _menus.MENUS['MAIN_MENU_LINKS']
+	        };
+
+	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(App, [{
+	        key: 'handleButtonClick',
+	        value: function handleButtonClick(action) {
+	            console.log("ACTION", action);
+	            if (action !== 'OPEN_PAGE') {
+	                this.setState({
+	                    btnMenu: _menus.MENUS[action]
+	                });
+	            }
+
+	            // console.log("aACtion", this.state.btnMenu);i
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+
+	            console.log(this.state.btnMenu);
+
+	            //TODO: refactor icon map, create component to reduce onCLick handlingz
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'header' },
+	                    _react2.default.createElement('img', { src: 'imgs/ghv-logo.png' })
+	                ),
+	                'Hello World',
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'main-content' },
+	                    '//tab button Component',
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'main-menu menu-container' },
+	                        _react2.default.createElement(
+	                            'ul',
+	                            null,
+	                            this.state.btnMenu.map(function (btn) {
+	                                return _react2.default.createElement(
+	                                    'li',
+	                                    { key: btn.label, className: 'category-btn' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        {
+	                                            onClick: function onClick() {
+	                                                return _this2.handleButtonClick(btn.action);
+	                                            },
+	                                            className: 'menu-text'
+	                                        },
+	                                        btn.label
+	                                    )
+	                                );
+	                            })
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return App;
+	}(_react2.default.Component);
+
+	exports.default = App;
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19761,6 +19869,278 @@
 
 /***/ }),
 /* 160 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var MENUS = exports.MENUS = {
+	    MAIN_MENU_LINKS: [{
+	        label: 'Climate Monitoring',
+	        action: 'CLIMATE_MENU_LINKS'
+	    }, {
+	        label: 'Biotic Communities',
+	        action: 'BIOTIC_MENU_LINKS'
+	    }, {
+	        label: 'Water Resources',
+	        action: 'WATER_MENU_LINKS'
+	    }],
+	    CLIMATE_MENU_LINKS: [{
+	        label: 'Real Time Climate Tracking',
+	        action: 'REAL_TIME_CLIMATE_TRACKING_LINKS'
+	    }, {
+	        label: 'Polar Ice',
+	        action: 'POLAR_ICE_LINKS'
+	    }, {
+	        label: 'Sea Level Rise',
+	        action: 'SEA_LEVEL_RISE_LINKS'
+	    }, {
+	        label: 'Climate vs. Weather',
+	        action: 'CLIMATE_WEATHER_LINKS'
+	    }, {
+	        label: 'Global Temperature and Greenhouse Gas Concentration',
+	        action: 'GLOABAL_TEMP_GG_LINKS'
+	    }, {
+	        label: 'CLimate Change and Extreme Weather Events',
+	        action: 'CC_EXTREME_WEATHER'
+	    }],
+	    BIOTIC_MENU_LINKS: [{
+	        label: 'Climate Change and Agriculture',
+	        action: 'CC_AGRICULTURE_LINKS'
+	    }, {
+	        label: 'Climate Change and Forest Cover',
+	        action: 'CC_FOREST_COVER_LINKS'
+	    }, {
+	        label: 'Climate Change and Species Ranges',
+	        action: 'CC_SPECIES_RANGES_LINKS'
+	    }, {
+	        label: 'Climate Change and Disease',
+	        action: 'CLIMATE_CHANGE_DISEASE_LINKS'
+	    }],
+	    WATER_MENU_LINKS: [{
+	        label: 'Deluge or Draught',
+	        action: 'MAIN_MENU_LINKS'
+	    }, {
+	        label: 'Freshwater Availablity and Consumption',
+	        action: 'MAIN_MENU_LINKS'
+	    }, {
+	        label: 'Water Contamination',
+	        action: 'MAIN_MENU_LINKS'
+	    }, {
+	        label: 'Water and Energy',
+	        action: 'MAIN_MENU_LINKS'
+	    }],
+	    REAL_TIME_CLIMATE_TRACKING_LINKS: [{
+	        label: 'Why Climate Data Matters',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.youtube.com/embed/-G8jy5ldiTU'
+	        }
+	    }, {
+	        label: 'NOAA Global Climate Dashboard',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.climate.gov/maps-data#global-climate-dashboard'
+	        }
+	    }, {
+	        label: 'ICE_CORE_VIDEO',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.youtube.com/watch?v=oHzADl-XID8'
+	        }
+	    }],
+	    POLAR_ICE_LINKS: [{
+	        label: 'Images of Change NASA Glacier Melt',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska'
+	        }
+	    }, {
+	        label: 'Antartic & Greenland Land Ice',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://climate.nasa.gov/vital-signs/land-ice/'
+	        }
+	    }, {
+	        label: 'National Snow & Ice Data Center',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/'
+	        }
+	    }],
+	    SEA_LEVEL_RISE_LINKS: [{
+	        label: 'If Antartica Melted: Antartic Ice Sheet Interactive',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://ny.pbslearningmedia.org/asset/ess05_int_icemelt/'
+	        }
+	    }, {
+	        label: 'NOAA Interactive Map',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://coast.noaa.gov/slr/'
+	        }
+	    }, {
+	        label: 'Yonkers & Hudson Valley Coastline',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://scenichudson.org/slr/mapper'
+	        }
+	    }],
+	    CLIMATE_WEATHER_LINKS: [{
+	        label: 'What Is Climate',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://ny.pbslearningmedia.org/resource/3059b771-8019-4836-8850-897e7cba25d5/3059b771-8019-4836-8850-897e7cba25d5/#.WVSIkdPyvuQ'
+	        }
+	    }, {
+	        label: 'Weather vs Climate',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.youtube.com/embed/e0vj-0imOLw%22'
+	        }
+	    }],
+	    GLOBAL_TEMP_GG_LINKS: [{
+	        label: 'The Greenhouse Effect',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://nca2014.globalchange.gov/report/appendices/climate-science-supplement#graphic-38756'
+	        }
+	    }, {
+	        label: 'Global Temperature Interactive Map',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://svs.gsfc.nasa.gov/4030'
+	        }
+	    }, {
+	        label: 'C02 and Temperaure Correlation',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.epa.gov/sites/production/files/2016-07'
+	        }
+	    }, {
+	        label: 'Modern Era C02 and Temperature',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: ''
+	        }
+	    }, {
+	        label: 'NASA Video, Comparing Natural & Human Factors',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://climate.nasa.gov/climate_resources/144/'
+	        }
+	    }],
+	    CC_EXTREME_WEATHER: [{
+	        label: 'Extreme Heat Waves',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.climate.gov/tags/heat-wave'
+	        }
+	    }, {
+	        label: 'NOAA Drought Monitor USA',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.climate.gov/maps-data/data-snapshots/usdroughtmonitor-weekly-ndmc-2013-04-02'
+	        }
+	    }, {
+	        label: 'Billion Dollar Weather Events',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.climate.gov/news-features/featured-images/billion-dollar-weather-disasters-1980'
+	        }
+	    }, {
+	        label: 'Heavy Precipitation',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://nca2014.globalchange.gov/report/our-changing-climate'
+	        }
+	    }],
+	    CC_AGRICULTURE_LINKS: [{
+	        label: 'USDA Plant Hardiness Zone Map',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.arborday.org/media/images/changes15.png'
+	        }
+	    }, {
+	        label: 'Projected Crop Yields 2050',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://www.wri.org/sites/default/files/uploads/'
+	        }
+	    }, {
+	        label: 'Resilience for Farmers',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.youtube.com/embed/4ieM_zKB6U4'
+	        }
+	    }],
+	    CC_FOREST_COVER_LINKS: [{
+	        label: 'Increase in Wildfires',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://nca2014.globalchange.gov/report'
+	        }
+	    }, {
+	        label: 'Global Deforestation',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://pbs.twimg.com/media/CNa83pbUEAIM8sA.png'
+	        }
+	    }, {
+	        label: 'Forests: Lungs of the Earth',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://svs.gsfc.nasa.gov/vis/a000000/a003900/a003947/'
+	        }
+	    }, {
+	        label: 'Projected Shifts in Forest Types',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://www.epa.gov/sites/production/files/2016-06/shiftinforesttypes-large.jpg'
+	        }
+	    }],
+	    CC_SPECIES_RANGES_LINKS: [{
+	        label: 'Species Range Change Interactive',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
+	        }
+	    }, {
+	        label: 'Bees are Feeling the STING of Climate Change',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
+	        }
+	    }],
+	    CLIMATE_CHANGE_DISEASE_LINKS: [{
+	        label: 'Climate Change & Human Health',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            img: 'https://www.cdc.gov/climateandhealth/images/climate_change_health_impacts600w.jpg'
+	        }
+	    }, {
+	        label: 'Rise in Vector Species',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/human-health#graphic-21020'
+	        }
+	    }, {
+	        label: 'Forest Pest Video',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'http://www.pressherald.com/2016/12/07/spread-by-trade-and-climate-bugs-butcher-americas-forests/video/'
+	        }
+	    }, {
+	        label: 'Invasive Species',
+	        action: 'OPEN_PAGE'
+	    }]
+	};
+
+/***/ }),
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
