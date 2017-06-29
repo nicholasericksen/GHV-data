@@ -1,8 +1,7 @@
 import React from 'react';
 
 import ButtonMenu from './ButtonMenu';
-
-import { MENUS } from '../constants/menus';
+import Page from './Page';
 
 export default class App extends React.Component {
 
@@ -10,38 +9,52 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            btnMenu: MENUS['MAIN_MENU_LINKS']
+            contentType: 'menu',
+            breadcrumbs: []
         };
 
-        this.handleButtonClick = this.handleButtonClick.bind(this);
+        this.changeContentType = this.changeContentType.bind(this);
+        this.updateBreadcrumbs = this.updateBreadcrumbs.bind(this);
     }
 
-    handleButtonClick(action) {
-        if (action !== 'OPEN_PAGE') {
-            this.setState({
-                btnMenu: MENUS[action]
-            });
-        }
+    /**
+    * Change the type of content being displayed
+    * @contentType menu or page
+    */
+    //TODO: change this to updateContentType
+    changeContentType(contentType, payload) {
+        this.setState({
+            contentType,
+            payload
+        })
+    }
+
+    updateBreadcrumbs(crumb) {
+        this.setState({
+             breadcrumbs: [...this.state.breadcrumbs, crumb]
+        });
+        console.log("CRUMBS", this.state.breadcrumbs);
     }
 
     render() {
-        console.log(this.state.btnMenu);
+        let content;
 
-        //TODO: refactor icon map, create component to reduce onCLick handlingz
+        if (this.state.contentType === 'menu') content = <ButtonMenu updateBreadcrumbs={this.updateBreadcrumbs} changeContentType={this.changeContentType} />;
+        else content = <Page payload={this.state.payload} />;
+
         return (
             <div>
                 <div className="header">
                     <img src="imgs/ghv-logo.png" />
+                    <div className="nav-menu">
+                        {this.state.breadcrumbs.map((crumb, index) => (
+                            <span>{crumb.label}</span>
+                        ))}
+
+                    </div>
                 </div>
-                Hello World
                 <div className="main-content">
-
-                    //tab button Component
-                    <ButtonMenu
-                        btnMenu={this.state.btnMenu}
-                        handleButtonClick={this.handleButtonClick}
-                    />
-
+                    {content}
                 </div>
             </div>
         );
