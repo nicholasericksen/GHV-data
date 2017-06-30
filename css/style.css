@@ -12,6 +12,13 @@ p { font-size: 24px; }
     left: 0;
     top: 151px;
 }
+#back-rail {
+    width: 20%;
+    min-width: 175px;
+    position: fixed;
+    right: 0;
+    top: 151px;
+}
 
 #main-content-container {
     max-width: 875px;
@@ -59,6 +66,20 @@ p { font-size: 24px; }
 .small-logo {
     width: 390px;
     margin: 0px;
+}
+
+#back-button-container {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid #4c88c3;
+}
+
+.back-button {
+    width: 130px;
 }
 
 .menu-container {
