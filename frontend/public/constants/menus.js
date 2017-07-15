@@ -91,7 +91,7 @@ export const MENUS = {
             }
         },
         {
-            label: 'ICE_CORE_VIDEO',
+            label: 'Ice Core Video',
             action: 'OPEN_PAGE',
             payload: {
                 iframe: 'https://www.youtube.com/watch?v=oHzADl-XID8'

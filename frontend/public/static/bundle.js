@@ -61,7 +61,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(161);
+	var _reactDom = __webpack_require__(160);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -85,13 +85,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ButtonMenu = __webpack_require__(162);
+	var _ButtonMenu = __webpack_require__(161);
 
 	var _ButtonMenu2 = _interopRequireDefault(_ButtonMenu);
 
-	var _Page = __webpack_require__(164);
+	var _Button = __webpack_require__(162);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _Page = __webpack_require__(163);
 
 	var _Page2 = _interopRequireDefault(_Page);
+
+	var _menus = __webpack_require__(164);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -113,17 +119,20 @@
 
 	        _this.state = {
 	            contentType: 'menu',
+	            btnMenu: _menus.MENUS['MAIN_MENU_LINKS'],
 	            breadcrumbs: []
 	        };
 
 	        _this.changeContentType = _this.changeContentType.bind(_this);
 	        _this.updateBreadcrumbs = _this.updateBreadcrumbs.bind(_this);
+	        _this.handleMenuButtonClick = _this.handleMenuButtonClick.bind(_this);
 	        return _this;
 	    }
 
 	    /**
 	    * Change the type of content being displayed
-	    * @contentType menu or page
+	    * @param {string} contentType menu or page
+	    * @param {object} payload describes content
 	    */
 	    //TODO: change this to updateContentType
 
@@ -136,6 +145,12 @@
 	                payload: payload
 	            });
 	        }
+
+	        /**
+	        * Function to update the breadcrumbs of the menu buttons clicked
+	        * @param {object} crumb the btn object with action and payload
+	        */
+
 	    }, {
 	        key: 'updateBreadcrumbs',
 	        value: function updateBreadcrumbs(crumb) {
@@ -144,12 +159,30 @@
 	            });
 	            console.log("CRUMBS", this.state.breadcrumbs);
 	        }
+
+	        /**
+	        * Function to handle the clicking of a button menu Button
+	        * @param {object} btn determines the action and payload
+	        */
+
+	    }, {
+	        key: 'handleMenuButtonClick',
+	        value: function handleMenuButtonClick(btn) {
+	            if (btn.action === 'OPEN_PAGE' && btn.payload) {
+	                this.changeContentType('page', btn.payload);
+	            } else {
+	                this.setState({
+	                    btnMenu: _menus.MENUS[btn.action]
+	                });
+	                this.updateBreadcrumbs({ label: btn.label, action: btn.action });
+	            }
+	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var content = void 0;
 
-	            if (this.state.contentType === 'menu') content = _react2.default.createElement(_ButtonMenu2.default, { updateBreadcrumbs: this.updateBreadcrumbs, changeContentType: this.changeContentType });else content = _react2.default.createElement(_Page2.default, { payload: this.state.payload });
+	            if (this.state.contentType === 'menu') content = _react2.default.createElement(_ButtonMenu2.default, { handleButtonClick: this.handleMenuButtonClick, btnMenu: this.state.btnMenu, updateBreadcrumbs: this.updateBreadcrumbs, changeContentType: this.changeContentType });else content = _react2.default.createElement(_Page2.default, { payload: this.state.payload });
 
 	            return _react2.default.createElement(
 	                'div',
@@ -161,13 +194,7 @@
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'nav-menu' },
-	                        this.state.breadcrumbs.map(function (crumb, index) {
-	                            return _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                crumb.label
-	                            );
-	                        })
+	                        _react2.default.createElement(_ButtonMenu2.default, { handleButtonClick: this.handleMenuButtonClick, btnMenu: this.state.breadcrumbs, updateBreadcrumbs: this.updateBreadcrumbs, changeContentType: this.changeContentType })
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -19875,6 +19902,206 @@
 
 /***/ }),
 /* 160 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = __webpack_require__(5);
+
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Button = __webpack_require__(162);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _menus = __webpack_require__(164);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//TODO Rename this to Menu
+	//TODO Make this a functional component
+
+	var ButtonMenu = function (_Component) {
+	    _inherits(ButtonMenu, _Component);
+
+	    function ButtonMenu() {
+	        _classCallCheck(this, ButtonMenu);
+
+	        return _possibleConstructorReturn(this, (ButtonMenu.__proto__ || Object.getPrototypeOf(ButtonMenu)).apply(this, arguments));
+	    }
+
+	    _createClass(ButtonMenu, [{
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'main-menu menu-container' },
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    this.props.btnMenu.map(function (btn) {
+	                        return _react2.default.createElement(_Button2.default, {
+	                            key: btn.label,
+	                            btn: btn,
+	                            handleButtonClick: _this2.props.handleButtonClick
+	                        });
+	                    })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ButtonMenu;
+	}(_react.Component);
+
+	exports.default = ButtonMenu;
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Button = function (_Component) {
+	    _inherits(Button, _Component);
+
+	    function Button(props) {
+	        _classCallCheck(this, Button);
+
+	        var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
+
+	        _this.handleClick = _this.handleClick.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(Button, [{
+	        key: "handleClick",
+	        value: function handleClick() {
+	            this.props.handleButtonClick(this.props.btn);
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            //TODO change from li to div
+	            return _react2.default.createElement(
+	                "li",
+	                { className: "category-btn" },
+	                _react2.default.createElement(
+	                    "div",
+	                    {
+	                        onClick: this.handleClick,
+	                        className: "menu-text"
+	                    },
+	                    this.props.btn.label
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Button;
+	}(_react.Component);
+
+	// TODO: update object to shape for btn
+
+
+	exports.default = Button;
+	Button.propTypes = {
+	    handleButtonClick: _react.PropTypes.func.isRequired,
+	    btn: _react.PropTypes.object.isRequired
+	};
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Page = function (_Component) {
+	    _inherits(Page, _Component);
+
+	    function Page() {
+	        _classCallCheck(this, Page);
+
+	        return _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).apply(this, arguments));
+	    }
+
+	    _createClass(Page, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                this.props.payload.iframe
+	            );
+	        }
+	    }]);
+
+	    return Page;
+	}(_react.Component);
+
+	exports.default = Page;
+
+/***/ }),
+/* 164 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -19951,7 +20178,7 @@
 	            iframe: 'https://www.climate.gov/maps-data#global-climate-dashboard'
 	        }
 	    }, {
-	        label: 'ICE_CORE_VIDEO',
+	        label: 'Ice Core Video',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            iframe: 'https://www.youtube.com/watch?v=oHzADl-XID8'
@@ -20144,222 +20371,6 @@
 	        action: 'OPEN_PAGE'
 	    }]
 	};
-
-/***/ }),
-/* 161 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = __webpack_require__(5);
-
-
-/***/ }),
-/* 162 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(3);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Button = __webpack_require__(163);
-
-	var _Button2 = _interopRequireDefault(_Button);
-
-	var _menus = __webpack_require__(160);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//TODO Rename this to Menu
-	var ButtonMenu = function (_Component) {
-	    _inherits(ButtonMenu, _Component);
-
-	    function ButtonMenu(props) {
-	        _classCallCheck(this, ButtonMenu);
-
-	        var _this = _possibleConstructorReturn(this, (ButtonMenu.__proto__ || Object.getPrototypeOf(ButtonMenu)).call(this, props));
-
-	        _this.state = {
-	            btnMenu: _menus.MENUS['MAIN_MENU_LINKS']
-	        };
-
-	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
-	        return _this;
-	    }
-
-	    _createClass(ButtonMenu, [{
-	        key: 'handleButtonClick',
-	        value: function handleButtonClick(btn) {
-	            if (btn.action === 'OPEN_PAGE' && btn.payload) {
-	                this.props.changeContentType('page', btn.payload);
-	            } else {
-	                this.setState({
-	                    btnMenu: _menus.MENUS[btn.action]
-	                });
-	                this.props.updateBreadcrumbs({ label: btn.label, action: btn.action });
-	            }
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'main-menu menu-container' },
-	                _react2.default.createElement(
-	                    'ul',
-	                    null,
-	                    this.state.btnMenu.map(function (btn) {
-	                        return _react2.default.createElement(_Button2.default, {
-	                            key: btn.label,
-	                            btn: btn,
-	                            handleButtonClick: _this2.handleButtonClick
-	                        });
-	                    })
-	                )
-	            );
-	        }
-	    }]);
-
-	    return ButtonMenu;
-	}(_react.Component);
-
-	exports.default = ButtonMenu;
-
-/***/ }),
-/* 163 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(3);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Button = function (_Component) {
-	    _inherits(Button, _Component);
-
-	    function Button(props) {
-	        _classCallCheck(this, Button);
-
-	        var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
-
-	        _this.handleClick = _this.handleClick.bind(_this);
-	        return _this;
-	    }
-
-	    _createClass(Button, [{
-	        key: "handleClick",
-	        value: function handleClick() {
-	            this.props.handleButtonClick(this.props.btn);
-	        }
-	    }, {
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "li",
-	                { className: "category-btn" },
-	                _react2.default.createElement(
-	                    "div",
-	                    {
-	                        onClick: this.handleClick,
-	                        className: "menu-text"
-	                    },
-	                    this.props.btn.label
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Button;
-	}(_react.Component);
-
-	// TODO: update object to shape for btn
-
-
-	exports.default = Button;
-	Button.propTypes = {
-	    handleButtonClick: _react.PropTypes.func.isRequired,
-	    btn: _react.PropTypes.object.isRequired
-	};
-
-/***/ }),
-/* 164 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(3);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Page = function (_Component) {
-	    _inherits(Page, _Component);
-
-	    function Page() {
-	        _classCallCheck(this, Page);
-
-	        return _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).apply(this, arguments));
-	    }
-
-	    _createClass(Page, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                this.props.payload.iframe
-	            );
-	        }
-	    }]);
-
-	    return Page;
-	}(_react.Component);
-
-	exports.default = Page;
 
 /***/ })
 /******/ ]);

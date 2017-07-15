@@ -12,6 +12,7 @@ export default class Button extends Component {
     }
 
     render() {
+        //TODO change from li to div
         return(
             <li className="category-btn">
                 <div
