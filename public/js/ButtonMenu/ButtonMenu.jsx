@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Button from './Button';
+import Button from '../Button/Button';
 
 import { MENUS } from '../constants/menus';
 
@@ -12,9 +12,10 @@ export default class ButtonMenu extends Component {
         return (
             <div className="main-menu menu-container">
                 <ul>
-                    {this.props.btnMenu.map((btn) => (
+                    {this.props.btnMenu.map((btn, index) => (
                         <Button
-                            key={btn.label}
+                            key={btn.label + '-' + index}
+                            index={index}
                             btn={btn}
                             handleButtonClick={this.props.handleButtonClick}
                         />

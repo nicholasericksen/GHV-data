@@ -8,7 +8,7 @@ export default class Button extends Component {
     }
 
     handleClick () {
-        this.props.handleButtonClick(this.props.btn)
+        this.props.handleButtonClick(this.props.btn, this.props.index);
     }
 
     render() {
