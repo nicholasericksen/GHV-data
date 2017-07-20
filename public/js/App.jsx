@@ -110,13 +110,18 @@ export default class App extends React.Component {
     }
 
     handleBackButtonClick() {
-        // // console.log(this.state.btnMenu[this.state.breadcrumbs.length].action);
-        // const back = this.state.breadcrumbs.pop();
-        // console.log("BACK", back.action);
-        // // this.setState({
-        // //     btnMenu: MENUS[back.action]
-        // // });
-        // this.handleButtonClick(back);
+        let back;
+        let backButtonIndex = -1; // default for home
+        let currentBreadcrumbs = this.state.breadcrumbs;
+        if (currentBreadcrumbs.length > 1) {
+            // We are at least 2 levels deep
+            backButtonIndex = this.state.breadcrumbs.length - 2;
+            back = this.state.breadcrumbs[backButtonIndex];
+        } else {
+            // We are at least 0 to 1 level deep
+            back = {action: 'MAIN_MENU_LINKS'};
+        }
+        this.handleBreadcrumbClick(back, backButtonIndex);
     }
 
     showBreadcrumbs() {
