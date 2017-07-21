@@ -126,7 +126,10 @@
 	        _this.state = {
 	            contentType: 'menu',
 	            btnMenu: _menus.MENUS['MAIN_MENU_LINKS'],
-	            breadcrumbs: [],
+	            breadcrumbs: [{
+	                action: 'MAIN_MENU_LINKS',
+	                label: 'Main Menu'
+	            }],
 	            active: null,
 	            showBreadcrumbs: false
 	        };
@@ -202,7 +205,6 @@
 	                this.setState({
 	                    btnMenu: _menus.MENUS[btn.action]
 	                });
-	                console.log("IN HERE", this.state.btnMenu);
 
 	                this.changeContentType('menu', null);
 	            }
@@ -218,9 +220,7 @@
 	        value: function handleMenuButtonClick(btn) {
 	            this.handleButtonClick(btn);
 
-	            if (btn.action !== 'OPEN_PAGE') {
-	                this.addBreadCrumb({ label: btn.label, action: btn.action });
-	            }
+	            this.addBreadCrumb({ label: btn.label, action: btn.action });
 	        }
 
 	        /**
@@ -236,22 +236,26 @@
 	            this.removeBreadCrumb(index);
 	            this.setState({ showBreadcrumbs: false });
 	        }
+
+	        /**
+	        * Handles clicking on the back arrow icon
+	        */
+
 	    }, {
 	        key: 'handleBackButtonClick',
 	        value: function handleBackButtonClick() {
-	            var back = void 0;
-	            var backButtonIndex = -1; // default for home
-	            var currentBreadcrumbs = this.state.breadcrumbs;
-	            if (currentBreadcrumbs.length > 1) {
-	                // We are at least 2 levels deep
-	                backButtonIndex = this.state.breadcrumbs.length - 2;
-	                back = this.state.breadcrumbs[backButtonIndex];
-	            } else {
-	                // We are at least 0 to 1 level deep
-	                back = { action: 'MAIN_MENU_LINKS' };
+	            if (this.state.breadcrumbs.length > 1) {
+	                var currentIndex = this.state.breadcrumbs.length - 1;
+	                var prevIndex = currentIndex - 1;
+
+	                this.handleBreadcrumbClick(this.state.breadcrumbs[prevIndex], prevIndex);
 	            }
-	            this.handleBreadcrumbClick(back, backButtonIndex);
 	        }
+
+	        /**
+	        * Determines if breadcrumbs should be shown
+	        */
+
 	    }, {
 	        key: 'showBreadcrumbs',
 	        value: function showBreadcrumbs() {
@@ -275,8 +279,8 @@
 	                content = _react2.default.createElement(_Page2.default, { btn: this.state.active });
 	            }
 
-	            console.log(this.state.breadcrumbs);
 	            var breadcrumbHeader = void 0;
+
 	            if (this.state.breadcrumbs.length === 1) {
 	                breadcrumbHeader = _react2.default.createElement(
 	                    'span',
@@ -303,7 +307,7 @@
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'home-btn', onClick: function onClick() {
-	                                    return _this2.handleBreadcrumbClick({ action: 'MAIN_MENU_LINKS' }, -1);
+	                                    return _this2.handleBreadcrumbClick({ action: 'MAIN_MENU_LINKS' }, 0);
 	                                } },
 	                            _react2.default.createElement('span', { className: 'glyphicon glyphicon-home', 'aria-hidden': 'true' })
 	                        ),
@@ -14995,7 +14999,7 @@
 	 *
 	 * @providesModule shallowEqual
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
