@@ -32,10 +32,10 @@ export const MENUS = {
         },
         {
             label: 'Global Temperature and Greenhouse Gas Concentration',
-            action: 'GLOABAL_TEMP_GG_LINKS',
+            action: 'GLOBAL_TEMP_GG_LINKS',
         },
         {
-            label: 'CLimate Change and Extreme Weather Events',
+            label: 'Climate Change and Extreme Weather Events',
             action: 'CC_EXTREME_WEATHER',
         }
     ],
@@ -80,21 +80,21 @@ export const MENUS = {
             label: 'Why Climate Data Matters',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.youtube.com/embed/-G8jy5ldiTU'
+                youtube: 'https://www.youtube.com/embed/-G8jy5ldiTU'
             }
         },
         {
             label: 'NOAA Global Climate Dashboard',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.climate.gov/maps-data#global-climate-dashboard'
+                iframe: 'https://climate.nasa.gov/interactives/climate-time-machine'
             }
         },
         {
             label: 'Ice Core Video',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.youtube.com/watch?v=oHzADl-XID8'
+                video: '/public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
             }
         }
     ],
@@ -110,14 +110,17 @@ export const MENUS = {
             label: 'Antartic & Greenland Land Ice',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://climate.nasa.gov/vital-signs/land-ice/'
+                slider: {
+                    imgs: ['Antarctica.png', 'Greenland.png', 'west-antarctica.jpg'],
+                    baseUrl: '/public/imgs/polar-ice/'
+                }
             }
         },
         {
             label: 'National Snow & Ice Data Center',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/'
+                iframe: 'http://nsidc.org/data/tools/arctic-sea-ice-chart/'
             }
         }
     ],
@@ -126,14 +129,17 @@ export const MENUS = {
             label: 'If Antartica Melted: Antartic Ice Sheet Interactive',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://ny.pbslearningmedia.org/asset/ess05_int_icemelt/'
+                slider: {
+                    baseUrl: '/public/imgs/antarctica-melted/',
+                    imgs: ['canada.jpg', 'australia.jpg', 'europe.jpg', 'sa.jpg', 'sp.jpg', 'africa.jpg', 'asia.jpg']
+                }
             }
         },
         {
             label: 'NOAA Interactive Map',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://coast.noaa.gov/slr/'
+                iframe: 'https://coast.noaa.gov/slr/#/layer/slr'
             }
         },
         {
@@ -149,14 +155,14 @@ export const MENUS = {
             label: 'What Is Climate',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://ny.pbslearningmedia.org/resource/3059b771-8019-4836-8850-897e7cba25d5/3059b771-8019-4836-8850-897e7cba25d5/#.WVSIkdPyvuQ'
+                video: '/public/videos/ClimateScience-EP2-final360.mp4'
             }
         },
         {
             label: 'Weather vs Climate',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.youtube.com/embed/e0vj-0imOLw%22'
+                youtube: 'https://www.youtube.com/embed/e0vj-0imOLw'
             }
         }
     ],
@@ -165,35 +171,44 @@ export const MENUS = {
             label: 'The Greenhouse Effect',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://nca2014.globalchange.gov/report/appendices/climate-science-supplement#graphic-38756'
+                slider: {
+                    baseUrl: '/public/imgs/greenhouse-effect/',
+                    imgs: ['Greenhouse-Gasses.jpg', 'The-Greenhouse-Effect.jpg']
+                }
             }
         },
         {
             label: 'Global Temperature Interactive Map',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://svs.gsfc.nasa.gov/4030'
+                video: '/public/videos/Global-Temp-Interactive-Map.mp4'
             }
         },
         {
             label: 'C02 and Temperaure Correlation',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.epa.gov/sites/production/files/2016-07'
+                slider: {
+                    baseUrl: '/public/imgs/c02-temp-correlation/',
+                    imgs: ['CO2-and-Temperature-Corr.jpg']
+                }
             }
         },
         {
             label: 'Modern Era C02 and Temperature',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: ''
+                slider: {
+                    baseUrl: '/public/imgs/modern-era-c02-temp/',
+                    imgs: ['Modern-Era-global-temp-and-co2-NOAA-source.gif', 'Figure1.jpg']
+                }
             }
         },
         {
             label: 'NASA Video, Comparing Natural & Human Factors',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://climate.nasa.gov/climate_resources/144/'
+                video: '/public/videos/NASA-Comparing-Natural-and-Human.mp4'
             }
         }
     ],

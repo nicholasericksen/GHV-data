@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import ButtonMenu from './ButtonMenu/ButtonMenu';
 import Button from './Button/Button';
+import Breadcrumbs from './ButtonMenu/Breadcrumbs';
 import Page from './Page/Page';
 
 import { MENUS } from './constants/menus';
@@ -145,12 +146,6 @@ export default class App extends React.Component {
             content = <Page btn={this.state.active} />;
         }
 
-        let breadcrumbHeader;
-
-        if (this.state.breadcrumbs.length === 1) {
-            breadcrumbHeader = (<span className="current-page">Current Page: </span>);
-        }
-
         return (
             <div>
                 <div className="header">
@@ -166,17 +161,17 @@ export default class App extends React.Component {
                             <span className="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </div>
                     </div>
+                    <Breadcrumbs
+                        showBreadcrumbs={this.state.showBreadcrumbs}
+                        breadcrumbs={this.state.breadcrumbs}
+                        handleBreadcrumbClick={this.handleBreadcrumbClick}
+                        btnMenu={this.state.breadcrumbs}
+                        removeBreadCrumb={this.removeBreadCrumb}
+                        changeContentType={this.changeContentType}
+                    />
                 </div>
 
-                    <div className={classNames([{active: this.state.showBreadcrumbs}, "breadcrumbs"])}>
-                        {breadcrumbHeader}
-                        <ButtonMenu
-                            handleButtonClick={this.handleBreadcrumbClick}
-                            btnMenu={this.state.breadcrumbs}
-                            updateBreadcrumbs={this.removeBreadCrumb}
-                            changeContentType={this.changeContentType}
-                        />
-                    </div>
+
                 <div className="main-content">
                     {content}
                 </div>

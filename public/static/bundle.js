@@ -61,7 +61,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(169);
+	var _reactDom = __webpack_require__(170);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -97,13 +97,17 @@
 
 	var _Button2 = _interopRequireDefault(_Button);
 
-	var _Page = __webpack_require__(164);
+	var _Breadcrumbs = __webpack_require__(164);
+
+	var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
+
+	var _Page = __webpack_require__(165);
 
 	var _Page2 = _interopRequireDefault(_Page);
 
 	var _menus = __webpack_require__(163);
 
-	__webpack_require__(165);
+	__webpack_require__(166);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -279,16 +283,6 @@
 	                content = _react2.default.createElement(_Page2.default, { btn: this.state.active });
 	            }
 
-	            var breadcrumbHeader = void 0;
-
-	            if (this.state.breadcrumbs.length === 1) {
-	                breadcrumbHeader = _react2.default.createElement(
-	                    'span',
-	                    { className: 'current-page' },
-	                    'Current Page: '
-	                );
-	            }
-
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -316,16 +310,13 @@
 	                            { onClick: this.showBreadcrumbs, className: 'breadcrumb-btn' },
 	                            _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify', 'aria-hidden': 'true' })
 	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: (0, _classnames2.default)([{ active: this.state.showBreadcrumbs }, "breadcrumbs"]) },
-	                    breadcrumbHeader,
-	                    _react2.default.createElement(_ButtonMenu2.default, {
-	                        handleButtonClick: this.handleBreadcrumbClick,
+	                    ),
+	                    _react2.default.createElement(_Breadcrumbs2.default, {
+	                        showBreadcrumbs: this.state.showBreadcrumbs,
+	                        breadcrumbs: this.state.breadcrumbs,
+	                        handleBreadcrumbClick: this.handleBreadcrumbClick,
 	                        btnMenu: this.state.breadcrumbs,
-	                        updateBreadcrumbs: this.removeBreadCrumb,
+	                        removeBreadCrumb: this.removeBreadCrumb,
 	                        changeContentType: this.changeContentType
 	                    })
 	                ),
@@ -14999,7 +14990,7 @@
 	 *
 	 * @providesModule shallowEqual
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -20263,9 +20254,9 @@
 	        action: 'CLIMATE_WEATHER_LINKS'
 	    }, {
 	        label: 'Global Temperature and Greenhouse Gas Concentration',
-	        action: 'GLOABAL_TEMP_GG_LINKS'
+	        action: 'GLOBAL_TEMP_GG_LINKS'
 	    }, {
-	        label: 'CLimate Change and Extreme Weather Events',
+	        label: 'Climate Change and Extreme Weather Events',
 	        action: 'CC_EXTREME_WEATHER'
 	    }],
 	    BIOTIC_MENU_LINKS: [{
@@ -20298,19 +20289,19 @@
 	        label: 'Why Climate Data Matters',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.youtube.com/embed/-G8jy5ldiTU'
+	            youtube: 'https://www.youtube.com/embed/-G8jy5ldiTU'
 	        }
 	    }, {
 	        label: 'NOAA Global Climate Dashboard',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.climate.gov/maps-data#global-climate-dashboard'
+	            iframe: 'https://climate.nasa.gov/interactives/climate-time-machine'
 	        }
 	    }, {
 	        label: 'Ice Core Video',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.youtube.com/watch?v=oHzADl-XID8'
+	            video: '/public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
 	        }
 	    }],
 	    POLAR_ICE_LINKS: [{
@@ -20323,26 +20314,32 @@
 	        label: 'Antartic & Greenland Land Ice',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://climate.nasa.gov/vital-signs/land-ice/'
+	            slider: {
+	                imgs: ['Antarctica.png', 'Greenland.png', 'west-antarctica.jpg'],
+	                baseUrl: '/public/imgs/polar-ice/'
+	            }
 	        }
 	    }, {
 	        label: 'National Snow & Ice Data Center',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'http://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/'
+	            iframe: 'http://nsidc.org/data/tools/arctic-sea-ice-chart/'
 	        }
 	    }],
 	    SEA_LEVEL_RISE_LINKS: [{
 	        label: 'If Antartica Melted: Antartic Ice Sheet Interactive',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://ny.pbslearningmedia.org/asset/ess05_int_icemelt/'
+	            slider: {
+	                baseUrl: '/public/imgs/antarctica-melted/',
+	                imgs: ['canada.jpg', 'australia.jpg', 'europe.jpg', 'sa.jpg', 'sp.jpg', 'africa.jpg', 'asia.jpg']
+	            }
 	        }
 	    }, {
 	        label: 'NOAA Interactive Map',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://coast.noaa.gov/slr/'
+	            iframe: 'https://coast.noaa.gov/slr/#/layer/slr'
 	        }
 	    }, {
 	        label: 'Yonkers & Hudson Valley Coastline',
@@ -20355,44 +20352,53 @@
 	        label: 'What Is Climate',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://ny.pbslearningmedia.org/resource/3059b771-8019-4836-8850-897e7cba25d5/3059b771-8019-4836-8850-897e7cba25d5/#.WVSIkdPyvuQ'
+	            video: '/public/videos/ClimateScience-EP2-final360.mp4'
 	        }
 	    }, {
 	        label: 'Weather vs Climate',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.youtube.com/embed/e0vj-0imOLw%22'
+	            youtube: 'https://www.youtube.com/embed/e0vj-0imOLw'
 	        }
 	    }],
 	    GLOBAL_TEMP_GG_LINKS: [{
 	        label: 'The Greenhouse Effect',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'http://nca2014.globalchange.gov/report/appendices/climate-science-supplement#graphic-38756'
+	            slider: {
+	                baseUrl: '/public/imgs/greenhouse-effect/',
+	                imgs: ['Greenhouse-Gasses.jpg', 'The-Greenhouse-Effect.jpg']
+	            }
 	        }
 	    }, {
 	        label: 'Global Temperature Interactive Map',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://svs.gsfc.nasa.gov/4030'
+	            video: '/public/videos/Global-Temp-Interactive-Map.mp4'
 	        }
 	    }, {
 	        label: 'C02 and Temperaure Correlation',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.epa.gov/sites/production/files/2016-07'
+	            slider: {
+	                baseUrl: '/public/imgs/c02-temp-correlation/',
+	                imgs: ['CO2-and-Temperature-Corr.jpg']
+	            }
 	        }
 	    }, {
 	        label: 'Modern Era C02 and Temperature',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: ''
+	            slider: {
+	                baseUrl: '/public/imgs/modern-era-c02-temp/',
+	                imgs: ['Modern-Era-global-temp-and-co2-NOAA-source.gif', 'Figure1.jpg']
+	            }
 	        }
 	    }, {
 	        label: 'NASA Video, Comparing Natural & Human Factors',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://climate.nasa.gov/climate_resources/144/'
+	            video: '/public/videos/NASA-Comparing-Natural-and-Human.mp4'
 	        }
 	    }],
 	    CC_EXTREME_WEATHER: [{
@@ -20517,6 +20523,83 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _ButtonMenu = __webpack_require__(161);
+
+	var _ButtonMenu2 = _interopRequireDefault(_ButtonMenu);
+
+	var _classnames = __webpack_require__(160);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Breadcrumbs = function (_Component) {
+	    _inherits(Breadcrumbs, _Component);
+
+	    function Breadcrumbs() {
+	        _classCallCheck(this, Breadcrumbs);
+
+	        return _possibleConstructorReturn(this, (Breadcrumbs.__proto__ || Object.getPrototypeOf(Breadcrumbs)).apply(this, arguments));
+	    }
+
+	    _createClass(Breadcrumbs, [{
+	        key: 'render',
+	        value: function render() {
+	            var breadcrumbHeader = void 0;
+	            if (this.props.breadcrumbs.length === 1) {
+	                breadcrumbHeader = _react2.default.createElement(
+	                    'span',
+	                    { className: 'current-page' },
+	                    'Current Page: '
+	                );
+	            }
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: (0, _classnames2.default)([{ active: this.props.showBreadcrumbs }, "breadcrumbs"]) },
+	                breadcrumbHeader,
+	                _react2.default.createElement(_ButtonMenu2.default, {
+	                    handleButtonClick: this.props.handleBreadcrumbClick,
+	                    btnMenu: this.props.breadcrumbs,
+	                    updateBreadcrumbs: this.props.removeBreadCrumb,
+	                    changeContentType: this.props.changeContentType
+	                })
+	            );
+	        }
+	    }]);
+
+	    return Breadcrumbs;
+	}(_react.Component);
+
+	exports.default = Breadcrumbs;
+
+
+	Breadcrumbs.PropTypes = {
+	    showBreadcrumbs: _react.PropTypes.bool.isRequired
+	};
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20528,24 +20611,118 @@
 	var Page = function (_Component) {
 	    _inherits(Page, _Component);
 
-	    function Page() {
+	    function Page(props) {
 	        _classCallCheck(this, Page);
 
-	        return _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).call(this, props));
+
+	        _this.state = {
+	            activeImageIndex: 0
+	        };
+
+	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
+	        return _this;
 	    }
 
 	    _createClass(Page, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            // window.onbeforeunload = function(e) {
+	            //     var dialogText = 'Dialog text here';
+	            //     e.returnValue = dialogText;
+	            //     console.log("Return", e.returnValue);
+	            // };
+	            //
+	            // window.addEventListener("beforeunload", function (event) {
+	            //     event.returnValue = "\o/";
+	            //     console.log("FDIAUSHFIUYDSGFIG");
+	            // });
+	        }
+	    }, {
+	        key: 'handleButtonClick',
+	        value: function handleButtonClick(direction) {
+	            console.log("CLICK", direction);
+	            if (direction === 'left') {
+	                if (this.state.activeImageIndex === 0) {
+	                    this.setState({
+	                        activeImageIndex: this.props.btn.payload.slider.imgs.length - 1
+	                    });
+	                } else {
+	                    this.setState({
+	                        activeImageIndex: this.state.activeImageIndex - 1
+	                    });
+	                }
+	            } else if (direction === 'right') {
+	                if (this.state.activeImageIndex === this.props.btn.payload.slider.imgs.length - 1) {
+	                    this.setState({
+	                        activeImageIndex: 0
+	                    });
+	                } else {
+	                    this.setState({
+	                        activeImageIndex: this.state.activeImageIndex + 1
+	                    });
+	                }
+	            }
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
+	            var content = null;
+	            var _props$btn$payload = this.props.btn.payload,
+	                iframe = _props$btn$payload.iframe,
+	                video = _props$btn$payload.video,
+	                youtube = _props$btn$payload.youtube,
+	                slider = _props$btn$payload.slider;
+	            var activeImageIndex = this.state.activeImageIndex;
+
+
+	            if (iframe) {
+	                content = _react2.default.createElement('iframe', { sandbox: 'allow-scripts allow-same-origin', src: iframe });
+	            } else if (youtube) {
+	                content = _react2.default.createElement('iframe', { src: youtube + "?autoplay=1" });
+	            } else if (video) {
+	                content = _react2.default.createElement('video', { src: video, autoPlay: true, controls: true });
+	            } else if (slider) {
+	                content = _react2.default.createElement(
+	                    'div',
+	                    { className: 'img-slider-container' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        null,
+	                        this.props.btn.label
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'img-slider' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'slider-btn' },
+	                            _react2.default.createElement('span', { onClick: function onClick() {
+	                                    return _this2.handleButtonClick('left');
+	                                }, className: 'glyphicon glyphicon-chevron-left', 'aria-hidden': 'true' })
+	                        ),
+	                        _react2.default.createElement('img', { className: 'slide', src: slider.baseUrl + slider.imgs[activeImageIndex] }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'slider-btn' },
+	                            _react2.default.createElement('span', { onClick: function onClick() {
+	                                    return _this2.handleButtonClick('right');
+	                                }, className: 'glyphicon glyphicon-chevron-right', 'aria-hidden': 'true' })
+	                        )
+	                    )
+	                );
+	            }
+
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    this.props.btn.label
-	                ),
-	                _react2.default.createElement('iframe', { src: this.props.btn.payload.iframe })
+	                    'div',
+	                    { className: 'page-content' },
+	                    content
+	                )
 	            );
 	        }
 	    }]);
@@ -20556,16 +20733,16 @@
 	exports.default = Page;
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(166);
+	var content = __webpack_require__(167);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20582,21 +20759,21 @@
 	}
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".breadcrumb-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 25px;\n  top: 30px;\n}\n.home-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 100px;\n  top: 30px;\n}\n.back-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 175px;\n  top: 30px;\n}\n.nav-btns {\n  color: #656565;\n}\n.main-content {\n  width: 80%;\n  margin: 0 auto;\n  max-width: 850px;\n}\n.main-content iframe {\n  width: 1000px;\n  height: 500px;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.menu-container ul {\n  list-style: none;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
+	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.breadcrumb-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 25px;\n  top: 30px;\n}\n.home-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 100px;\n  top: 30px;\n}\n.back-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 175px;\n  top: 30px;\n}\n.nav-btns {\n  color: #656565;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .img-slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .img-slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n}\n.main-content .page-content .img-slider-container .img-slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .img-slider-container .img-slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .img-slider-container .img-slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 32px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .img-slider-container .img-slider .slide {\n  display: block;\n  margin: 0 auto;\n  float: left;\n  box-shadow: 10px 10px 10px #444444;\n  object-fit: cover;\n  max-height: 75%;\n  max-width: 80%;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports) {
 
 	/*
@@ -20652,7 +20829,7 @@
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -20904,7 +21081,7 @@
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
