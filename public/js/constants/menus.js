@@ -1,6 +1,5 @@
 export const MENUS = {
-    MAIN_MENU_LINKS: [
-        {
+    MAIN_MENU_LINKS: [{
             label: 'Climate Monitoring',
             action: 'CLIMATE_MENU_LINKS',
         },
@@ -13,8 +12,7 @@ export const MENUS = {
             action: 'WATER_MENU_LINKS',
         }
     ],
-    CLIMATE_MENU_LINKS: [
-        {
+    CLIMATE_MENU_LINKS: [{
             label: 'Real Time Climate Tracking',
             action: 'REAL_TIME_CLIMATE_TRACKING_LINKS',
         },
@@ -39,8 +37,7 @@ export const MENUS = {
             action: 'CC_EXTREME_WEATHER',
         }
     ],
-    BIOTIC_MENU_LINKS: [
-        {
+    BIOTIC_MENU_LINKS: [{
             label: 'Climate Change and Agriculture',
             action: 'CC_AGRICULTURE_LINKS',
         },
@@ -57,26 +54,58 @@ export const MENUS = {
             action: 'CLIMATE_CHANGE_DISEASE_LINKS',
         }
     ],
-    WATER_MENU_LINKS: [
-        {
-            label: 'Deluge or Draught',
-            action: 'MAIN_MENU_LINKS',
+    WATER_MENU_LINKS: [{
+            label: 'Deluge',
+            action: 'OPEN_PAGE',
+            payload: {
+                video: '/public/videos/Deluge.mp4'
+            }
         },
         {
+                label: 'Drought',
+                action: 'OPEN_PAGE',
+                payload: {
+                    video: '/public/videos/Drought.mp4'
+                }
+            },
+        {
             label: 'Freshwater Availablity and Consumption',
-            action: 'MAIN_MENU_LINKS',
+            action: 'OPEN_PAGE',
+            payload: {
+                slider: {
+                    baseUrl: '/public/imgs/water/',
+                    imgs: ['B---Freshwater-Availability-in-US.png'
+                    ]
+                }
+            }
+
         },
         {
             label: 'Water Contamination',
-            action: 'MAIN_MENU_LINKS',
+            action: 'OPEN_PAGE',
+            payload: {
+                slider: {
+                    baseUrl: '/public/imgs/water/',
+                    imgs: [
+                        'C---Climate-Change-_-Water-Contamination.jpg'
+                    ]
+                }
+            }
         },
         {
             label: 'Water and Energy',
-            action: 'MAIN_MENU_LINKS',
+            action: 'OPEN_PAGE',
+            payload: {
+                slider: {
+                    baseUrl: '/public/imgs/water/',
+                    imgs: [
+                        'D---waterconsumption-(slideshow).png'
+                    ]
+                }
+            }
         }
     ],
-    REAL_TIME_CLIMATE_TRACKING_LINKS: [
-        {
+    REAL_TIME_CLIMATE_TRACKING_LINKS: [{
             label: 'Why Climate Data Matters',
             action: 'OPEN_PAGE',
             payload: {
@@ -98,8 +127,7 @@ export const MENUS = {
             }
         }
     ],
-    POLAR_ICE_LINKS: [
-        {
+    POLAR_ICE_LINKS: [{
             label: 'Images of Change NASA Glacier Melt',
             action: 'OPEN_PAGE',
             payload: {
@@ -124,8 +152,7 @@ export const MENUS = {
             }
         }
     ],
-    SEA_LEVEL_RISE_LINKS: [
-        {
+    SEA_LEVEL_RISE_LINKS: [{
             label: 'If Antartica Melted: Antartic Ice Sheet Interactive',
             action: 'OPEN_PAGE',
             payload: {
@@ -150,8 +177,7 @@ export const MENUS = {
             }
         }
     ],
-    CLIMATE_WEATHER_LINKS: [
-        {
+    CLIMATE_WEATHER_LINKS: [{
             label: 'What Is Climate',
             action: 'OPEN_PAGE',
             payload: {
@@ -166,8 +192,7 @@ export const MENUS = {
             }
         }
     ],
-    GLOBAL_TEMP_GG_LINKS: [
-        {
+    GLOBAL_TEMP_GG_LINKS: [{
             label: 'The Greenhouse Effect',
             action: 'OPEN_PAGE',
             payload: {
@@ -212,38 +237,77 @@ export const MENUS = {
             }
         }
     ],
-    CC_EXTREME_WEATHER: [
-        {
+    CC_EXTREME_WEATHER: [{
             label: 'Extreme Heat Waves',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.climate.gov/tags/heat-wave'
+                slider: {
+                    baseUrl: '/public/imgs/extreme-heatwave/',
+                    imgs: ['A---Deadliest-Heat-Waves.jpg',
+                        'B---Western-Europe-Heat-Wave-2006.jpg',
+                        'C---Russia-Heat-Wave-July-2010.png',
+                        'C1---Russian-Heat-Wave-July-2010-NOAA-Anomalies.png',
+                        'C2---Russian-Heat-Wave-July-2010-_-Wildfire.jpg',
+                        'C3---Russia-Heat-Wave-July-2010-Wildfires.png',
+                        'C4---Russia-Heat-Wave-July-2010-Wildfires2.jpg',
+                        'D---India-Heat-Wave-May-2015.png',
+                        'D1---India-Heat-Wave-May-2015-Dried-Pond.jpg',
+                        'D2---India-Heat-Wave-May-2015-Melting-Roads-(CNN).jpg',
+                        'D3---India-Heat-Wave-May-2015-Men-Sleep-on-Road-Divider-in-Delhi.jpg',
+                        'E---Western-US-Heat-Wave-June-2017.jpg'
+                    ]
+                }
             }
         },
         {
             label: 'NOAA Drought Monitor USA',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.climate.gov/maps-data/data-snapshots/usdroughtmonitor-weekly-ndmc-2013-04-02'
+                slider: {
+                    baseUrl: '/public/imgs/extreme-draught/',
+                    imgs: ['US-Drought-Index-2011-2012.gif',
+                        'US-Drought-Index-2014-2015.gif'
+                    ]
+                }
             }
         },
         {
             label: 'Billion Dollar Weather Events',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.climate.gov/news-features/featured-images/billion-dollar-weather-disasters-1980'
+                slider: {
+                    baseUrl: '/public/imgs/billion-dollar-weather/',
+                    imgs: ['A---billion_dollar_events_bystate_lrg.png',
+                        'B---Billion-Dollar-Events-since-2008.jpg',
+                        'C---natural-catastrophies.jpg',
+                        'D--weather-catastrophies.png'
+                    ]
+                }
             }
         },
         {
             label: 'Heavy Precipitation',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://nca2014.globalchange.gov/report/our-changing-climate'
+                slider: {
+                    baseUrl: '/public/imgs/heavy-precipitation/',
+                    imgs: ['A---CS_extreme_precip_index_13263_V9.png',
+                        'B---CS-Water_flood_trends_v5.png',
+                        'C---heavy-precipitation.png',
+                        'D---CS_winter_storms_v4.png'
+                    ]
+                }
+            }
+        },
+        {
+            label: 'Hurricane Sandy',
+            action: 'OPEN_PAGE',
+            payload: {
+                video: '/public/videos/6V-Hurricane-Sandy-and-Climate-Change-Connection.mp4'
             }
         }
     ],
-    CC_AGRICULTURE_LINKS: [
-        {
+    CC_AGRICULTURE_LINKS: [{
             label: 'USDA Plant Hardiness Zone Map',
             action: 'OPEN_PAGE',
             payload: {
@@ -265,8 +329,7 @@ export const MENUS = {
             }
         }
     ],
-    CC_FOREST_COVER_LINKS: [
-        {
+    CC_FOREST_COVER_LINKS: [{
             label: 'Increase in Wildfires',
             action: 'OPEN_PAGE',
             payload: {
@@ -295,8 +358,7 @@ export const MENUS = {
             }
         }
     ],
-    CC_SPECIES_RANGES_LINKS: [
-        {
+    CC_SPECIES_RANGES_LINKS: [{
             label: 'Species Range Change Interactive',
             action: 'OPEN_PAGE',
             payload: {
@@ -311,8 +373,7 @@ export const MENUS = {
             }
         }
     ],
-    CLIMATE_CHANGE_DISEASE_LINKS: [
-        {
+    CLIMATE_CHANGE_DISEASE_LINKS: [{
             label: 'Climate Change & Human Health',
             action: 'OPEN_PAGE',
             payload: {
