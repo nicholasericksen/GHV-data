@@ -4,40 +4,55 @@
     position: fixed;
     width: 100%;
 }
-.breadcrumb-btn {
-    font-size: 66px;
-    position:fixed;
-    right: 25px;
-    top: 30px;
-    display: none;
-}
-
-.home-btn {
-    font-size: 66px;
-    position:fixed;
-    right: 85px;
-    top: 30px;
-}
-
-.back-btn {
-    font-size: 66px;
-    position:fixed;
-    right: 175px;
-    top: 30px;
-}
 
 .nav-btns {
     color: #656565;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
+
+    .nav-btn {
+        float: left;
+        padding-right: 35px;
+        font-size: 50px;
+
+            .info-modal {
+                position:absolute;
+                top:0;
+                position: fixed;
+                right: 35px;
+                height: 580px;
+                background-color: #f1f1f1;
+                width: 1000px;
+                top: 130px;
+                border: 3px solid grey;
+                border-radius: 10px;
+                box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+                .info-modal-content {
+                    padding: 30px;
+
+                    p {
+                        font-size: 22px;
+                    }
+
+                    .logo-container {
+                        position: absolute;
+                        bottom: 65px;
+
+                        img {
+                            width: 240px;
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+    }
 }
 
-
 .main-content {
-
-
-
-    // width: 80%;
     margin: 0 auto;
-    // max-width: 850px;
     padding-top: 145px;
 
     .page-content {
