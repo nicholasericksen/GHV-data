@@ -61,7 +61,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(170);
+	var _reactDom = __webpack_require__(171);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -107,7 +107,7 @@
 
 	var _menus = __webpack_require__(163);
 
-	__webpack_require__(166);
+	__webpack_require__(167);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -135,7 +135,8 @@
 	                label: 'Main Menu'
 	            }],
 	            active: null,
-	            showBreadcrumbs: false
+	            showBreadcrumbs: false,
+	            showInfoModal: false
 	        };
 
 	        _this.changeContentType = _this.changeContentType.bind(_this);
@@ -145,6 +146,7 @@
 	        _this.handleBreadcrumbClick = _this.handleBreadcrumbClick.bind(_this);
 	        _this.showBreadcrumbs = _this.showBreadcrumbs.bind(_this);
 	        _this.handleBackButtonClick = _this.handleBackButtonClick.bind(_this);
+	        _this.handleInfoButtonClick = _this.handleInfoButtonClick.bind(_this);
 	        return _this;
 	    }
 
@@ -266,6 +268,11 @@
 	            this.setState({ showBreadcrumbs: !this.state.showBreadcrumbs });
 	        }
 	    }, {
+	        key: 'handleInfoButtonClick',
+	        value: function handleInfoButtonClick() {
+	            this.setState({ showInfoModal: !this.state.showInfoModal });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var _this2 = this;
@@ -295,30 +302,48 @@
 	                        { className: 'nav-btns' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { onClick: this.handleBackButtonClick, className: 'back-btn' },
+	                            { onClick: this.handleBackButtonClick, className: 'back-btn nav-btn' },
 	                            _react2.default.createElement('span', { className: 'glyphicon glyphicon-arrow-left', 'aria-hidden': 'true' })
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'home-btn', onClick: function onClick() {
+	                            { className: 'home-btn nav-btn', onClick: function onClick() {
 	                                    return _this2.handleBreadcrumbClick({ action: 'MAIN_MENU_LINKS' }, 0);
 	                                } },
 	                            _react2.default.createElement('span', { className: 'glyphicon glyphicon-home', 'aria-hidden': 'true' })
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { onClick: this.showBreadcrumbs, className: 'breadcrumb-btn' },
-	                            _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify', 'aria-hidden': 'true' })
+	                            { onClick: this.handleInfoButtonClick, className: 'info-btn nav-btn' },
+	                            _react2.default.createElement('span', { className: 'glyphicon glyphicon-info-sign', 'aria-hidden': 'true' }),
+	                            this.state.showInfoModal ? _react2.default.createElement(
+	                                'div',
+	                                { className: 'info-modal' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'info-modal-content' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'About'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \\ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor \\ in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\\ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'logo-container' },
+	                                        _react2.default.createElement('img', { src: 'public/imgs/logos/IRI.jpeg' }),
+	                                        _react2.default.createElement('img', { src: 'public/imgs/logos/NOAA.png' }),
+	                                        _react2.default.createElement('img', { src: 'public/imgs/logos/STEM.png' }),
+	                                        _react2.default.createElement('img', { src: 'public/imgs/logos/IAC_APPS.png' })
+	                                    )
+	                                )
+	                            ) : null
 	                        )
-	                    ),
-	                    _react2.default.createElement(_Breadcrumbs2.default, {
-	                        showBreadcrumbs: this.state.showBreadcrumbs,
-	                        breadcrumbs: this.state.breadcrumbs,
-	                        handleBreadcrumbClick: this.handleBreadcrumbClick,
-	                        btnMenu: this.state.breadcrumbs,
-	                        removeBreadCrumb: this.removeBreadCrumb,
-	                        changeContentType: this.changeContentType
-	                    })
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -20663,7 +20688,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Slider = __webpack_require__(171);
+	var _Slider = __webpack_require__(166);
 
 	var _Slider2 = _interopRequireDefault(_Slider);
 
@@ -20720,13 +20745,140 @@
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Slider = function (_Component) {
+	    _inherits(Slider, _Component);
+
+	    function Slider(props) {
+	        _classCallCheck(this, Slider);
+
+	        var _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
+
+	        _this.state = {
+	            activeImageIndex: 0
+	        };
+
+	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
+	        _this.renderNavButton = _this.renderNavButton.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(Slider, [{
+	        key: 'handleButtonClick',
+	        value: function handleButtonClick(direction) {
+	            var imgs = this.props.slider.imgs;
+
+
+	            if (direction === 'left') {
+	                if (this.state.activeImageIndex === 0) {
+	                    this.setState({
+	                        activeImageIndex: imgs.length - 1
+	                    });
+	                } else {
+	                    this.setState({
+	                        activeImageIndex: this.state.activeImageIndex - 1
+	                    });
+	                }
+	            } else if (direction === 'right') {
+	                if (this.state.activeImageIndex === imgs.length - 1) {
+	                    this.setState({
+	                        activeImageIndex: 0
+	                    });
+	                } else {
+	                    this.setState({
+	                        activeImageIndex: this.state.activeImageIndex + 1
+	                    });
+	                }
+	            }
+	        }
+	    }, {
+	        key: 'renderNavButton',
+	        value: function renderNavButton(direction) {
+	            var _this2 = this;
+
+	            if (this.props.slider.imgs.length > 1) {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { className: 'slider-btn' },
+	                    _react2.default.createElement('span', {
+	                        onClick: function onClick() {
+	                            return _this2.handleButtonClick(direction);
+	                        },
+	                        className: 'glyphicon glyphicon-chevron-' + direction,
+	                        'aria-hidden': 'true' })
+	                );
+	            }
+
+	            return null;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _props = this.props,
+	                label = _props.label,
+	                slider = _props.slider;
+
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'img-slider-container' },
+	                _react2.default.createElement(
+	                    'h2',
+	                    null,
+	                    label
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'img-slider' },
+	                    this.renderNavButton('left'),
+	                    _react2.default.createElement('img', { className: 'slide', src: slider.baseUrl + slider.imgs[this.state.activeImageIndex] }),
+	                    this.renderNavButton('right')
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Slider;
+	}(_react.Component);
+
+	exports.default = Slider;
+
+
+	Slider.propTypes = {
+	    label: _react.PropTypes.string.isRequired,
+	    slider: _react.PropTypes.object.isRequired
+	};
+
+/***/ }),
+/* 167 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(167);
+	var content = __webpack_require__(168);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(169)(content, {});
+	var update = __webpack_require__(170)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20743,21 +20895,21 @@
 	}
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(168)();
+	exports = module.exports = __webpack_require__(169)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.breadcrumb-btn {\n  font-size: 66px;\n  position: fixed;\n  right: 25px;\n  top: 30px;\n  display: none;\n}\n.home-btn {\n  font-size: 66px;\n  position: fixed;\n  right: 85px;\n  top: 30px;\n}\n.back-btn {\n  font-size: 66px;\n  position: fixed;\n  right: 175px;\n  top: 30px;\n}\n.nav-btns {\n  color: #656565;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .img-slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .img-slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n  font-size: 36px;\n}\n.main-content .page-content .img-slider-container .img-slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .img-slider-container .img-slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .img-slider-container .img-slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 90px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .img-slider-container .img-slider .slide {\n  display: block;\n  margin: 0 auto;\n  float: left;\n  box-shadow: 10px 10px 10px #444444;\n  object-fit: cover;\n  max-height: 75%;\n  max-width: 80%;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
+	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.nav-btns {\n  color: #656565;\n  position: absolute;\n  right: 15px;\n  top: 40px;\n  cursor: pointer;\n}\n.nav-btns .nav-btn {\n  float: left;\n  padding-right: 35px;\n  font-size: 50px;\n}\n.nav-btns .nav-btn .info-modal {\n  position: absolute;\n  top: 0;\n  position: fixed;\n  right: 35px;\n  height: 580px;\n  background-color: #f1f1f1;\n  width: 1000px;\n  top: 130px;\n  border: 3px solid grey;\n  border-radius: 10px;\n  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);\n}\n.nav-btns .nav-btn .info-modal .info-modal-content {\n  padding: 30px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content p {\n  font-size: 22px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content .logo-container {\n  position: absolute;\n  bottom: 65px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content .logo-container img {\n  width: 240px;\n  padding: 0 20px;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .img-slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .img-slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n  font-size: 36px;\n}\n.main-content .page-content .img-slider-container .img-slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .img-slider-container .img-slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .img-slider-container .img-slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 90px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .img-slider-container .img-slider .slide {\n  display: block;\n  margin: 0 auto;\n  float: left;\n  box-shadow: 10px 10px 10px #444444;\n  object-fit: cover;\n  max-height: 75%;\n  max-width: 80%;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports) {
 
 	/*
@@ -20813,7 +20965,7 @@
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -21065,140 +21217,13 @@
 
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = __webpack_require__(5);
 
-
-/***/ }),
-/* 171 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(3);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Slider = function (_Component) {
-	    _inherits(Slider, _Component);
-
-	    function Slider(props) {
-	        _classCallCheck(this, Slider);
-
-	        var _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
-
-	        _this.state = {
-	            activeImageIndex: 0
-	        };
-
-	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
-	        _this.renderNavButton = _this.renderNavButton.bind(_this);
-	        return _this;
-	    }
-
-	    _createClass(Slider, [{
-	        key: 'handleButtonClick',
-	        value: function handleButtonClick(direction) {
-	            var imgs = this.props.slider.imgs;
-
-
-	            if (direction === 'left') {
-	                if (this.state.activeImageIndex === 0) {
-	                    this.setState({
-	                        activeImageIndex: imgs.length - 1
-	                    });
-	                } else {
-	                    this.setState({
-	                        activeImageIndex: this.state.activeImageIndex - 1
-	                    });
-	                }
-	            } else if (direction === 'right') {
-	                if (this.state.activeImageIndex === imgs.length - 1) {
-	                    this.setState({
-	                        activeImageIndex: 0
-	                    });
-	                } else {
-	                    this.setState({
-	                        activeImageIndex: this.state.activeImageIndex + 1
-	                    });
-	                }
-	            }
-	        }
-	    }, {
-	        key: 'renderNavButton',
-	        value: function renderNavButton(direction) {
-	            var _this2 = this;
-
-	            if (this.props.slider.imgs.length > 1) {
-	                return _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-btn' },
-	                    _react2.default.createElement('span', {
-	                        onClick: function onClick() {
-	                            return _this2.handleButtonClick(direction);
-	                        },
-	                        className: 'glyphicon glyphicon-chevron-' + direction,
-	                        'aria-hidden': 'true' })
-	                );
-	            }
-
-	            return null;
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _props = this.props,
-	                label = _props.label,
-	                slider = _props.slider;
-
-
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'img-slider-container' },
-	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    label
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'img-slider' },
-	                    this.renderNavButton('left'),
-	                    _react2.default.createElement('img', { className: 'slide', src: slider.baseUrl + slider.imgs[this.state.activeImageIndex] }),
-	                    this.renderNavButton('right')
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Slider;
-	}(_react.Component);
-
-	exports.default = Slider;
-
-
-	Slider.propTypes = {
-	    label: _react.PropTypes.string.isRequired,
-	    slider: _react.PropTypes.object.isRequired
-	};
 
 /***/ })
 /******/ ]);
