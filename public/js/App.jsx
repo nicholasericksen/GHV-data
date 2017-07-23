@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import ButtonMenu from './ButtonMenu/ButtonMenu';
 import Button from './Button/Button';
+import Breadcrumbs from './ButtonMenu/Breadcrumbs';
 import Page from './Page/Page';
 
 import { MENUS } from './constants/menus';
@@ -17,7 +18,10 @@ export default class App extends React.Component {
         this.state = {
             contentType: 'menu',
             btnMenu: MENUS['MAIN_MENU_LINKS'],
-            breadcrumbs: [],
+            breadcrumbs: [{
+                action: 'MAIN_MENU_LINKS',
+                label: 'Main Menu'
+            }],
             active: null,
             showBreadcrumbs: false,
         };
@@ -80,7 +84,6 @@ export default class App extends React.Component {
             this.setState({
                 btnMenu: MENUS[btn.action]
             });
-            console.log("IN HERE", this.state.btnMenu);
 
             this.changeContentType('menu', null);
         }
@@ -93,9 +96,7 @@ export default class App extends React.Component {
     handleMenuButtonClick(btn) {
         this.handleButtonClick(btn);
 
-        if (btn.action !== 'OPEN_PAGE') {
-            this.addBreadCrumb({label: btn.label, action: btn.action});
-        }
+        this.addBreadCrumb({label: btn.label, action: btn.action});
     }
 
     /**
@@ -109,21 +110,21 @@ export default class App extends React.Component {
         this.setState({showBreadcrumbs: false});
     }
 
+    /**
+    * Handles clicking on the back arrow icon
+    */
     handleBackButtonClick() {
-        let back;
-        let backButtonIndex = -1; // default for home
-        let currentBreadcrumbs = this.state.breadcrumbs;
-        if (currentBreadcrumbs.length > 1) {
-            // We are at least 2 levels deep
-            backButtonIndex = this.state.breadcrumbs.length - 2;
-            back = this.state.breadcrumbs[backButtonIndex];
-        } else {
-            // We are at least 0 to 1 level deep
-            back = {action: 'MAIN_MENU_LINKS'};
+        if (this.state.breadcrumbs.length > 1) {
+            const currentIndex = this.state.breadcrumbs.length - 1;
+            const prevIndex = currentIndex - 1;
+
+            this.handleBreadcrumbClick(this.state.breadcrumbs[prevIndex], prevIndex);
         }
-        this.handleBreadcrumbClick(back, backButtonIndex);
     }
 
+    /**
+    * Determines if breadcrumbs should be shown
+    */
     showBreadcrumbs() {
         this.setState({showBreadcrumbs: !this.state.showBreadcrumbs});
     }
@@ -145,12 +146,6 @@ export default class App extends React.Component {
             content = <Page btn={this.state.active} />;
         }
 
-        console.log(this.state.breadcrumbs);
-        let breadcrumbHeader;
-        if (this.state.breadcrumbs.length === 1) {
-            breadcrumbHeader = (<span className="current-page">Current Page: </span>);
-        }
-
         return (
             <div>
                 <div className="header">
@@ -159,24 +154,24 @@ export default class App extends React.Component {
                         <div onClick={this.handleBackButtonClick} className="back-btn">
                             <span className="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                         </div>
-                        <div className="home-btn" onClick={() => this.handleBreadcrumbClick({action: 'MAIN_MENU_LINKS'}, -1)}>
+                        <div className="home-btn" onClick={() => this.handleBreadcrumbClick({action: 'MAIN_MENU_LINKS'}, 0)}>
                             <span className="glyphicon glyphicon-home" aria-hidden="true"></span>
                         </div>
                         <div onClick={this.showBreadcrumbs} className="breadcrumb-btn">
                             <span className="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </div>
                     </div>
+                    <Breadcrumbs
+                        showBreadcrumbs={this.state.showBreadcrumbs}
+                        breadcrumbs={this.state.breadcrumbs}
+                        handleBreadcrumbClick={this.handleBreadcrumbClick}
+                        btnMenu={this.state.breadcrumbs}
+                        removeBreadCrumb={this.removeBreadCrumb}
+                        changeContentType={this.changeContentType}
+                    />
                 </div>
 
-                    <div className={classNames([{active: this.state.showBreadcrumbs}, "breadcrumbs"])}>
-                        {breadcrumbHeader}
-                        <ButtonMenu
-                            handleButtonClick={this.handleBreadcrumbClick}
-                            btnMenu={this.state.breadcrumbs}
-                            updateBreadcrumbs={this.removeBreadCrumb}
-                            changeContentType={this.changeContentType}
-                        />
-                    </div>
+
                 <div className="main-content">
                     {content}
                 </div>
