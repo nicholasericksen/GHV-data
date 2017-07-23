@@ -58,14 +58,14 @@ export const MENUS = {
             label: 'Deluge',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/Deluge.mp4'
+                video: 'public/videos/Deluge.mp4'
             }
         },
         {
             label: 'Drought',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/Drought.mp4'
+                video: 'public/videos/Drought.mp4'
             }
         },
         {
@@ -73,7 +73,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/water/',
+                    baseUrl: 'public/imgs/water/',
                     imgs: ['B---Freshwater-Availability-in-US.png']
                 }
             }
@@ -84,7 +84,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/water/',
+                    baseUrl: 'public/imgs/water/',
                     imgs: [
                         'C---Climate-Change-_-Water-Contamination.jpg'
                     ]
@@ -96,7 +96,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/water/',
+                    baseUrl: 'public/imgs/water/',
                     imgs: [
                         'D---waterconsumption-(slideshow).png'
                     ]
@@ -122,7 +122,7 @@ export const MENUS = {
             label: 'Ice Core Video',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
+                video: 'public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
             }
         }
     ],
@@ -139,7 +139,7 @@ export const MENUS = {
             payload: {
                 slider: {
                     imgs: ['Antarctica.png', 'Greenland.png', 'west-antarctica.jpg'],
-                    baseUrl: '/public/imgs/polar-ice/'
+                    baseUrl: 'public/imgs/polar-ice/'
                 }
             }
         },
@@ -156,7 +156,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/antarctica-melted/',
+                    baseUrl: 'public/imgs/antarctica-melted/',
                     imgs: ['canada.jpg', 'australia.jpg', 'europe.jpg', 'sa.jpg', 'sp.jpg', 'africa.jpg', 'asia.jpg']
                 }
             }
@@ -180,7 +180,7 @@ export const MENUS = {
             label: 'What Is Climate',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/ClimateScience-EP2-final360.mp4'
+                video: 'public/videos/ClimateScience-EP2-final360.mp4'
             }
         },
         {
@@ -196,7 +196,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/greenhouse-effect/',
+                    baseUrl: 'public/imgs/greenhouse-effect/',
                     imgs: ['Greenhouse-Gasses.jpg', 'The-Greenhouse-Effect.jpg']
                 }
             }
@@ -205,7 +205,7 @@ export const MENUS = {
             label: 'Global Temperature Interactive Map',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/Global-Temp-Interactive-Map.mp4'
+                video: 'public/videos/Global-Temp-Interactive-Map.mp4'
             }
         },
         {
@@ -213,7 +213,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/c02-temp-correlation/',
+                    baseUrl: 'public/imgs/c02-temp-correlation/',
                     imgs: ['CO2-and-Temperature-Corr.jpg']
                 }
             }
@@ -223,7 +223,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/modern-era-c02-temp/',
+                    baseUrl: 'public/imgs/modern-era-c02-temp/',
                     imgs: ['Modern-Era-global-temp-and-co2-NOAA-source.gif', 'Figure1.jpg']
                 }
             }
@@ -232,7 +232,7 @@ export const MENUS = {
             label: 'NASA Video, Comparing Natural & Human Factors',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/NASA-Comparing-Natural-and-Human.mp4'
+                video: 'public/videos/NASA-Comparing-Natural-and-Human.mp4'
             }
         }
     ],
@@ -241,7 +241,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/extreme-heatwave/',
+                    baseUrl: 'public/imgs/extreme-heatwave/',
                     imgs: ['A---Deadliest-Heat-Waves.jpg',
                         'B---Western-Europe-Heat-Wave-2006.jpg',
                         'C---Russia-Heat-Wave-July-2010.png',
@@ -263,7 +263,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/extreme-draught/',
+                    baseUrl: 'public/imgs/extreme-draught/',
                     imgs: ['US-Drought-Index-2011-2012.gif',
                         'US-Drought-Index-2014-2015.gif'
                     ]
@@ -275,7 +275,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/billion-dollar-weather/',
+                    baseUrl: 'public/imgs/billion-dollar-weather/',
                     imgs: ['A---billion_dollar_events_bystate_lrg.png',
                         'B---Billion-Dollar-Events-since-2008.jpg',
                         'C---natural-catastrophies.jpg',
@@ -289,7 +289,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/heavy-precipitation/',
+                    baseUrl: 'public/imgs/heavy-precipitation/',
                     imgs: ['A---CS_extreme_precip_index_13263_V9.png',
                         'B---CS-Water_flood_trends_v5.png',
                         'C---heavy-precipitation.png',
@@ -302,7 +302,7 @@ export const MENUS = {
             label: 'Hurricane Sandy',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/6V-Hurricane-Sandy-and-Climate-Change-Connection.mp4'
+                video: 'public/videos/6V-Hurricane-Sandy-and-Climate-Change-Connection.mp4'
             }
         }
     ],
@@ -311,7 +311,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/zone-hardness/',
+                    baseUrl: 'public/imgs/zone-hardness/',
                     imgs: ['zone-hardiness-changes.png']
                 }
             }
@@ -321,7 +321,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/climate-crop/',
+                    baseUrl: 'public/imgs/climate-crop/',
                     imgs: ['climate_and_crop_yields_2-World-Resource-Institute.jpg']
                 }
             }
@@ -339,7 +339,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/increase-wildfires/',
+                    baseUrl: 'public/imgs/increase-wildfires/',
                     imgs: [
                         'A---Increase-in-Forest-Fire.jpg',
                         'A1---Forest-Fires-are-Getting-Bigger.jpg',
@@ -353,7 +353,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/global-deforestation_climate-change/',
+                    baseUrl: 'public/imgs/global-deforestation_climate-change/',
                     imgs: [
                         'B1--Deforestation-and-Climate-Change.jpg',
                         'B2---deforestation-and-climate-change-mitigation.jpg',
@@ -367,7 +367,7 @@ export const MENUS = {
             label: 'Forests: Lungs of the Earth',
             action: 'OPEN_PAGE',
             payload: {
-                video: '/public/videos/The-Forests-Lungs-of-the-Earth-(NASA-Imaging-of-CO2-and-Photosynthesis).m4v'
+                video: 'public/videos/The-Forests-Lungs-of-the-Earth-(NASA-Imaging-of-CO2-and-Photosynthesis).m4v'
             }
         },
         {
@@ -375,7 +375,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/projected-shift/',
+                    baseUrl: 'public/imgs/projected-shift/',
                     imgs: ['Projected-Shift-in-Forest-Type.jpg']
                 }
             }
@@ -401,7 +401,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/climate-change-human-health/',
+                    baseUrl: 'public/imgs/climate-change-human-health/',
                     imgs: ['A---Climate-Change-&-Human-Health-(CDC-image).jpg']
                 }
             }
@@ -411,7 +411,7 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                    baseUrl: '/public/imgs/rise-vector-species/',
+                    baseUrl: 'public/imgs/rise-vector-species/',
                     imgs: ['B1---Projected-Change-in-Tick-Population.png',
                         'B2---CO2-and-Mosquitos-in-Northeast-USA.png'
                     ]
