@@ -20278,20 +20278,20 @@
 	        label: 'Deluge',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/Deluge.mp4'
+	            video: 'public/videos/Deluge.mp4'
 	        }
 	    }, {
 	        label: 'Drought',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/Drought.mp4'
+	            video: 'public/videos/Drought.mp4'
 	        }
 	    }, {
 	        label: 'Freshwater Availablity and Consumption',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/water/',
+	                baseUrl: 'public/imgs/water/',
 	                imgs: ['B---Freshwater-Availability-in-US.png']
 	            }
 	        }
@@ -20301,7 +20301,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/water/',
+	                baseUrl: 'public/imgs/water/',
 	                imgs: ['C---Climate-Change-_-Water-Contamination.jpg']
 	            }
 	        }
@@ -20310,7 +20310,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/water/',
+	                baseUrl: 'public/imgs/water/',
 	                imgs: ['D---waterconsumption-(slideshow).png']
 	            }
 	        }
@@ -20331,7 +20331,7 @@
 	        label: 'Ice Core Video',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
+	            video: 'public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
 	        }
 	    }],
 	    POLAR_ICE_LINKS: [{
@@ -20346,7 +20346,7 @@
 	        payload: {
 	            slider: {
 	                imgs: ['Antarctica.png', 'Greenland.png', 'west-antarctica.jpg'],
-	                baseUrl: '/public/imgs/polar-ice/'
+	                baseUrl: 'public/imgs/polar-ice/'
 	            }
 	        }
 	    }, {
@@ -20361,7 +20361,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/antarctica-melted/',
+	                baseUrl: 'public/imgs/antarctica-melted/',
 	                imgs: ['canada.jpg', 'australia.jpg', 'europe.jpg', 'sa.jpg', 'sp.jpg', 'africa.jpg', 'asia.jpg']
 	            }
 	        }
@@ -20382,7 +20382,7 @@
 	        label: 'What Is Climate',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/ClimateScience-EP2-final360.mp4'
+	            video: 'public/videos/ClimateScience-EP2-final360.mp4'
 	        }
 	    }, {
 	        label: 'Weather vs Climate',
@@ -20396,7 +20396,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/greenhouse-effect/',
+	                baseUrl: 'public/imgs/greenhouse-effect/',
 	                imgs: ['Greenhouse-Gasses.jpg', 'The-Greenhouse-Effect.jpg']
 	            }
 	        }
@@ -20404,14 +20404,14 @@
 	        label: 'Global Temperature Interactive Map',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/Global-Temp-Interactive-Map.mp4'
+	            video: 'public/videos/Global-Temp-Interactive-Map.mp4'
 	        }
 	    }, {
 	        label: 'C02 and Temperaure Correlation',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/c02-temp-correlation/',
+	                baseUrl: 'public/imgs/c02-temp-correlation/',
 	                imgs: ['CO2-and-Temperature-Corr.jpg']
 	            }
 	        }
@@ -20420,7 +20420,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/modern-era-c02-temp/',
+	                baseUrl: 'public/imgs/modern-era-c02-temp/',
 	                imgs: ['Modern-Era-global-temp-and-co2-NOAA-source.gif', 'Figure1.jpg']
 	            }
 	        }
@@ -20428,7 +20428,7 @@
 	        label: 'NASA Video, Comparing Natural & Human Factors',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/NASA-Comparing-Natural-and-Human.mp4'
+	            video: 'public/videos/NASA-Comparing-Natural-and-Human.mp4'
 	        }
 	    }],
 	    CC_EXTREME_WEATHER: [{
@@ -20436,7 +20436,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/extreme-heatwave/',
+	                baseUrl: 'public/imgs/extreme-heatwave/',
 	                imgs: ['A---Deadliest-Heat-Waves.jpg', 'B---Western-Europe-Heat-Wave-2006.jpg', 'C---Russia-Heat-Wave-July-2010.png', 'C1---Russian-Heat-Wave-July-2010-NOAA-Anomalies.png', 'C2---Russian-Heat-Wave-July-2010-_-Wildfire.jpg', 'C3---Russia-Heat-Wave-July-2010-Wildfires.png', 'C4---Russia-Heat-Wave-July-2010-Wildfires2.jpg', 'D---India-Heat-Wave-May-2015.png', 'D1---India-Heat-Wave-May-2015-Dried-Pond.jpg', 'D2---India-Heat-Wave-May-2015-Melting-Roads-(CNN).jpg', 'D3---India-Heat-Wave-May-2015-Men-Sleep-on-Road-Divider-in-Delhi.jpg', 'E---Western-US-Heat-Wave-June-2017.jpg']
 	            }
 	        }
@@ -20445,7 +20445,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/extreme-draught/',
+	                baseUrl: 'public/imgs/extreme-draught/',
 	                imgs: ['US-Drought-Index-2011-2012.gif', 'US-Drought-Index-2014-2015.gif']
 	            }
 	        }
@@ -20454,7 +20454,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/billion-dollar-weather/',
+	                baseUrl: 'public/imgs/billion-dollar-weather/',
 	                imgs: ['A---billion_dollar_events_bystate_lrg.png', 'B---Billion-Dollar-Events-since-2008.jpg', 'C---natural-catastrophies.jpg', 'D--weather-catastrophies.png']
 	            }
 	        }
@@ -20463,7 +20463,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/heavy-precipitation/',
+	                baseUrl: 'public/imgs/heavy-precipitation/',
 	                imgs: ['A---CS_extreme_precip_index_13263_V9.png', 'B---CS-Water_flood_trends_v5.png', 'C---heavy-precipitation.png', 'D---CS_winter_storms_v4.png']
 	            }
 	        }
@@ -20471,7 +20471,7 @@
 	        label: 'Hurricane Sandy',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/6V-Hurricane-Sandy-and-Climate-Change-Connection.mp4'
+	            video: 'public/videos/6V-Hurricane-Sandy-and-Climate-Change-Connection.mp4'
 	        }
 	    }],
 	    CC_AGRICULTURE_LINKS: [{
@@ -20479,7 +20479,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/zone-hardness/',
+	                baseUrl: 'public/imgs/zone-hardness/',
 	                imgs: ['zone-hardiness-changes.png']
 	            }
 	        }
@@ -20488,7 +20488,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/climate-crop/',
+	                baseUrl: 'public/imgs/climate-crop/',
 	                imgs: ['climate_and_crop_yields_2-World-Resource-Institute.jpg']
 	            }
 	        }
@@ -20504,7 +20504,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/increase-wildfires/',
+	                baseUrl: 'public/imgs/increase-wildfires/',
 	                imgs: ['A---Increase-in-Forest-Fire.jpg', 'A1---Forest-Fires-are-Getting-Bigger.jpg', 'A2---Acreage-Burned.png']
 	            }
 	        }
@@ -20513,7 +20513,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/global-deforestation_climate-change/',
+	                baseUrl: 'public/imgs/global-deforestation_climate-change/',
 	                imgs: ['B1--Deforestation-and-Climate-Change.jpg', 'B2---deforestation-and-climate-change-mitigation.jpg', 'B3---Deforestation-Effects.jpg', 'B4---Causes-of-Deforestation.jpg']
 	            }
 	        }
@@ -20521,14 +20521,14 @@
 	        label: 'Forests: Lungs of the Earth',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: '/public/videos/The-Forests-Lungs-of-the-Earth-(NASA-Imaging-of-CO2-and-Photosynthesis).m4v'
+	            video: 'public/videos/The-Forests-Lungs-of-the-Earth-(NASA-Imaging-of-CO2-and-Photosynthesis).m4v'
 	        }
 	    }, {
 	        label: 'Projected Shifts in Forest Types',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/projected-shift/',
+	                baseUrl: 'public/imgs/projected-shift/',
 	                imgs: ['Projected-Shift-in-Forest-Type.jpg']
 	            }
 	        }
@@ -20553,7 +20553,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/climate-change-human-health/',
+	                baseUrl: 'public/imgs/climate-change-human-health/',
 	                imgs: ['A---Climate-Change-&-Human-Health-(CDC-image).jpg']
 	            }
 	        }
@@ -20562,7 +20562,7 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
-	                baseUrl: '/public/imgs/rise-vector-species/',
+	                baseUrl: 'public/imgs/rise-vector-species/',
 	                imgs: ['B1---Projected-Change-in-Tick-Population.png', 'B2---CO2-and-Mosquitos-in-Northeast-USA.png']
 	            }
 	        }
@@ -20751,7 +20751,7 @@
 
 
 	// module
-	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.breadcrumb-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 25px;\n  top: 30px;\n}\n.home-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 100px;\n  top: 30px;\n}\n.back-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 175px;\n  top: 30px;\n}\n.nav-btns {\n  color: #656565;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .img-slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .img-slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n  font-size: 36px;\n}\n.main-content .page-content .img-slider-container .img-slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .img-slider-container .img-slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .img-slider-container .img-slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 90px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .img-slider-container .img-slider .slide {\n  display: block;\n  margin: 0 auto;\n  float: left;\n  box-shadow: 10px 10px 10px #444444;\n  object-fit: cover;\n  max-height: 75%;\n  max-width: 80%;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
+	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.breadcrumb-btn {\n  font-size: 66px;\n  position: fixed;\n  right: 25px;\n  top: 30px;\n  display: none;\n}\n.home-btn {\n  font-size: 66px;\n  position: fixed;\n  right: 85px;\n  top: 30px;\n}\n.back-btn {\n  font-size: 66px;\n  position: fixed;\n  right: 175px;\n  top: 30px;\n}\n.nav-btns {\n  color: #656565;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .img-slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .img-slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n  font-size: 36px;\n}\n.main-content .page-content .img-slider-container .img-slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .img-slider-container .img-slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .img-slider-container .img-slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 90px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .img-slider-container .img-slider .slide {\n  display: block;\n  margin: 0 auto;\n  float: left;\n  box-shadow: 10px 10px 10px #444444;\n  object-fit: cover;\n  max-height: 75%;\n  max-width: 80%;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
 
 	// exports
 
