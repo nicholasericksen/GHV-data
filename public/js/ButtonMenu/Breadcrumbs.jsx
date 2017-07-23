@@ -8,7 +8,8 @@ export default class Breadcrumbs extends Component {
 
 
     render() {
-        let breadcrumbHeader;
+        let breadcrumbHeader = null;
+        
         if (this.props.breadcrumbs.length === 1) {
             breadcrumbHeader = (<span className="current-page">Current Page: </span>);
         }

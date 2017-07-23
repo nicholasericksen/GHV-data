@@ -20265,10 +20265,12 @@
 	    }, {
 	        label: 'Climate Change and Forest Cover',
 	        action: 'CC_FOREST_COVER_LINKS'
-	    }, {
-	        label: 'Climate Change and Species Ranges',
-	        action: 'CC_SPECIES_RANGES_LINKS'
-	    }, {
+	    },
+	    // {
+	    //     label: 'Climate Change and Species Ranges',
+	    //     action: 'CC_SPECIES_RANGES_LINKS',
+	    // },
+	    {
 	        label: 'Climate Change and Disease',
 	        action: 'CLIMATE_CHANGE_DISEASE_LINKS'
 	    }],
@@ -20373,7 +20375,7 @@
 	        label: 'Yonkers & Hudson Valley Coastline',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'http://scenichudson.org/slr/mapper'
+	            iframe: 'http://scenichudson.org/slr/mapper#block-menu-block-1'
 	        }
 	    }],
 	    CLIMATE_WEATHER_LINKS: [{
@@ -20476,80 +20478,94 @@
 	        label: 'USDA Plant Hardiness Zone Map',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.arborday.org/media/images/changes15.png'
+	            slider: {
+	                baseUrl: '/public/imgs/zone-hardness/',
+	                imgs: ['zone-hardiness-changes.png']
+	            }
 	        }
 	    }, {
 	        label: 'Projected Crop Yields 2050',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'http://www.wri.org/sites/default/files/uploads/'
+	            slider: {
+	                baseUrl: '/public/imgs/climate-crop/',
+	                imgs: ['climate_and_crop_yields_2-World-Resource-Institute.jpg']
+	            }
 	        }
 	    }, {
 	        label: 'Resilience for Farmers',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.youtube.com/embed/4ieM_zKB6U4'
+	            youtube: 'https://www.youtube.com/embed/4ieM_zKB6U4'
 	        }
 	    }],
 	    CC_FOREST_COVER_LINKS: [{
 	        label: 'Increase in Wildfires',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'http://nca2014.globalchange.gov/report'
+	            slider: {
+	                baseUrl: '/public/imgs/increase-wildfires/',
+	                imgs: ['A---Increase-in-Forest-Fire.jpg', 'A1---Forest-Fires-are-Getting-Bigger.jpg', 'A2---Acreage-Burned.png']
+	            }
 	        }
 	    }, {
 	        label: 'Global Deforestation',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://pbs.twimg.com/media/CNa83pbUEAIM8sA.png'
+	            slider: {
+	                baseUrl: '/public/imgs/global-deforestation_climate-change/',
+	                imgs: ['B1--Deforestation-and-Climate-Change.jpg', 'B2---deforestation-and-climate-change-mitigation.jpg', 'B3---Deforestation-Effects.jpg', 'B4---Causes-of-Deforestation.jpg']
+	            }
 	        }
 	    }, {
 	        label: 'Forests: Lungs of the Earth',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://svs.gsfc.nasa.gov/vis/a000000/a003900/a003947/'
+	            video: '/public/videos/The-Forests-Lungs-of-the-Earth-(NASA-Imaging-of-CO2-and-Photosynthesis).m4v'
 	        }
 	    }, {
 	        label: 'Projected Shifts in Forest Types',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://www.epa.gov/sites/production/files/2016-06/shiftinforesttypes-large.jpg'
+	            slider: {
+	                baseUrl: '/public/imgs/projected-shift/',
+	                imgs: ['Projected-Shift-in-Forest-Type.jpg']
+	            }
 	        }
 	    }],
-	    CC_SPECIES_RANGES_LINKS: [{
-	        label: 'Species Range Change Interactive',
-	        action: 'OPEN_PAGE',
-	        payload: {
-	            iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
-	        }
-	    }, {
-	        label: 'Bees are Feeling the STING of Climate Change',
-	        action: 'OPEN_PAGE',
-	        payload: {
-	            iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
-	        }
-	    }],
+	    // CC_SPECIES_RANGES_LINKS: [{
+	    //         label: 'Species Range Change Interactive',
+	    //         action: 'OPEN_PAGE',
+	    //         payload: {
+	    //             iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
+	    //         }
+	    //     },
+	    //     {
+	    //         label: 'Bees are Feeling the STING of Climate Change',
+	    //         action: 'OPEN_PAGE',
+	    //         payload: {
+	    //             iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
+	    //         }
+	    //     }
+	    // ],
 	    CLIMATE_CHANGE_DISEASE_LINKS: [{
 	        label: 'Climate Change & Human Health',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            img: 'https://www.cdc.gov/climateandhealth/images/climate_change_health_impacts600w.jpg'
+	            slider: {
+	                baseUrl: '/public/imgs/climate-change-human-health/',
+	                imgs: ['A---Climate-Change-&-Human-Health-(CDC-image).jpg']
+	            }
 	        }
 	    }, {
 	        label: 'Rise in Vector Species',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/human-health#graphic-21020'
+	            slider: {
+	                baseUrl: '/public/imgs/rise-vector-species/',
+	                imgs: ['B1---Projected-Change-in-Tick-Population.png', 'B2---CO2-and-Mosquitos-in-Northeast-USA.png']
+	            }
 	        }
-	    }, {
-	        label: 'Forest Pest Video',
-	        action: 'OPEN_PAGE',
-	        payload: {
-	            iframe: 'http://www.pressherald.com/2016/12/07/spread-by-trade-and-climate-bugs-butcher-americas-forests/video/'
-	        }
-	    }, {
-	        label: 'Invasive Species',
-	        action: 'OPEN_PAGE'
 	    }]
 	};
 
@@ -20597,7 +20613,8 @@
 	    _createClass(Breadcrumbs, [{
 	        key: 'render',
 	        value: function render() {
-	            var breadcrumbHeader = void 0;
+	            var breadcrumbHeader = null;
+
 	            if (this.props.breadcrumbs.length === 1) {
 	                breadcrumbHeader = _react2.default.createElement(
 	                    'span',
@@ -20646,6 +20663,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Slider = __webpack_require__(171);
+
+	var _Slider2 = _interopRequireDefault(_Slider);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20657,108 +20678,25 @@
 	var Page = function (_Component) {
 	    _inherits(Page, _Component);
 
-	    function Page(props) {
+	    function Page() {
 	        _classCallCheck(this, Page);
 
-	        var _this = _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).call(this, props));
-
-	        _this.state = {
-	            activeImageIndex: 0
-	        };
-
-	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
-	        return _this;
+	        return _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).apply(this, arguments));
 	    }
 
 	    _createClass(Page, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            // window.onbeforeunload = function(e) {
-	            //     var dialogText = 'Dialog text here';
-	            //     e.returnValue = dialogText;
-	            //     console.log("Return", e.returnValue);
-	            // };
-	            //
-	            // window.addEventListener("beforeunload", function (event) {
-	            //     event.returnValue = "\o/";
-	            //     console.log("FDIAUSHFIUYDSGFIG");
-	            // });
-	        }
-	    }, {
-	        key: 'handleButtonClick',
-	        value: function handleButtonClick(direction) {
-	            console.log("CLICK", direction);
-	            if (direction === 'left') {
-	                if (this.state.activeImageIndex === 0) {
-	                    this.setState({
-	                        activeImageIndex: this.props.btn.payload.slider.imgs.length - 1
-	                    });
-	                } else {
-	                    this.setState({
-	                        activeImageIndex: this.state.activeImageIndex - 1
-	                    });
-	                }
-	            } else if (direction === 'right') {
-	                if (this.state.activeImageIndex === this.props.btn.payload.slider.imgs.length - 1) {
-	                    this.setState({
-	                        activeImageIndex: 0
-	                    });
-	                } else {
-	                    this.setState({
-	                        activeImageIndex: this.state.activeImageIndex + 1
-	                    });
-	                }
-	            }
-	        }
-	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var _this2 = this;
-
 	            var content = null;
 	            var _props$btn$payload = this.props.btn.payload,
 	                iframe = _props$btn$payload.iframe,
 	                video = _props$btn$payload.video,
 	                youtube = _props$btn$payload.youtube,
 	                slider = _props$btn$payload.slider;
-	            var activeImageIndex = this.state.activeImageIndex;
 
 
-	            if (iframe) {
-	                content = _react2.default.createElement('iframe', { sandbox: 'allow-scripts allow-same-origin', src: iframe });
-	            } else if (youtube) {
-	                content = _react2.default.createElement('iframe', { src: youtube + "?autoplay=1" });
-	            } else if (video) {
-	                content = _react2.default.createElement('video', { src: video, autoPlay: true, controls: true });
-	            } else if (slider) {
-	                content = _react2.default.createElement(
-	                    'div',
-	                    { className: 'img-slider-container' },
-	                    _react2.default.createElement(
-	                        'h2',
-	                        null,
-	                        this.props.btn.label
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'img-slider' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'slider-btn' },
-	                            _react2.default.createElement('span', { onClick: function onClick() {
-	                                    return _this2.handleButtonClick('left');
-	                                }, className: 'glyphicon glyphicon-chevron-left', 'aria-hidden': 'true' })
-	                        ),
-	                        _react2.default.createElement('img', { className: 'slide', src: slider.baseUrl + slider.imgs[activeImageIndex] }),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'slider-btn' },
-	                            _react2.default.createElement('span', { onClick: function onClick() {
-	                                    return _this2.handleButtonClick('right');
-	                                }, className: 'glyphicon glyphicon-chevron-right', 'aria-hidden': 'true' })
-	                        )
-	                    )
-	                );
+	            if (iframe) content = _react2.default.createElement('iframe', { sandbox: 'allow-scripts allow-same-origin', src: iframe });else if (youtube) content = _react2.default.createElement('iframe', { src: youtube + "?autoplay=1" });else if (video) content = _react2.default.createElement('video', { src: video, autoPlay: true, controls: true });else if (slider) content = _react2.default.createElement(_Slider2.default, { slider: slider, label: this.props.btn.label });else {
+	                //TODO Go back to the homepage
 	            }
 
 	            return _react2.default.createElement(
@@ -20813,7 +20751,7 @@
 
 
 	// module
-	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.breadcrumb-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 25px;\n  top: 30px;\n}\n.home-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 100px;\n  top: 30px;\n}\n.back-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 175px;\n  top: 30px;\n}\n.nav-btns {\n  color: #656565;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .img-slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .img-slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n}\n.main-content .page-content .img-slider-container .img-slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .img-slider-container .img-slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .img-slider-container .img-slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 32px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .img-slider-container .img-slider .slide {\n  display: block;\n  margin: 0 auto;\n  float: left;\n  box-shadow: 10px 10px 10px #444444;\n  object-fit: cover;\n  max-height: 75%;\n  max-width: 80%;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
+	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.breadcrumb-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 25px;\n  top: 30px;\n}\n.home-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 100px;\n  top: 30px;\n}\n.back-btn {\n  font-size: 40px;\n  position: fixed;\n  right: 175px;\n  top: 30px;\n}\n.nav-btns {\n  color: #656565;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .img-slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .img-slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n  font-size: 36px;\n}\n.main-content .page-content .img-slider-container .img-slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .img-slider-container .img-slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .img-slider-container .img-slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 90px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .img-slider-container .img-slider .slide {\n  display: block;\n  margin: 0 auto;\n  float: left;\n  box-shadow: 10px 10px 10px #444444;\n  object-fit: cover;\n  max-height: 75%;\n  max-width: 80%;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
 
 	// exports
 
@@ -21134,6 +21072,133 @@
 
 	module.exports = __webpack_require__(5);
 
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Slider = function (_Component) {
+	    _inherits(Slider, _Component);
+
+	    function Slider(props) {
+	        _classCallCheck(this, Slider);
+
+	        var _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
+
+	        _this.state = {
+	            activeImageIndex: 0
+	        };
+
+	        _this.handleButtonClick = _this.handleButtonClick.bind(_this);
+	        _this.renderNavButton = _this.renderNavButton.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(Slider, [{
+	        key: 'handleButtonClick',
+	        value: function handleButtonClick(direction) {
+	            var imgs = this.props.slider.imgs;
+
+
+	            if (direction === 'left') {
+	                if (this.state.activeImageIndex === 0) {
+	                    this.setState({
+	                        activeImageIndex: imgs.length - 1
+	                    });
+	                } else {
+	                    this.setState({
+	                        activeImageIndex: this.state.activeImageIndex - 1
+	                    });
+	                }
+	            } else if (direction === 'right') {
+	                if (this.state.activeImageIndex === imgs.length - 1) {
+	                    this.setState({
+	                        activeImageIndex: 0
+	                    });
+	                } else {
+	                    this.setState({
+	                        activeImageIndex: this.state.activeImageIndex + 1
+	                    });
+	                }
+	            }
+	        }
+	    }, {
+	        key: 'renderNavButton',
+	        value: function renderNavButton(direction) {
+	            var _this2 = this;
+
+	            if (this.props.slider.imgs.length > 1) {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { className: 'slider-btn' },
+	                    _react2.default.createElement('span', {
+	                        onClick: function onClick() {
+	                            return _this2.handleButtonClick(direction);
+	                        },
+	                        className: 'glyphicon glyphicon-chevron-' + direction,
+	                        'aria-hidden': 'true' })
+	                );
+	            }
+
+	            return null;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _props = this.props,
+	                label = _props.label,
+	                slider = _props.slider;
+
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'img-slider-container' },
+	                _react2.default.createElement(
+	                    'h2',
+	                    null,
+	                    label
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'img-slider' },
+	                    this.renderNavButton('left'),
+	                    _react2.default.createElement('img', { className: 'slide', src: slider.baseUrl + slider.imgs[this.state.activeImageIndex] }),
+	                    this.renderNavButton('right')
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Slider;
+	}(_react.Component);
+
+	exports.default = Slider;
+
+
+	Slider.propTypes = {
+	    label: _react.PropTypes.string.isRequired,
+	    slider: _react.PropTypes.object.isRequired
+	};
 
 /***/ })
 /******/ ]);

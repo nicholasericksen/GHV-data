@@ -45,10 +45,10 @@ export const MENUS = {
             label: 'Climate Change and Forest Cover',
             action: 'CC_FOREST_COVER_LINKS',
         },
-        {
-            label: 'Climate Change and Species Ranges',
-            action: 'CC_SPECIES_RANGES_LINKS',
-        },
+        // {
+        //     label: 'Climate Change and Species Ranges',
+        //     action: 'CC_SPECIES_RANGES_LINKS',
+        // },
         {
             label: 'Climate Change and Disease',
             action: 'CLIMATE_CHANGE_DISEASE_LINKS',
@@ -62,20 +62,19 @@ export const MENUS = {
             }
         },
         {
-                label: 'Drought',
-                action: 'OPEN_PAGE',
-                payload: {
-                    video: '/public/videos/Drought.mp4'
-                }
-            },
+            label: 'Drought',
+            action: 'OPEN_PAGE',
+            payload: {
+                video: '/public/videos/Drought.mp4'
+            }
+        },
         {
             label: 'Freshwater Availablity and Consumption',
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
                     baseUrl: '/public/imgs/water/',
-                    imgs: ['B---Freshwater-Availability-in-US.png'
-                    ]
+                    imgs: ['B---Freshwater-Availability-in-US.png']
                 }
             }
 
@@ -173,7 +172,7 @@ export const MENUS = {
             label: 'Yonkers & Hudson Valley Coastline',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://scenichudson.org/slr/mapper'
+                iframe: 'http://scenichudson.org/slr/mapper#block-menu-block-1'
             }
         }
     ],
@@ -311,21 +310,27 @@ export const MENUS = {
             label: 'USDA Plant Hardiness Zone Map',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.arborday.org/media/images/changes15.png'
+                slider: {
+                    baseUrl: '/public/imgs/zone-hardness/',
+                    imgs: ['zone-hardiness-changes.png']
+                }
             }
         },
         {
             label: 'Projected Crop Yields 2050',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://www.wri.org/sites/default/files/uploads/'
+                slider: {
+                    baseUrl: '/public/imgs/climate-crop/',
+                    imgs: ['climate_and_crop_yields_2-World-Resource-Institute.jpg']
+                }
             }
         },
         {
             label: 'Resilience for Farmers',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.youtube.com/embed/4ieM_zKB6U4'
+                youtube: 'https://www.youtube.com/embed/4ieM_zKB6U4'
             }
         }
     ],
@@ -333,70 +338,96 @@ export const MENUS = {
             label: 'Increase in Wildfires',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://nca2014.globalchange.gov/report'
+                slider: {
+                    baseUrl: '/public/imgs/increase-wildfires/',
+                    imgs: [
+                        'A---Increase-in-Forest-Fire.jpg',
+                        'A1---Forest-Fires-are-Getting-Bigger.jpg',
+                        'A2---Acreage-Burned.png'
+                    ]
+                }
             }
         },
         {
             label: 'Global Deforestation',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://pbs.twimg.com/media/CNa83pbUEAIM8sA.png'
+                slider: {
+                    baseUrl: '/public/imgs/global-deforestation_climate-change/',
+                    imgs: [
+                        'B1--Deforestation-and-Climate-Change.jpg',
+                        'B2---deforestation-and-climate-change-mitigation.jpg',
+                        'B3---Deforestation-Effects.jpg',
+                        'B4---Causes-of-Deforestation.jpg'
+                    ]
+                }
             }
         },
         {
             label: 'Forests: Lungs of the Earth',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://svs.gsfc.nasa.gov/vis/a000000/a003900/a003947/'
+                video: '/public/videos/The-Forests-Lungs-of-the-Earth-(NASA-Imaging-of-CO2-and-Photosynthesis).m4v'
             }
         },
         {
             label: 'Projected Shifts in Forest Types',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.epa.gov/sites/production/files/2016-06/shiftinforesttypes-large.jpg'
+                slider: {
+                    baseUrl: '/public/imgs/projected-shift/',
+                    imgs: ['Projected-Shift-in-Forest-Type.jpg']
+                }
             }
         }
     ],
-    CC_SPECIES_RANGES_LINKS: [{
-            label: 'Species Range Change Interactive',
-            action: 'OPEN_PAGE',
-            payload: {
-                iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
-            }
-        },
-        {
-            label: 'Bees are Feeling the STING of Climate Change',
-            action: 'OPEN_PAGE',
-            payload: {
-                iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
-            }
-        }
-    ],
+    // CC_SPECIES_RANGES_LINKS: [{
+    //         label: 'Species Range Change Interactive',
+    //         action: 'OPEN_PAGE',
+    //         payload: {
+    //             iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
+    //         }
+    //     },
+    //     {
+    //         label: 'Bees are Feeling the STING of Climate Change',
+    //         action: 'OPEN_PAGE',
+    //         payload: {
+    //             iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
+    //         }
+    //     }
+    // ],
     CLIMATE_CHANGE_DISEASE_LINKS: [{
             label: 'Climate Change & Human Health',
             action: 'OPEN_PAGE',
             payload: {
-                img: 'https://www.cdc.gov/climateandhealth/images/climate_change_health_impacts600w.jpg'
+                slider: {
+                    baseUrl: '/public/imgs/climate-change-human-health/',
+                    imgs: ['A---Climate-Change-&-Human-Health-(CDC-image).jpg']
+                }
             }
         },
         {
             label: 'Rise in Vector Species',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/human-health#graphic-21020'
+                slider: {
+                    baseUrl: '/public/imgs/rise-vector-species/',
+                    imgs: ['B1---Projected-Change-in-Tick-Population.png',
+                        'B2---CO2-and-Mosquitos-in-Northeast-USA.png'
+                    ]
+                }
             }
         },
-        {
-            label: 'Forest Pest Video',
-            action: 'OPEN_PAGE',
-            payload: {
-                iframe: 'http://www.pressherald.com/2016/12/07/spread-by-trade-and-climate-bugs-butcher-americas-forests/video/'
-            }
-        },
-        {
-            label: 'Invasive Species',
-            action: 'OPEN_PAGE',
-        }
+        // {
+        //     label: 'Forest Pest Video',
+        //     action: 'OPEN_PAGE',
+        //     payload: {
+        //         iframe: 'http://www.pressherald.com/2016/12/07/spread-by-trade-and-climate-bugs-butcher-americas-forests/video/'
+        //     }
+        // },
+        // {
+        //     label: 'Invasive Species',
+        //     action: 'OPEN_PAGE',
+        // }
     ]
 };
