@@ -20426,7 +20426,7 @@
 	            }
 	        }
 	    }, {
-	        label: 'Global Temperature Time-lapse 1884-2012 (NASA Scientific VIsualization Studio)',
+	        label: 'Global Temperature Time-lapse 1884-2012 (NASA Scientific Visualization Studio)',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            video: 'public/videos/Global-Temp-Interactive-Map.mp4'
