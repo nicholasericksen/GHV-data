@@ -7,10 +7,22 @@ export default class Page extends Component {
         let content = null;
         const { iframe, video, youtube, slider } = this.props.btn.payload;
 
-        if (iframe) content = <iframe sandbox="allow-scripts allow-same-origin" src={iframe} />;
-        else if (youtube) content = <iframe src={youtube + "?autoplay=1"} />;
-        else if (video) content = <video src={video} autoPlay controls></video>;
-        else if (slider) content = <Slider slider={slider} label={this.props.btn.label} />;
+        if (iframe)
+        {
+            content = <iframe sandbox="allow-scripts allow-same-origin" src={iframe} />;
+        }
+        else if (youtube)
+        {
+            content = <iframe src={youtube + "?autoplay=1"} />;
+        }
+        else if (video)
+        {
+            content = <video src={video} autoPlay controls></video>;
+        }
+        else if (slider)
+        {
+            content = <Slider slider={slider} label={this.props.btn.label} />;
+        }
         else {
             //TODO Go back to the homepage
         }

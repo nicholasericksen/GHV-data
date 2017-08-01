@@ -4,20 +4,20 @@ export const MENUS = {
             action: 'CLIMATE_MENU_LINKS',
         },
         {
-            label: 'Biotic Communities',
+            label: 'Impact on Biotic Communities',
             action: 'BIOTIC_MENU_LINKS',
         },
         {
-            label: 'Water Resources',
+            label: 'Impact on Water Cycle & Resources',
             action: 'WATER_MENU_LINKS',
         }
     ],
     CLIMATE_MENU_LINKS: [{
-            label: 'Real Time Climate Tracking',
+            label: 'Real Time Climate Monitoring',
             action: 'REAL_TIME_CLIMATE_TRACKING_LINKS',
         },
         {
-            label: 'Polar Ice',
+            label: 'Polar and Glacial Ice',
             action: 'POLAR_ICE_LINKS',
         },
         {
@@ -29,7 +29,7 @@ export const MENUS = {
             action: 'CLIMATE_WEATHER_LINKS',
         },
         {
-            label: 'Global Temperature and Greenhouse Gas Concentration',
+            label: 'Global Temperatures and Greenhouse Gas Concentration',
             action: 'GLOBAL_TEMP_GG_LINKS',
         },
         {
@@ -105,21 +105,21 @@ export const MENUS = {
         }
     ],
     REAL_TIME_CLIMATE_TRACKING_LINKS: [{
-            label: 'Why Climate Data Matters',
+            label: 'Why Climate Data Matters (IRI Video)',
             action: 'OPEN_PAGE',
             payload: {
                 youtube: 'https://www.youtube.com/embed/-G8jy5ldiTU'
             }
         },
         {
-            label: 'NOAA Global Climate Dashboard',
+            label: 'NASA Climate Time Machine: Vital Signs of the Planet',
             action: 'OPEN_PAGE',
             payload: {
                 iframe: 'https://climate.nasa.gov/interactives/climate-time-machine'
             }
         },
         {
-            label: 'Ice Core Video',
+            label: 'Climate History in Ice Cores (NOVA Video Segment: Extreme Ice)',
             action: 'OPEN_PAGE',
             payload: {
                 video: 'public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
@@ -152,7 +152,7 @@ export const MENUS = {
         }
     ],
     SEA_LEVEL_RISE_LINKS: [{
-            label: 'If Antartica Melted: Antartic Ice Sheet Interactive',
+            label: 'If Antartica Melted: National Geographic Maps',
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
@@ -162,14 +162,14 @@ export const MENUS = {
             }
         },
         {
-            label: 'NOAA Interactive Map',
+            label: 'NOAA Interactive Map: Sea Level Rise and Mitigation',
             action: 'OPEN_PAGE',
             payload: {
                 iframe: 'https://coast.noaa.gov/slr/#/layer/slr'
             }
         },
         {
-            label: 'Yonkers & Hudson Valley Coastline',
+            label: 'Sea Level Rise Local Scenarios: Scenic Hudson Interactive Map',
             action: 'OPEN_PAGE',
             payload: {
                 iframe: 'http://scenichudson.org/slr/mapper#block-menu-block-1'
@@ -177,14 +177,14 @@ export const MENUS = {
         }
     ],
     CLIMATE_WEATHER_LINKS: [{
-            label: 'What Is Climate',
+            label: 'What Is Climate?',
             action: 'OPEN_PAGE',
             payload: {
                 video: 'public/videos/ClimateScience-EP2-final360.mp4'
             }
         },
         {
-            label: 'Weather vs Climate',
+            label: 'Trend and Variation (Climate versus Weather)',
             action: 'OPEN_PAGE',
             payload: {
                 youtube: 'https://www.youtube.com/embed/e0vj-0imOLw'
@@ -202,14 +202,14 @@ export const MENUS = {
             }
         },
         {
-            label: 'Global Temperature Interactive Map',
+            label: 'Global Temperature Time-lapse 1884-2012 (NASA Scientific VIsualization Studio)',
             action: 'OPEN_PAGE',
             payload: {
                 video: 'public/videos/Global-Temp-Interactive-Map.mp4'
             }
         },
         {
-            label: 'C02 and Temperaure Correlation',
+            label: 'Historical CO2 and Global Temperature Correlation',
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
@@ -219,7 +219,7 @@ export const MENUS = {
             }
         },
         {
-            label: 'Modern Era C02 and Temperature',
+            label: 'Modern Era CO2 and Temperature Correlation (1880-2010)',
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
@@ -229,7 +229,7 @@ export const MENUS = {
             }
         },
         {
-            label: 'NASA Video, Comparing Natural & Human Factors',
+            label: 'NASA Video Comparing Natural & Human Factors',
             action: 'OPEN_PAGE',
             payload: {
                 video: 'public/videos/NASA-Comparing-Natural-and-Human.mp4'
@@ -259,7 +259,7 @@ export const MENUS = {
             }
         },
         {
-            label: 'NOAA Drought Monitor USA',
+            label: 'NOAA Drought Monitor (Animated Maps)',
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
