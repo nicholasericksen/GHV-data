@@ -157,7 +157,43 @@ export const MENUS = {
             payload: {
                 slider: {
                     baseUrl: 'public/imgs/antarctica-melted/',
-                    imgs: ['canada.jpg', 'australia.jpg', 'europe.jpg', 'sa.jpg', 'sp.jpg', 'africa.jpg', 'asia.jpg']
+                    imgs: [
+                        {
+                            caption: 'North America\'s new coastline after land ice melt causes sea level to rise 216 feet would lose the eastern\
+                             seaboard, nearly all of Florida, and the Gulf Coast. Scientists say with limited global warming, it would take 5,000 \
+                             years for this ice to melt. With a runaway greenhouse effect, however, that timeline could shrink with the ice cover.',
+                            src: 'canada.jpg'
+                        },
+                        {
+                            caption: 'The major cities of Australia and South Pacific, where 4 out of 5 people live, would \
+                             be under water. Some of Australia\'s desert would be replaced with an inland sea.',
+                            src: 'australia.jpg'
+                        },
+                        {
+                            caption: 'In Europe, London, Venice, Stockholm, and St. Petersburg, would be swallowed up by the sea, including most of Denmark and the Netherlands.',
+                            src: 'europe.jpg'
+                        },
+                        {
+                            caption: 'South America\'s Amazon and Paraguay Rivers would become ocean inlets. Only the more mountainous regions of Central America would remain.',
+                            src: 'sa.jpg'
+                        },
+                        {
+                            caption: 'Antarctica looks very different without ice. East Antarctica has survived earlier warming periods, and has been getting more snow in recent decades.\
+                             West Antarctica, on the other hand is vulnerable and has experienced accelerated melting. \
+                            In 2017, a sheet the size of Delaware broke off into the ocean. Luckily, most of this ice is already on submerged bedrock and would not cause as much sea level rise.',
+                            src: 'sp.jpg'
+                        },
+                        {
+                            caption: 'Africa\'s coastline would change the least, though Mauritania, Senegal, Sierra Leone, and Egypt would be radically affected. \
+                            Also, without the albedo effect (ice\'s white surface reflecting the sun\'s light and heat), the African continent would have oppressively hot temperatures.',
+                            src: 'africa.jpg'
+                        },
+                        {
+                            caption: 'The greatest population centers along coastal India, China, and Bangladesh, where over a billion people live, would be underwater. \
+                             Tokyo, Japan would be a distant memory. Even a 6 foot sea-level rise would impact the planet\'s coastal communities greatly. Can we reverse the trend in time?',
+                            src: 'asia.jpg'
+                        }
+                     ]
                 }
             }
         },

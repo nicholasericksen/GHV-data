@@ -56,23 +56,27 @@ export default class Slider extends Component {
     }
 
     render() {
+        const { activeImageIndex } = this.state;
+
         const {
             label,
             slider
         } = this.props;
-
+        console.log("bkjsdfbksjd", slider.imgs);
         return(
             <div className="slider-container">
                 <h2>{label}</h2>
                 <div className="slider">
                     {this.renderNavButton('left')}
                     <div className="slide-container">
-                        <img className="slide" src={slider.baseUrl + slider.imgs[this.state.activeImageIndex]} />
-                        <div className="caption">
-                            sndfoiudsbnfidus sdiouf bsdiu fb sdiufb isdu fiu sdbfiu sdbfiubsdf  iubsdfi bsdiufb
-                            sidfub isdu fbiosudfb sodfi osdifn sodif osidfjn sdoifj sdoifj dsoif dsoif jsdoif jsd
-                            osid fnsdoifh dsoif sopdf sdpoifj sdpofj dposfjpodsf posdif usdpof sdpof jsdpofjsdpof sd
-                        </div>
+                        <img className="slide" src={slider.baseUrl + slider.imgs[activeImageIndex].src} />
+                        {slider.imgs[activeImageIndex].caption ?
+                            <div className="caption">
+                                {slider.imgs[activeImageIndex].caption}
+                            </div>
+                            :
+                            null
+                        }
                     </div>
                     {this.renderNavButton('right')}
                 </div>

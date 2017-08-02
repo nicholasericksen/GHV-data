@@ -20387,7 +20387,35 @@
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/antarctica-melted/',
-	                imgs: ['canada.jpg', 'australia.jpg', 'europe.jpg', 'sa.jpg', 'sp.jpg', 'africa.jpg', 'asia.jpg']
+	                imgs: [{
+	                    caption: 'North America\'s new coastline after land ice melt causes sea level to rise 216 feet would lose the eastern\
+	                             seaboard, nearly all of Florida, and the Gulf Coast. Scientists say with limited global warming, it would take 5,000 \
+	                             years for this ice to melt. With a runaway greenhouse effect, however, that timeline could shrink with the ice cover.',
+	                    src: 'canada.jpg'
+	                }, {
+	                    caption: 'The major cities of Australia and South Pacific, where 4 out of 5 people live, would \
+	                             be under water. Some of Australia\'s desert would be replaced with an inland sea.',
+	                    src: 'australia.jpg'
+	                }, {
+	                    caption: 'In Europe, London, Venice, Stockholm, and St. Petersburg, would be swallowed up by the sea, including most of Denmark and the Netherlands.',
+	                    src: 'europe.jpg'
+	                }, {
+	                    caption: 'South America\'s Amazon and Paraguay Rivers would become ocean inlets. Only the more mountainous regions of Central America would remain.',
+	                    src: 'sa.jpg'
+	                }, {
+	                    caption: 'Antarctica looks very different without ice. East Antarctica has survived earlier warming periods, and has been getting more snow in recent decades.\
+	                             West Antarctica, on the other hand is vulnerable and has experienced accelerated melting. \
+	                            In 2017, a sheet the size of Delaware broke off into the ocean. Luckily, most of this ice is already on submerged bedrock and would not cause as much sea level rise.',
+	                    src: 'sp.jpg'
+	                }, {
+	                    caption: 'Africa\'s coastline would change the least, though Mauritania, Senegal, Sierra Leone, and Egypt would be radically affected. \
+	                            Also, without the albedo effect (ice\'s white surface reflecting the sun\'s light and heat), the African continent would have oppressively hot temperatures.',
+	                    src: 'africa.jpg'
+	                }, {
+	                    caption: 'The greatest population centers along coastal India, China, and Bangladesh, where over a billion people live, would be underwater. \
+	                             Tokyo, Japan would be a distant memory. Even a 6 foot sea-level rise would impact the planet\'s coastal communities greatly. Can we reverse the trend in time?',
+	                    src: 'asia.jpg'
+	                }]
 	            }
 	        }
 	    }, {
@@ -20841,11 +20869,12 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var activeImageIndex = this.state.activeImageIndex;
 	            var _props = this.props,
 	                label = _props.label,
 	                slider = _props.slider;
 
-
+	            console.log("bkjsdfbksjd", slider.imgs);
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'slider-container' },
@@ -20861,12 +20890,12 @@
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'slide-container' },
-	                        _react2.default.createElement('img', { className: 'slide', src: slider.baseUrl + slider.imgs[this.state.activeImageIndex] }),
-	                        _react2.default.createElement(
+	                        _react2.default.createElement('img', { className: 'slide', src: slider.baseUrl + slider.imgs[activeImageIndex].src }),
+	                        slider.imgs[activeImageIndex].caption ? _react2.default.createElement(
 	                            'div',
 	                            { className: 'caption' },
-	                            'sndfoiudsbnfidus sdiouf bsdiu fb sdiufb isdu fiu sdbfiu sdbfiubsdf  iubsdfi bsdiufb sidfub isdu fbiosudfb sodfi osdifn sodif osidfjn sdoifj sdoifj dsoif dsoif jsdoif jsd osid fnsdoifh dsoif sopdf sdpoifj sdpofj dposfjpodsf posdif usdpof sdpof jsdpofjsdpof sd'
-	                        )
+	                            slider.imgs[activeImageIndex].caption
+	                        ) : null
 	                    ),
 	                    this.renderNavButton('right')
 	                )
@@ -20920,7 +20949,7 @@
 
 
 	// module
-	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.nav-btns {\n  color: #656565;\n  position: absolute;\n  right: 15px;\n  top: 40px;\n  cursor: pointer;\n}\n.nav-btns .nav-btn {\n  float: left;\n  padding-right: 35px;\n  font-size: 50px;\n}\n.nav-btns .nav-btn .info-modal {\n  position: absolute;\n  top: 0;\n  position: fixed;\n  right: 35px;\n  height: 580px;\n  background-color: #f1f1f1;\n  width: 1000px;\n  top: 130px;\n  border: 3px solid grey;\n  border-radius: 10px;\n  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);\n}\n.nav-btns .nav-btn .info-modal .info-modal-content {\n  padding: 30px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content p {\n  font-size: 22px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content .logo-container {\n  position: absolute;\n  bottom: 65px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content .logo-container img {\n  width: 240px;\n  padding: 0 20px;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n  font-size: 36px;\n}\n.main-content .page-content .slider-container .slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .slider-container .slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .slider-container .slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 90px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .slider-container .slider .slide-container {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  padding-top: 25px;\n}\n.main-content .page-content .slider-container .slider .slide-container .slide {\n  display: block;\n  margin: 0 auto;\n  box-shadow: 10px 10px 10px #444444;\n  max-height: 75%;\n  max-width: 80%;\n}\n.main-content .page-content .slider-container .slider .slide-container .caption {\n  color: white;\n  display: block;\n  width: 65%;\n  padding-top: 5px;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
+	exports.push([module.id, ".header {\n  z-index: 999;\n  background-color: white;\n  position: fixed;\n  width: 100%;\n}\n.nav-btns {\n  color: #656565;\n  position: absolute;\n  right: 15px;\n  top: 40px;\n  cursor: pointer;\n}\n.nav-btns .nav-btn {\n  float: left;\n  padding-right: 35px;\n  font-size: 50px;\n}\n.nav-btns .nav-btn .info-modal {\n  position: absolute;\n  top: 0;\n  position: fixed;\n  right: 35px;\n  height: 580px;\n  background-color: #f1f1f1;\n  width: 1000px;\n  top: 130px;\n  border: 3px solid grey;\n  border-radius: 10px;\n  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);\n}\n.nav-btns .nav-btn .info-modal .info-modal-content {\n  padding: 30px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content p {\n  font-size: 22px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content .logo-container {\n  position: absolute;\n  bottom: 65px;\n}\n.nav-btns .nav-btn .info-modal .info-modal-content .logo-container img {\n  width: 240px;\n  padding: 0 20px;\n}\n.main-content {\n  margin: 0 auto;\n  padding-top: 145px;\n}\n.main-content .page-content {\n  height: calc(100% - 150px);\n}\n.main-content .page-content video,\n.main-content .page-content iframe {\n  width: 100%;\n  height: 100%;\n}\n.main-content .page-content video {\n  background-color: #000;\n}\n.main-content .page-content .slider-container {\n  background-color: #2F2F2F;\n}\n.main-content .page-content .slider-container h2 {\n  padding-top: 10px;\n  position: absolute;\n  padding-left: 25px;\n  color: #fdfbfb;\n  font-size: 36px;\n}\n.main-content .page-content .slider-container .slider {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main-content .page-content .slider-container .slider .page-content {\n  background-color: #2f2f2f;\n}\n.main-content .page-content .slider-container .slider .slider-btn {\n  float: left;\n  width: 10%;\n  text-align: center;\n  font-size: 90px;\n  color: #DCDCDC;\n  cursor: pointer;\n}\n.main-content .page-content .slider-container .slider .slide-container {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  padding-top: 50px;\n}\n.main-content .page-content .slider-container .slider .slide-container .slide {\n  display: block;\n  margin: 0 auto;\n  box-shadow: 10px 10px 10px #444444;\n  max-height: 75%;\n  max-width: 80%;\n}\n.main-content .page-content .slider-container .slider .slide-container .caption {\n  color: white;\n  display: block;\n  width: 85%;\n  padding-top: 5px;\n  text-align: center;\n  font-size: 16px;\n}\n.menu-text {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.main-menu {\n  margin: 0 auto;\n  width: 80%;\n  max-width: 845px;\n}\n.menu-container ul {\n  list-style: none;\n  padding: 0;\n}\n.menu-container li {\n  height: 150px;\n  width: 100%;\n  border: 1px solid black;\n  vertical-align: middle;\n  font-size: 36px;\n  border-radius: 15px;\n  /* color: #fff; */\n  border: 5px solid #4c88c3;\n  /* border: none; */\n  margin-top: 25px;\n  background-color: #256fbd;\n  color: #FFF;\n  text-align: center;\n}\n.menu-container li:hover {\n  cursor: pointer;\n  /*background-color: #bfc8d0;*/\n  background-color: #4386a0;\n  text-decoration: none;\n}\n.breadcrumbs {\n  display: none;\n  width: 295px;\n  position: fixed;\n  /* margin-top: 25px; */\n  right: 25px;\n  top: 80px;\n  background-color: #FFF;\n  border: 4px solid #ccb5b5;\n  border-radius: 3px;\n}\n.breadcrumbs.active {\n  display: block;\n}\n.breadcrumbs .current-page {\n  position: absolute;\n  top: 10px;\n  left: 20px;\n  color: #8e8c8c;\n}\n.breadcrumbs .category-btn {\n  height: 50px;\n  font-size: 22px;\n  border: none;\n  color: #000;\n  background-color: #FFF;\n  text-align: underline;\n  text-decoration: underline;\n  text-align: left;\n}\n.breadcrumbs .category-btn:hover {\n  background-color: #FFF;\n}\n.breadcrumbs .menu-text {\n  align-items: left;\n}\n", ""]);
 
 	// exports
 
