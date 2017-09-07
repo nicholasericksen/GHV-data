@@ -157,7 +157,31 @@ export const MENUS = {
             payload: {
                 slider: {
                     baseUrl: 'public/imgs/antarctica-melted/',
-                    imgs: ['canada.jpg', 'australia.jpg', 'europe.jpg', 'sa.jpg', 'sp.jpg', 'africa.jpg', 'asia.jpg']
+                    captions: [
+                        'North America\'s new coastline after land ice melt causes sea level to rise 216 feet would lose the eastern\
+                         seaboard, nearly all of Florida, and the Gulf Coast. Scientists say with limited global warming, it would take 5,000 \
+                         years for this ice to melt. With a runaway greenhouse effect, however, that timeline could shrink with the ice cover.',
+                         'The major cities of Australia and South Pacific, where 4 out of 5 people live, would \
+                          be under water. Some of Australia\'s desert would be replaced with an inland sea.',
+                          'In Europe, London, Venice, Stockholm, and St. Petersburg, would be swallowed up by the sea, including most of Denmark and the Netherlands.',
+                          'South America\'s Amazon and Paraguay Rivers would become ocean inlets. Only the more mountainous regions of Central America would remain.',
+                          'Antarctica looks very different without ice. East Antarctica has survived earlier warming periods, and has been getting more snow in recent decades.\
+                           West Antarctica, on the other hand is vulnerable and has experienced accelerated melting. \
+                          In 2017, a sheet the size of Delaware broke off into the ocean. Luckily, most of this ice is already on submerged bedrock and would not cause as much sea level rise.',
+                          'Africa\'s coastline would change the least, though Mauritania, Senegal, Sierra Leone, and Egypt would be radically affected. \
+                          Also, without the albedo effect (ice\'s white surface reflecting the sun\'s light and heat), the African continent would have oppressively hot temperatures.',
+                          'The greatest population centers along coastal India, China, and Bangladesh, where over a billion people live, would be underwater. \
+                           Tokyo, Japan would be a distant memory. Even a 6 foot sea-level rise would impact the planet\'s coastal communities greatly. Can we reverse the trend in time?'
+                    ],
+                    imgs: [
+                            'canada.jpg',
+                            'australia.jpg',
+                            'europe.jpg',
+                            'sa.jpg',
+                            'sp.jpg',
+                            'africa.jpg',
+                            'asia.jpg'
+                     ]
                 }
             }
         },
@@ -177,7 +201,7 @@ export const MENUS = {
         }
     ],
     CLIMATE_WEATHER_LINKS: [{
-            label: 'What Is Climate?',
+            label: 'What Is Climate? (Video by Utah Education Network Climate Science Series)',
             action: 'OPEN_PAGE',
             payload: {
                 video: 'public/videos/ClimateScience-EP2-final360.mp4'
@@ -197,7 +221,8 @@ export const MENUS = {
             payload: {
                 slider: {
                     baseUrl: 'public/imgs/greenhouse-effect/',
-                    imgs: ['Greenhouse-Gasses.jpg', 'The-Greenhouse-Effect.jpg']
+                    imgs: ['Greenhouse-Gasses.jpg', 'The-Greenhouse-Effect.jpg'],
+                    captions: ['Earth\'s atmosphere consists of a mixture of gases. The composition is 78% Nitrogen, 21% Oxygen, .9% Argon, and 2% other variable gases. Scientists study these variable gases especially because their heat trapping potential. They include Carbon Dioxide, Methane, Nitrous Oxide, and Sulfur Hexaflouride, as well as Ozone (O3), and Water Vapor.', 'Greenhouse Gases allow sunlight through to be absorbed or reflected by the sun, but trap some of the re-radiated long waves from leaving our atmosphere, thereby warming our planet. Without greenhouse gases, Earth would be cold and uninhabitable, like Mars. However, modern agriculture, industry, and energy production has greatly increased greenhouse gas concentration. 99% of scientists agree that this human activity has caused accelerated global warming (climate change).']
                 }
             }
         },
@@ -214,7 +239,8 @@ export const MENUS = {
             payload: {
                 slider: {
                     baseUrl: 'public/imgs/c02-temp-correlation/',
-                    imgs: ['CO2-and-Temperature-Corr.jpg']
+                    imgs: ['CO2-and-Temperature-Corr.jpg'],
+                    captions: ['Scientists measure trapped gases and oxygen isotopes in annual layers of ice core samples to get data on CO2 concentrations in the atmosphere and global temperatures over the past 800,000 years. Graphing the data presents a strong direct correlation between the two, and strongly suggests that their relationship might be what is driving the current warming trend on Earth.']
                 }
             }
         },
@@ -224,7 +250,8 @@ export const MENUS = {
             payload: {
                 slider: {
                     baseUrl: 'public/imgs/modern-era-c02-temp/',
-                    imgs: ['Modern-Era-global-temp-and-co2-NOAA-source.gif', 'Figure1.jpg']
+                    imgs: ['Modern-Era-global-temp-and-co2-NOAA-source.gif', 'Figure1.jpg'],
+                    captions: ['Blue bars represent cooler than 1880-2010 average temperature (read bottom of bar) and red bars represent warmer than average (read top of bars). Black line represents CO2 concentrations in parts per million. Climate scientists have warned for decades that we should not surpass the 400 ppm threshold to keep the warming trend in check. However, in September 2016, we permanently crossed the 400ppm threshold. 2016 was the hottest year ever recorded in human history.']
                 }
             }
         },
@@ -254,6 +281,20 @@ export const MENUS = {
                         'D2---India-Heat-Wave-May-2015-Melting-Roads-(CNN).jpg',
                         'D3---India-Heat-Wave-May-2015-Men-Sleep-on-Road-Divider-in-Delhi.jpg',
                         'E---Western-US-Heat-Wave-June-2017.jpg'
+                    ],
+                    captions: [
+                        'Global warming has caused more temperature modulation over land, increasing the incidence of extreme heat waves. The five deadliest in recorded human history have all taken place in the last two decades.',
+                        'The 2003 European heatwave led to the hottest summer on record in Europe since at least 1540. In late June 2006, another heatwave broke many of the 2003 records for the UK, Belgium, Ireland, the Netherlands, and Germany. These events, once occurring 1-in-30 years, are now expected 1-in-3.5 years.',
+                        ' In July 2010, Moscow and western Russia experienced record-breaking temperatures (up to 12 degrees Celsius higher than normal) that led to severely dry land.',
+                        'The whole Northern Hemisphere experienced much higher than average temperatures in 2010, but Russia was the hardest hit. Between scorching temperatures, extreme drought causing wildfire, and resulting poor air quality, over 10,000 deaths may be attributed to this heatwave in Russia alone.',
+                        'By the end of the heatwave, Russia\'s forests were so desiccated, that wildfire ran rampant through September in the forests to the west, causing $15 billion in damages, and adding to the death-toll started by the heatwaves.',
+                        'All told, over 740,000 acres of forests burned.',
+                        'All told, over 740,000 acres of forests burned.',
+                        'In May 2015, India saw temperatures exceeding 115 degrees Fahrenheit. This map shows hottest daytime high temperature during the week May 24-30, 2015. NOAA Climate.gov map by Fiona Martin, based on interpolated weather station data provided by the India Meterological Department.',
+                        'Sheep being herded across a dried-up pond on the outskirts of Delhi. Farmers and laborers were hottest hit. Crops were ravaged by the heat and thousands of livestock died out in pasture.',
+                        'Temperatures in the cities were high enough to melt the blacktop.',
+                        'Heatwaves disproportionately affect the marginalized in society. Poorer people haven\'t the amenities, such as sufficient shelter, ice water, and air-conditioning, to escape extreme temperatures. Sick and elderly are more susceptible to heat stroke and dehydration. Some reports say that over 2300 people died in India from the heatwave.',
+                        'The U.S.A. has also experienced more frequent and extreme heatwaves in the past few decades. Summer 2017 brought temperatures to southern California and Arizona that exceeded 125 degrees Fahrenheit, bringing brownouts from excessive A/C demand on the grid, buckled roads, temporary business closures, and over 12 deaths.',
                     ]
                 }
             }
@@ -266,6 +307,10 @@ export const MENUS = {
                     baseUrl: 'public/imgs/extreme-draught/',
                     imgs: ['US-Drought-Index-2011-2012.gif',
                         'US-Drought-Index-2014-2015.gif'
+                    ],
+                    captions:[
+                        '2011-2012 brought extreme drought to the Southwest, especially Texas, and Great Plains. Texas suffered $7.62 billion in crop and livestock losses, with nearly 1/3 of cattle dying in the field from dehydration. Wildfires spiked: 23,835 fires burned more than 3.8 million acres and destroyed 2,763 Texas homes over 2011. At its peak in August 2012 the drought covered approximately 81% of the United States. Corn prices shot up 35% due to crop failure.',
+                        'The drought in the western coast hit critical mass in 2014, with the Governor Brown declaring California in a state of emergency. California\'s ancient forests, a national treasure, were left weakened and vulnerable. During the 5-year drought period, California greatly depleted groundwater reserves for agriculture and industry, causing the land to sink in places, seawater intrusion in others, and water allocations to be reduced all over.'
                     ]
                 }
             }
@@ -280,6 +325,12 @@ export const MENUS = {
                         'B---Billion-Dollar-Events-since-2008.jpg',
                         'C---natural-catastrophies.jpg',
                         'D--weather-catastrophies.png'
+                    ],
+                    captions: [
+                        'This NOAA map shows the number of billion-dollar disasters affecting each U.S. state between 1980 and 2016. Deeper color concentration illustrates greater number of disasters. Total number of disasters equals 203. Image adapted by Climate.gov, based on NCEI originals by Adam Smith.',
+                        'Map showing the number of times each state has been part of a billion-dollar weather or climate disaster of any type from 1980-2016. The darker the red, the greater the number of events the state has experienced. U.S. South/Central and Southeast regions experienced a higher frequency of billion-dollar disaster events than any other region. Map adapted by Climate.gov from originals provided by NOAA NCEI.',
+                        'Around the world, natural catastrophes are on the rise. Many can be directly classified as climatological in nature, such as drought, heatwaves, and forest fires. The increase in hydrological events, such as hurricanes and flood-rains, may be influenced by climate change, but it is harder to prove direct causation.',
+                        'Costly weather-related disasters have had a crippling effect on major economies around the world. Economic losses (property damage, loss of goods and services, infrastructure, communication lines) have increased even when the number of events have decreased because the severity of each extreme weather event has gone up.'
                     ]
                 }
             }
@@ -294,12 +345,18 @@ export const MENUS = {
                         'B---CS-Water_flood_trends_v5.png',
                         'C---heavy-precipitation.png',
                         'D---CS_winter_storms_v4.png'
+                    ],
+                    captions: [
+                        'One measure of a heavy precipitation event is a 2-day precipitation total that is exceeded on average only once in a five-year period, also known as a once-in-five-year event. As this extreme precipitation index for 1901-2012 shows, the occurrence of such events has become much more common in recent decades. Changes are compared to the period 1901-1960, and do not include Alaska or Hawai‘i. The 2000s decade (far right bar) includes 2001-2012. (Figure source: adapted from Kunkel et al. 20131).',
+                        'Trend magnitude (triangle size) and direction (green = increasing trend, brown = decreasing trend) of annual flood magnitude from the 1920s through 2008. Flooding in local areas can be affected by multiple factors, including land-use change, dams, and diversions of water for use. Most significant are increasing trends for floods in Midwest and Northeast, and a decreasing trend in the Southwest.(Figure source: Peterson et al. 20131).',
+                        'The number of "extreme precipitation" events around the U.S.A. are on the rise, especially in the Northeast, Midwest, Southeast, and Great Plains. (Figure source: adapted from Kunkel et al. 20131).',
+                        'Though snowfall in the Northern Hemisphere has decreased overall due to increasing global temperatures, the intensity of winter events has increased in many areas, because a warmer atmosphere can hold more moisture. The bar for each decade represents the difference from the long-term average. Storm frequencies have increased in middle and high latitudes, and storm intensities have increased in middle latitudes. (Figure source: updated from CCSP 2008).'
                     ]
                 }
             }
         },
         {
-            label: 'Hurricane Sandy',
+            label: 'Hurricane Sandy The jury is out on the climate change connection. (NOVA Video)',
             action: 'OPEN_PAGE',
             payload: {
                 video: 'public/videos/6V-Hurricane-Sandy-and-Climate-Change-Connection.mp4'
