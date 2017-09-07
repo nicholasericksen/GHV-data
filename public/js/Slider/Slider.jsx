@@ -62,7 +62,6 @@ export default class Slider extends Component {
             label,
             slider
         } = this.props;
-        console.log("bkjsdfbksjd", slider);
         return(
             <div className="slider-container">
                 <h2>{label}</h2>

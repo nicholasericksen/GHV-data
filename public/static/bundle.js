@@ -20861,7 +20861,6 @@
 	                label = _props.label,
 	                slider = _props.slider;
 
-	            console.log("bkjsdfbksjd", slider);
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'slider-container' },
