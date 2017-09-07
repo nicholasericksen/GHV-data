@@ -62,17 +62,17 @@ export default class Slider extends Component {
             label,
             slider
         } = this.props;
-        console.log("bkjsdfbksjd", slider.imgs);
+        console.log("bkjsdfbksjd", slider);
         return(
             <div className="slider-container">
                 <h2>{label}</h2>
                 <div className="slider">
                     {this.renderNavButton('left')}
                     <div className="slide-container">
-                        <img className="slide" src={slider.baseUrl + slider.imgs[activeImageIndex].src} />
-                        {slider.imgs[activeImageIndex].caption ?
+                        <img className="slide" src={slider.baseUrl + slider.imgs[activeImageIndex]} />
+                        {slider.captions ?
                             <div className="caption">
-                                {slider.imgs[activeImageIndex].caption}
+                                {slider.captions[activeImageIndex]}
                             </div>
                             :
                             null
