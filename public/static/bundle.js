@@ -20256,35 +20256,51 @@
 	});
 	var MENUS = exports.MENUS = {
 	    MAIN_MENU_LINKS: [{
-	        label: 'Climate Monitoring',
-	        action: 'CLIMATE_MENU_LINKS'
+	        label: 'Climate Science',
+	        action: 'MENU_1'
 	    }, {
-	        label: 'Impact on Biotic Communities',
-	        action: 'BIOTIC_MENU_LINKS'
+	        label: 'Climate Change Impact',
+	        action: 'MENU_2'
 	    }, {
-	        label: 'Impact on Water Cycle & Resources',
-	        action: 'WATER_MENU_LINKS'
+	        label: 'Adaptation and Resiliency',
+	        action: 'MENU_3'
 	    }],
-	    CLIMATE_MENU_LINKS: [{
-	        label: 'Real Time Climate Monitoring',
-	        action: 'REAL_TIME_CLIMATE_TRACKING_LINKS'
-	    }, {
-	        label: 'Polar and Glacial Ice',
-	        action: 'POLAR_ICE_LINKS'
-	    }, {
-	        label: 'Sea Level Rise',
-	        action: 'SEA_LEVEL_RISE_LINKS'
+	    MENU_1: [{
+	        label: 'Why Climate Data Matters',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            youtube: 'https://www.youtube.com/embed/-G8jy5ldiTU'
+	        }
 	    }, {
 	        label: 'Climate vs. Weather',
 	        action: 'CLIMATE_WEATHER_LINKS'
 	    }, {
-	        label: 'Global Temperatures and Greenhouse Gas Concentration',
-	        action: 'GLOBAL_TEMP_GG_LINKS'
+	        label: 'Historical Climate Change: Clues in Trees and Ice',
+	        action: 'HISTORICAL_CLIMATE_LINKS'
 	    }, {
-	        label: 'Climate Change and Extreme Weather Events',
-	        action: 'CC_EXTREME_WEATHER'
+	        label: 'Real Time Climate Monitoring',
+	        action: 'REAL_TIME_CLIMATE_TRACKING_LINKS'
+	    }, {
+	        label: 'Natural Forces: Volcanos, Sunspots, and Meteors, Oh My!',
+	        action: 'NATURAL_FORCES_LINKS'
+	    },
+	    // {
+	    //     label: 'Polar and Glacial Ice',
+	    //     action: 'POLAR_ICE_LINKS',
+	    // },
+	    // {
+	    //     label: 'Sea Level Rise',
+	    //     action: 'SEA_LEVEL_RISE_LINKS',
+	    // },
+	    {
+	        label: 'The Greenhouse Effect and Anthropogenic Warming',
+	        action: 'GLOBAL_TEMP_GG_LINKS'
+	        // {
+	        //     label: 'Climate Change and Extreme Weather Events',
+	        //     action: 'CC_EXTREME_WEATHER',
+	        // }
 	    }],
-	    BIOTIC_MENU_LINKS: [{
+	    MENU_2: [{
 	        label: 'Climate Change and Agriculture',
 	        action: 'CC_AGRICULTURE_LINKS'
 	    }, {
@@ -20299,7 +20315,7 @@
 	        label: 'Climate Change and Disease',
 	        action: 'CLIMATE_CHANGE_DISEASE_LINKS'
 	    }],
-	    WATER_MENU_LINKS: [{
+	    MENU_3: [{
 	        label: 'Deluge',
 	        action: 'OPEN_PAGE',
 	        payload: {
@@ -20341,22 +20357,16 @@
 	        }
 	    }],
 	    REAL_TIME_CLIMATE_TRACKING_LINKS: [{
-	        label: 'Why Climate Data Matters (IRI Video)',
-	        action: 'OPEN_PAGE',
-	        payload: {
-	            youtube: 'https://www.youtube.com/embed/-G8jy5ldiTU'
-	        }
-	    }, {
 	        label: 'NASA Climate Time Machine: Vital Signs of the Planet',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            iframe: 'https://climate.nasa.gov/interactives/climate-time-machine'
 	        }
 	    }, {
-	        label: 'Climate History in Ice Cores (NOVA Video Segment: Extreme Ice)',
+	        label: 'Local Weather and River Conditions',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: 'public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
+	            iframe: 'http://hudson.dl.stevens-tech.edu/hrecos/d/index.shtml'
 	        }
 	    }],
 	    POLAR_ICE_LINKS: [{
@@ -20379,6 +20389,45 @@
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            iframe: 'http://nsidc.org/data/tools/arctic-sea-ice-chart/'
+	        }
+	    }],
+	    HISTORICAL_CLIMATE_LINKS: [{
+	        label: "Dendrichronology: What tree cores tell us about local climate history.",
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            youtube: 'https://www.youtube.com/embed/-Vfg4GieRTc'
+	        }
+	    }, {
+	        label: 'Climate History in Ice Cores (NOVA Video Segment: Extreme Ice)',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            video: 'public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
+	        }
+	    }],
+	    NATURAL_FORCES_LINKS: [{
+	        label: 'Natural Cycles: Evidence of Change',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            youtube: 'https://www.youtube.com/embed/2_10jtPCjQw'
+	        }
+	    }, {
+	        label: 'Natural Climate Forces',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            slider: {
+	                baseUrl: 'public/imgs/natural-climate-forces/',
+	                captions: ['Not only human behavior cause climatic changes. Uncontrollable factors like variation of solar radiation cause\ changes in climate by affecting the global warming via cycle sunspot activity.  Another factor is the orbital variation.\ Seasonal distribution of earth is mainly due to the rotation of the earth in current orbit, a slight change of the earth\’s\ orbit can induce a large change in sunlight that reach earth surface and cause seasonal changes on earth. Variation of\ earth\’s\ orbit can be due to\
+	                        1.Change in tilt angle of earth’s axis of rotation\n\
+	                        2.Precession of earth axis\n\
+	                        3.Combination of above phenomena.\n', 'Global-average radiative forces (RF) estimates and ranges in 2005 for anthropogenic carbon dioxide (CO2), methane (CH4),\ nitrous oxide (N2O) and other important agents and mechanisms, together with the typical geographical extent (spatial scale) of the forcing and the assessed level of scientific understanding (LOSU). The net anthropogenic radiative forcing and its range are also shown. These require summing asymmetric uncertainty estimates from the component terms, and cannot be obtained by simple addition. Additional forcing factors not included here are considered to have a very low LOSU. Volcanic aerosols contribute an additional natural forcing but are not included in this figure due to their episodic nature. Range for linear contrails does not include other possible effects of aviation on cloudiness.'],
+	                imgs: ['CS-1-Natural-climate-forces.jpg', '2-ipcc-source.png']
+	            }
+	        }
+	    }, {
+	        label: 'NASA Video Comparing Natural & Human Factors',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            video: 'public/videos/NASA-Comparing-Natural-and-Human.mp4'
 	        }
 	    }],
 	    SEA_LEVEL_RISE_LINKS: [{
@@ -20441,7 +20490,7 @@
 	            video: 'public/videos/Global-Temp-Interactive-Map.mp4'
 	        }
 	    }, {
-	        label: 'Historical CO2 and Global Temperature Correlation',
+	        label: 'CO2 Temperature Correlation (past 800,000 years)',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
@@ -20451,7 +20500,17 @@
 	            }
 	        }
 	    }, {
-	        label: 'Modern Era CO2 and Temperature Correlation (1880-2010)',
+	        label: 'Natural and Human Factors',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            slider: {
+	                baseUrl: 'public/imgs/natural-human-factors/',
+	                captions: ['Observed global average changes (black line), model simulations using only changes in natural factors (solar and volcanic) in green, and model simulations with the addition of human-induced emissions (blue). Climate changes since 1950 cannot be explained by natural factors or variability, and can only be explained by human factors. '],
+	                imgs: ['models-observed-human-natural-source-EPA.png']
+	            }
+	        }
+	    }, {
+	        label: 'Post Industrial C02 and Temperature (1850-2015)',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
@@ -20459,12 +20518,6 @@
 	                imgs: ['Modern-Era-global-temp-and-co2-NOAA-source.gif', 'Figure1.jpg'],
 	                captions: ['Blue bars represent cooler than 1880-2010 average temperature (read bottom of bar) and red bars represent warmer than average (read top of bars). Black line represents CO2 concentrations in parts per million. Climate scientists have warned for decades that we should not surpass the 400 ppm threshold to keep the warming trend in check. However, in September 2016, we permanently crossed the 400ppm threshold. 2016 was the hottest year ever recorded in human history.']
 	            }
-	        }
-	    }, {
-	        label: 'NASA Video Comparing Natural & Human Factors',
-	        action: 'OPEN_PAGE',
-	        payload: {
-	            video: 'public/videos/NASA-Comparing-Natural-and-Human.mp4'
 	        }
 	    }],
 	    CC_EXTREME_WEATHER: [{

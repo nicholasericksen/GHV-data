@@ -308,9 +308,9 @@ export const MENUS = {
             action: 'OPEN_PAGE',
             payload: {
                 slider: {
-                        baseUrl: 'public/imgs/natual-human-factors/',
+                        baseUrl: 'public/imgs/natural-human-factors/',
                         captions: ['Observed global average changes (black line), model simulations using only changes in natural factors (solar and volcanic) in green, and model simulations with the addition of human-induced emissions (blue). Climate changes since 1950 cannot be explained by natural factors or variability, and can only be explained by human factors. '],
-                        imgs: ['public/imgs/c02-temp-correlation/']
+                        imgs: ['models-observed-human-natural-source-EPA.png']
                 }
             }
         },
