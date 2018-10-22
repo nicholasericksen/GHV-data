@@ -36,10 +36,7 @@ export const MENUS = {
             label: 'Natural Forces: Volcanos, Sunspots, and Meteors, Oh My!',
             action: 'NATURAL_FORCES_LINKS',
         },
-        // {
-        //     label: 'Polar and Glacial Ice',
-        //     action: 'POLAR_ICE_LINKS',
-        // },
+        // TODO: remove these
         // {
         //     label: 'Sea Level Rise',
         //     action: 'SEA_LEVEL_RISE_LINKS',
@@ -48,65 +45,67 @@ export const MENUS = {
             label: 'The Greenhouse Effect and Anthropogenic Warming',
             action: 'GLOBAL_TEMP_GG_LINKS',
         }
-        // {
-        //     label: 'Climate Change and Extreme Weather Events',
-        //     action: 'CC_EXTREME_WEATHER',
-        // }
     ],
-    MENU_2: [{
-            label: 'Climate Change and Agriculture',
+    MENU_2: [
+        {
+            label: 'Polar and Glacial Ice',
+            action: 'POLAR_ICE_LINKS',
+        },
+        {
+            label: 'Water Cycle and Extreme Weather',
+            action: 'WATER_CYCLE_EXTREME_WEATHER',
+        },
+        {
+            label: 'Oceans and Coasts',
+            action: 'SEA_LEVEL_RISE_LINKS',
+        },
+        {
+            label: 'Agriculture',
             action: 'CC_AGRICULTURE_LINKS',
         },
         {
-            label: 'Climate Change and Forest Cover',
+            label: 'Forrest Cover',
             action: 'CC_FOREST_COVER_LINKS',
         },
+        {
+            label: 'Animal Ranges',
+            action: 'CC_SPECIES_RANGES_LINKS',
+        },
+        {
+            label: 'Human Health And Disease',
+            action: 'CLIMATE_CHANGE_DISEASE_LINKS',
+        }
+        //{
+        //    label: 'Climate Change and Agriculture',
+        //    action: 'CC_AGRICULTURE_LINKS',
+        //},
+        //{
+        //    label: 'Climate Change and Forest Cover',
+        //    action: 'CC_FOREST_COVER_LINKS',
+        //},
         // {
         //     label: 'Climate Change and Species Ranges',
         //     action: 'CC_SPECIES_RANGES_LINKS',
         // },
-        {
-            label: 'Climate Change and Disease',
-            action: 'CLIMATE_CHANGE_DISEASE_LINKS',
-        }
+        //{
+        //    label: 'Climate Change and Disease',
+        //    action: 'CLIMATE_CHANGE_DISEASE_LINKS',
+        //}
     ],
-    MENU_3: [{
-            label: 'Deluge',
-            action: 'OPEN_PAGE',
-            payload: {
-                video: 'public/videos/Deluge.mp4'
-            }
+    MENU_3: [
+        {
+            label: 'The Global Effort',
+            action: 'GLOBAL_EFFECT'
         },
         {
-            label: 'Drought',
-            action: 'OPEN_PAGE',
-            payload: {
-                video: 'public/videos/Drought.mp4'
-            }
+            label: 'Coastal Resilience',
+            action: 'COASTAL_RESILIENCE'
         },
         {
-            label: 'Freshwater Availablity and Consumption',
-            action: 'OPEN_PAGE',
-            payload: {
-                slider: {
-                    baseUrl: 'public/imgs/water/',
-                    imgs: ['B---Freshwater-Availability-in-US.png']
-                }
-            }
-
-        },
-        {
-            label: 'Water Contamination',
-            action: 'OPEN_PAGE',
-            payload: {
-                slider: {
-                    baseUrl: 'public/imgs/water/',
-                    imgs: [
-                        'C---Climate-Change-_-Water-Contamination.jpg'
-                    ]
-                }
-            }
-        },
+            label: 'Think Globally, Act Locally',
+            action: 'THINK_GLOBALLY'
+        }
+/* TODO: find out where this goes
         {
             label: 'Water and Energy',
             action: 'OPEN_PAGE',
@@ -119,6 +118,241 @@ export const MENUS = {
                 }
             }
         }
+*/
+    ],
+GLOBAL_EFFECT: [
+    {
+        label: 'Benefits of Global Action',
+        action: 'OPEN_PAGE',
+        payload: {
+            youtube: 'https://www.youtube.com/embed/_Iz0NKA1yuo'
+        }
+    },
+    {
+        label: 'Paris Agreement Interactive',
+        action: 'OPEN_PAGE',
+        payload: {
+            iframe: 'https://cait.wri.org/indc/#/ratification?lang=en'
+        }
+    },
+    {
+        label: 'Climate Smart Agriculture',
+        action: 'OPEN_PAGE',
+        payload: {
+            youtube: 'https://www.youtube.com/embed/lUdNMsVDIZ0'
+        }
+    },
+    {
+        label: 'Breeding Resilience into our Forests Case Study',
+        action: 'OPEN_PAGE',
+        payload: {
+            video: 'public/imgs/3_1_4_video.mp4'
+        }
+    },
+    {
+        label: 'Meeting World Energy Lab',
+        action: 'OPEN_PAGE',
+        payload: {
+            iframe: 'http://www.learner.org/courses/envsci/interactives/energy/energy.html'
+        }
+    },
+    {
+        label: 'Our Future Starts Now: UN Markers on Sustainable Development',
+        action: 'OPEN_PAGE',
+        payload: {
+            youtube: 'https://www.youtube.com/embed/LEMXBNJq8as'
+        }
+    }
+],
+COASTAL_RESILIENCE: [
+    {
+        label: 'Estuary Model & Coastal Resilience',
+        action: 'OPEN_PAGE',
+        payload: {
+            yotube: 'https://www.youtube.com/embed/jCKYg1NtBnI'
+        }
+    },
+    {
+        label: 'Coastal Resilience',
+        action: 'OPEN_PAGE',
+        payload: {
+            video: 'public/img/3_2_2_video.mp4'
+        }
+    },
+    {
+        label: 'NOAA Digital Coast Mapping Tool',
+        action: 'OPEN_PAGE',
+        payload: {
+            iframe: 'https://coast.noaa.gov/slr/#/layer/slr'
+        }
+    },
+],
+THINK_GLOBALLY: [
+    {
+        label: 'Carbon Mitigation',
+        action: 'CARBON_MITIGATION'
+    },
+    {
+        label: 'Emergency Preparedness',
+        action: 'EMERGENCY_PREPAREDNESS'
+    },
+    {
+        label: 'Designing Cities for Resilience',
+        action: 'DESIGNING_CITIES'
+    },
+    {
+        label: 'Tracking National Progress',
+        action: 'TRACKING_PROGRESS'
+    }
+],
+
+CARBON_MITIGATION: [
+    {
+        label: 'Your Carbon Footprint Calculator',
+        action: 'OPEN_PAGE',
+        payload: {
+            iframe: 'https://coolclimate.berkeley.edu/calculator'
+        }
+    },
+    {
+        label: 'Reforestation for Carbon Sequestration',
+        action: 'OPEN_PAGE',
+        payload: {
+            video: 'public/videos/3_3_1_2_video.mp4'
+        }
+    }
+/* TODO: may come later
+    {
+        label: 'Soil Restoration for Carbon Sequestration',
+        action: '',
+        payload: {
+
+        }
+    }
+*/
+],
+EMERGENCY_PREPAREDNESS: [
+    {
+        label: 'Weather Ready Nation Videos',
+        action: 'OPEN_PAGE',
+        payload: {
+            iframe: 'https://coolclimate.berkeley.edu/calculator'
+        }
+    },
+    {
+        label: 'Simulated Hurricane Video',
+        action: 'OPEN_PAGE',
+        payload: {
+            youtube: 'https://www.youtube.com/embed/WXB1DQzvfxU'
+        }
+    },
+    {
+        label: 'Make an Emergency Plan & Kit (FEMA)',
+        action: 'OPEN_PAGE',
+        payload: {
+            youtube: 'https://www.youtube.com/embed/LviZ4pZrqu8'
+        }
+    }
+],
+DESIGNING_CITIES: [
+    {
+        label: 'Sustainable Cities: Nature Based Solutions',
+        action: 'OPEN_PAGE',
+        payload: {
+            video: 'public/videos/3_3_3_3_video.mp4'
+        }
+    },
+    {
+        label: 'Be Water Wise',
+        action: 'OPEN_PAGE',
+        payload: {
+            slider: {
+                baseUrl: 'public/imgs/3_3_3_4',
+                imgs: [
+                    '3_3_3_4_pic1.png',
+                    '3_3_3_4_pic2.png'
+                ]
+            }
+        }
+    }
+],
+TRACKING_PROGRESS : [
+    {
+        label: 'Climate Progress by State Google Map',
+        action: 'OPEN_PAGE',
+        payload: {
+            iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-21081'
+        }
+    },
+    {
+        label: 'National Renewable Energy Sources',
+        action: 'OPEN_PAGE',
+        payload: {
+            iframe: 'https://www.teachengineering.org/livinglabs/renewableenergy912'
+        }
+    }
+],
+//TODO: where does CC_EXTREME_WEATHER GO??
+    WATER_CYCLE_EXTREME_WEATHER: [
+        {
+                label: 'Deluge',
+                action: 'OPEN_PAGE',
+                payload: {
+                    video: 'public/videos/Deluge.mp4'
+                }
+            },
+            {
+                label: 'Drought',
+                action: 'OPEN_PAGE',
+                payload: {
+                    video: 'public/videos/Drought.mp4'
+                }
+            },
+            {
+                label: 'Freshwater Availablity and Consumption',
+                action: 'OPEN_PAGE',
+                payload: {
+                    slider: {
+                        baseUrl: 'public/imgs/water/',
+                        imgs: ['B---Freshwater-Availability-in-US.png', '2_2_2_pic2.png']
+                    }
+                }
+
+            },
+            {
+                label: 'Extreme Precipitation (Interactive Map)',
+                action: 'OPEN_PAGE',
+                payload: {
+                    iframe: 'https://nca2014.globalchange.gov/report/our-changing-climate/heavy-downpours-increasing#graphic-16692'
+                }
+            },
+            {
+                label: 'NOAA The State of The Climate',
+                action: 'OPEN_PAGE',
+                payload: 'https://www.climate.gov/news-features/featured-images/state-climate-extreme-events'
+            },
+            {
+                label: 'The Cost of Extreme Weather',
+                action: 'OPEN_PAGE',
+                payload: {
+                    slider: {
+                        baseUrl: 'public/imgs/2_2_5_Extreme_Weather/',
+                        imgs: ['2_2_5_pic1.jpg','2_2_5_pic2.png','2_2_5_pic3.png','2_2_5_pic4.jpg','2_2_5_pic5.png','2_2_5_pic6.jpg','2_2_5_pic7.jpg','2_2_5_pic8.jpg','2_2_5_pic9.jpg','2_2_5_pic10.png','2_2_5_pic12.jpg','2_2_5_pic13.jpg']
+                    }
+                }
+            }
+//            {
+//                label: 'Water Contamination',
+//                action: 'OPEN_PAGE',
+//                payload: {
+//                    slider: {
+//                        baseUrl: 'public/imgs/water/',
+//                        imgs: [
+//                            'C---Climate-Change-_-Water-Contamination.jpg'
+//                        ]
+//                    }
+//                }
+//            }
     ],
     REAL_TIME_CLIMATE_TRACKING_LINKS: [
         {
@@ -134,7 +368,7 @@ export const MENUS = {
             payload: {
                 iframe: 'http://hudson.dl.stevens-tech.edu/hrecos/d/index.shtml'
             }
-        }   
+        }
     ],
     POLAR_ICE_LINKS: [{
             label: 'Images of Change NASA Glacier Melt',
@@ -159,7 +393,17 @@ export const MENUS = {
             payload: {
                 iframe: 'http://nsidc.org/data/tools/arctic-sea-ice-chart/'
             }
-        }
+        },
+        {
+            label: 'Artic Sea Ice and Albedo Effect',
+            action: 'OPEN_PAGE',
+            payload: {
+                slider: {
+                    imgs: ['2_1_4_pic2.jpg', '2_1_4_pic4.png'],
+                    baseUrl: 'public/imgs/2_1_4_Sea_Ice/'
+                }
+            }
+        },
     ],
     HISTORICAL_CLIMATE_LINKS: [
         {
@@ -176,7 +420,7 @@ export const MENUS = {
                 video: 'public/videos/NOVA-National-Ice-Core-Lab-Video.mp4'
             }
         }
-        
+
     ],
     NATURAL_FORCES_LINKS: [
             {
@@ -210,54 +454,69 @@ export const MENUS = {
                 }
             }
     ],
-    SEA_LEVEL_RISE_LINKS: [{
-            label: 'If Antartica Melted: National Geographic Maps',
+    SEA_LEVEL_RISE_LINKS: [
+        {
+            label: 'Ocean Acidification',
             action: 'OPEN_PAGE',
             payload: {
-                slider: {
-                    baseUrl: 'public/imgs/antarctica-melted/',
-                    captions: [
-                        'North America\'s new coastline after land ice melt causes sea level to rise 216 feet would lose the eastern\
-                         seaboard, nearly all of Florida, and the Gulf Coast. Scientists say with limited global warming, it would take 5,000 \
-                         years for this ice to melt. With a runaway greenhouse effect, however, that timeline could shrink with the ice cover.',
-                         'The major cities of Australia and South Pacific, where 4 out of 5 people live, would \
-                          be under water. Some of Australia\'s desert would be replaced with an inland sea.',
-                          'In Europe, London, Venice, Stockholm, and St. Petersburg, would be swallowed up by the sea, including most of Denmark and the Netherlands.',
-                          'South America\'s Amazon and Paraguay Rivers would become ocean inlets. Only the more mountainous regions of Central America would remain.',
-                          'Antarctica looks very different without ice. East Antarctica has survived earlier warming periods, and has been getting more snow in recent decades.\
-                           West Antarctica, on the other hand is vulnerable and has experienced accelerated melting. \
-                          In 2017, a sheet the size of Delaware broke off into the ocean. Luckily, most of this ice is already on submerged bedrock and would not cause as much sea level rise.',
-                          'Africa\'s coastline would change the least, though Mauritania, Senegal, Sierra Leone, and Egypt would be radically affected. \
-                          Also, without the albedo effect (ice\'s white surface reflecting the sun\'s light and heat), the African continent would have oppressively hot temperatures.',
-                          'The greatest population centers along coastal India, China, and Bangladesh, where over a billion people live, would be underwater. \
-                           Tokyo, Japan would be a distant memory. Even a 6 foot sea-level rise would impact the planet\'s coastal communities greatly. Can we reverse the trend in time?'
-                    ],
-                    imgs: [
-                            'canada.jpg',
-                            'australia.jpg',
-                            'europe.jpg',
-                            'sa.jpg',
-                            'sp.jpg',
-                            'africa.jpg',
-                            'asia.jpg'
-                     ]
-                }
+                youtube: 'https://www.youtube.com/embed/Wo-bHt1bOsw'
             }
         },
         {
-            label: 'NOAA Interactive Map: Sea Level Rise and Mitigation',
+            label: 'NOVA Impact of Ocean Acidification',
+            action: 'OPEN_PAGE',
+            payload: {
+                iframe: 'https://www.youtube.com/embed/Wo-bHt1bOsw'
+            }
+        },
+        {
+            label: 'NOAA Digital Coast Mapping Tool',
             action: 'OPEN_PAGE',
             payload: {
                 iframe: 'https://coast.noaa.gov/slr/#/layer/slr'
             }
         },
         {
-            label: 'Sea Level Rise Local Scenarios: Scenic Hudson Interactive Map',
+            label: 'Yonkers and the Hudson Valley Coastline',
             action: 'OPEN_PAGE',
             payload: {
                 iframe: 'http://scenichudson.org/slr/mapper#block-menu-block-1'
             }
-        }
+        },
+        {
+                label: 'If Antartica Melted Maps',
+                action: 'OPEN_PAGE',
+                payload: {
+                    slider: {
+                        baseUrl: 'public/imgs/antarctica-melted/',
+                        captions: [
+                            'North America\'s new coastline after land ice melt causes sea level to rise 216 feet would lose the eastern\
+                             seaboard, nearly all of Florida, and the Gulf Coast. Scientists say with limited global warming, it would take 5,000 \
+                             years for this ice to melt. With a runaway greenhouse effect, however, that timeline could shrink with the ice cover.',
+                             'The major cities of Australia and South Pacific, where 4 out of 5 people live, would \
+                              be under water. Some of Australia\'s desert would be replaced with an inland sea.',
+                              'In Europe, London, Venice, Stockholm, and St. Petersburg, would be swallowed up by the sea, including most of Denmark and the Netherlands.',
+                              'South America\'s Amazon and Paraguay Rivers would become ocean inlets. Only the more mountainous regions of Central America would remain.',
+                              'Antarctica looks very different without ice. East Antarctica has survived earlier warming periods, and has been getting more snow in recent decades.\
+                               West Antarctica, on the other hand is vulnerable and has experienced accelerated melting. \
+                              In 2017, a sheet the size of Delaware broke off into the ocean. Luckily, most of this ice is already on submerged bedrock and would not cause as much sea level rise.',
+                              'Africa\'s coastline would change the least, though Mauritania, Senegal, Sierra Leone, and Egypt would be radically affected. \
+                              Also, without the albedo effect (ice\'s white surface reflecting the sun\'s light and heat), the African continent would have oppressively hot temperatures.',
+                              'The greatest population centers along coastal India, China, and Bangladesh, where over a billion people live, would be underwater. \
+                               Tokyo, Japan would be a distant memory. Even a 6 foot sea-level rise would impact the planet\'s coastal communities greatly. Can we reverse the trend in time?'
+                        ],
+                        imgs: [
+                                'canada.jpg',
+                                'australia.jpg',
+                                'europe.jpg',
+                                'sa.jpg',
+                                'sp.jpg',
+                                'africa.jpg',
+                                'asia.jpg'
+                         ]
+                    }
+                }
+            }
     ],
     CLIMATE_WEATHER_LINKS: [{
             label: 'What Is Climate? (Video by Utah Education Network Climate Science Series)',
@@ -326,58 +585,7 @@ export const MENUS = {
             }
         }
     ],
-    CC_EXTREME_WEATHER: [{
-            label: 'Extreme Heat Waves',
-            action: 'OPEN_PAGE',
-            payload: {
-                slider: {
-                    baseUrl: 'public/imgs/extreme-heatwave/',
-                    imgs: ['A---Deadliest-Heat-Waves.jpg',
-                        'B---Western-Europe-Heat-Wave-2006.jpg',
-                        'C---Russia-Heat-Wave-July-2010.png',
-                        'C1---Russian-Heat-Wave-July-2010-NOAA-Anomalies.png',
-                        'C2---Russian-Heat-Wave-July-2010-_-Wildfire.jpg',
-                        'C3---Russia-Heat-Wave-July-2010-Wildfires.png',
-                        'C4---Russia-Heat-Wave-July-2010-Wildfires2.jpg',
-                        'D---India-Heat-Wave-May-2015.png',
-                        'D1---India-Heat-Wave-May-2015-Dried-Pond.jpg',
-                        'D2---India-Heat-Wave-May-2015-Melting-Roads-(CNN).jpg',
-                        'D3---India-Heat-Wave-May-2015-Men-Sleep-on-Road-Divider-in-Delhi.jpg',
-                        'E---Western-US-Heat-Wave-June-2017.jpg'
-                    ],
-                    captions: [
-                        'Global warming has caused more temperature modulation over land, increasing the incidence of extreme heat waves. The five deadliest in recorded human history have all taken place in the last two decades.',
-                        'The 2003 European heatwave led to the hottest summer on record in Europe since at least 1540. In late June 2006, another heatwave broke many of the 2003 records for the UK, Belgium, Ireland, the Netherlands, and Germany. These events, once occurring 1-in-30 years, are now expected 1-in-3.5 years.',
-                        ' In July 2010, Moscow and western Russia experienced record-breaking temperatures (up to 12 degrees Celsius higher than normal) that led to severely dry land.',
-                        'The whole Northern Hemisphere experienced much higher than average temperatures in 2010, but Russia was the hardest hit. Between scorching temperatures, extreme drought causing wildfire, and resulting poor air quality, over 10,000 deaths may be attributed to this heatwave in Russia alone.',
-                        'By the end of the heatwave, Russia\'s forests were so desiccated, that wildfire ran rampant through September in the forests to the west, causing $15 billion in damages, and adding to the death-toll started by the heatwaves.',
-                        'All told, over 740,000 acres of forests burned.',
-                        'All told, over 740,000 acres of forests burned.',
-                        'In May 2015, India saw temperatures exceeding 115 degrees Fahrenheit. This map shows hottest daytime high temperature during the week May 24-30, 2015. NOAA Climate.gov map by Fiona Martin, based on interpolated weather station data provided by the India Meterological Department.',
-                        'Sheep being herded across a dried-up pond on the outskirts of Delhi. Farmers and laborers were hottest hit. Crops were ravaged by the heat and thousands of livestock died out in pasture.',
-                        'Temperatures in the cities were high enough to melt the blacktop.',
-                        'Heatwaves disproportionately affect the marginalized in society. Poorer people haven\'t the amenities, such as sufficient shelter, ice water, and air-conditioning, to escape extreme temperatures. Sick and elderly are more susceptible to heat stroke and dehydration. Some reports say that over 2300 people died in India from the heatwave.',
-                        'The U.S.A. has also experienced more frequent and extreme heatwaves in the past few decades. Summer 2017 brought temperatures to southern California and Arizona that exceeded 125 degrees Fahrenheit, bringing brownouts from excessive A/C demand on the grid, buckled roads, temporary business closures, and over 12 deaths.',
-                    ]
-                }
-            }
-        },
-        {
-            label: 'NOAA Drought Monitor (Animated Maps)',
-            action: 'OPEN_PAGE',
-            payload: {
-                slider: {
-                    baseUrl: 'public/imgs/extreme-draught/',
-                    imgs: ['US-Drought-Index-2011-2012.gif',
-                        'US-Drought-Index-2014-2015.gif'
-                    ],
-                    captions:[
-                        '2011-2012 brought extreme drought to the Southwest, especially Texas, and Great Plains. Texas suffered $7.62 billion in crop and livestock losses, with nearly 1/3 of cattle dying in the field from dehydration. Wildfires spiked: 23,835 fires burned more than 3.8 million acres and destroyed 2,763 Texas homes over 2011. At its peak in August 2012 the drought covered approximately 81% of the United States. Corn prices shot up 35% due to crop failure.',
-                        'The drought in the western coast hit critical mass in 2014, with the Governor Brown declaring California in a state of emergency. California\'s ancient forests, a national treasure, were left weakened and vulnerable. During the 5-year drought period, California greatly depleted groundwater reserves for agriculture and industry, causing the land to sink in places, seawater intrusion in others, and water allocations to be reduced all over.'
-                    ]
-                }
-            }
-        },
+    CC_EXTREME_WEATHER: [
         {
             label: 'Billion Dollar Weather Events',
             action: 'OPEN_PAGE',
@@ -426,7 +634,15 @@ export const MENUS = {
             }
         }
     ],
-    CC_AGRICULTURE_LINKS: [{
+    CC_AGRICULTURE_LINKS: [
+        {
+            label: 'Climate Change and Agriculture',
+            action: 'OPEN_PAGE',
+            payload: {
+                iframe: 'https://www.youtube.com/embed/hjT__OpDn6E'
+            }
+        },
+        {
             label: 'USDA Plant Hardiness Zone Map',
             action: 'OPEN_PAGE',
             payload: {
@@ -447,12 +663,30 @@ export const MENUS = {
             }
         },
         {
+            label: 'NOAA Drought Monitor (Animated Maps)',
+            action: 'OPEN_PAGE',
+            payload: {
+                slider: {
+                    baseUrl: 'public/imgs/extreme-draught/',
+                    imgs: ['US-Drought-Index-2011-2012.gif',
+                        'US-Drought-Index-2014-2015.gif'
+                    ],
+                    captions:[
+                        '2011-2012 brought extreme drought to the Southwest, especially Texas, and Great Plains. Texas suffered $7.62 billion in crop and livestock losses, with nearly 1/3 of cattle dying in the field from dehydration. Wildfires spiked: 23,835 fires burned more than 3.8 million acres and destroyed 2,763 Texas homes over 2011. At its peak in August 2012 the drought covered approximately 81% of the United States. Corn prices shot up 35% due to crop failure.',
+                        'The drought in the western coast hit critical mass in 2014, with the Governor Brown declaring California in a state of emergency. California\'s ancient forests, a national treasure, were left weakened and vulnerable. During the 5-year drought period, California greatly depleted groundwater reserves for agriculture and industry, causing the land to sink in places, seawater intrusion in others, and water allocations to be reduced all over.'
+                    ]
+                }
+            }
+        }
+/* TODO: find where this goes
+        {
             label: 'Resilience for Farmers',
             action: 'OPEN_PAGE',
             payload: {
                 youtube: 'https://www.youtube.com/embed/4ieM_zKB6U4'
             }
         }
+*/
     ],
     CC_FOREST_COVER_LINKS: [{
             label: 'Increase in Wildfires',
@@ -484,12 +718,20 @@ export const MENUS = {
             }
         },
         {
+                label: 'Forrest Pest Video',
+                action: 'OPEN_PAGE',
+                payload: {
+                    iframe: 'https://www.youtube.com/embed/nUilMIKTWmY'
+                }
+        },
+        {
             label: 'Forests: Lungs of the Earth',
             action: 'OPEN_PAGE',
             payload: {
                 video: 'public/videos/The-Forests-Lungs-of-the-Earth-(NASA-Imaging-of-CO2-and-Photosynthesis).m4v'
             }
         },
+/* TODO: find out where this goes
         {
             label: 'Projected Shifts in Forest Types',
             action: 'OPEN_PAGE',
@@ -500,22 +742,31 @@ export const MENUS = {
                 }
             }
         }
+*/
     ],
-    // CC_SPECIES_RANGES_LINKS: [{
-    //         label: 'Species Range Change Interactive',
-    //         action: 'OPEN_PAGE',
-    //         payload: {
-    //             iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
-    //         }
-    //     },
-    //     {
-    //         label: 'Bees are Feeling the STING of Climate Change',
-    //         action: 'OPEN_PAGE',
-    //         payload: {
-    //             iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
-    //         }
-    //     }
-    // ],
+CC_SPECIES_RANGES_LINKS: [
+    {
+            label: 'A Warmer World For Artic Animals',
+            action: 'OPEN_PAGE',
+            payload: {
+                iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
+            }
+    },
+    {
+         label: 'Species Range Change Interactive',
+         action: 'OPEN_PAGE',
+         payload: {
+             iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
+         }
+     },
+     {
+         label: 'Bees are Feeling the STING of Climate Change',
+         action: 'OPEN_PAGE',
+         payload: {
+             iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
+         }
+     }
+],
     CLIMATE_CHANGE_DISEASE_LINKS: [{
             label: 'Climate Change & Human Health',
             action: 'OPEN_PAGE',
@@ -526,6 +777,7 @@ export const MENUS = {
                 }
             }
         },
+/* TODO: find where this goes
         {
             label: 'Rise in Vector Species',
             action: 'OPEN_PAGE',
@@ -538,6 +790,70 @@ export const MENUS = {
                 }
             }
         },
+*/
+        {
+                label: 'Pathways and Regional Vulnerabilities',
+                action: 'OPEN_PAGE',
+                payload: {
+                    slider: {
+                        baseUrl: 'public/imgs/2_7_2_Climate_and_Health',
+                        imgs: [
+                            '2.7.2_pic1.jpg',
+                            '2_7_2_pic2.jpg'
+                        ]
+                    }
+                }
+        },
+        {
+                label: 'Extreme Heat Waves',
+                action: 'OPEN_PAGE',
+                payload: {
+                    slider: {
+                        baseUrl: 'public/imgs/extreme-heatwave/',
+                        imgs: ['A---Deadliest-Heat-Waves.jpg',
+                            'B---Western-Europe-Heat-Wave-2006.jpg',
+                            'C---Russia-Heat-Wave-July-2010.png',
+                            'C1---Russian-Heat-Wave-July-2010-NOAA-Anomalies.png',
+                            'C2---Russian-Heat-Wave-July-2010-_-Wildfire.jpg',
+                            'C3---Russia-Heat-Wave-July-2010-Wildfires.png',
+                            'C4---Russia-Heat-Wave-July-2010-Wildfires2.jpg',
+                            'D---India-Heat-Wave-May-2015.png',
+                            'D1---India-Heat-Wave-May-2015-Dried-Pond.jpg',
+                            'D2---India-Heat-Wave-May-2015-Melting-Roads-(CNN).jpg',
+                            'D3---India-Heat-Wave-May-2015-Men-Sleep-on-Road-Divider-in-Delhi.jpg',
+                            'E---Western-US-Heat-Wave-June-2017.jpg'
+                        ],
+                        captions: [
+                            'Global warming has caused more temperature modulation over land, increasing the incidence of extreme heat waves. The five deadliest in recorded human history have all taken place in the last two decades.',
+                            'The 2003 European heatwave led to the hottest summer on record in Europe since at least 1540. In late June 2006, another heatwave broke many of the 2003 records for the UK, Belgium, Ireland, the Netherlands, and Germany. These events, once occurring 1-in-30 years, are now expected 1-in-3.5 years.',
+                            ' In July 2010, Moscow and western Russia experienced record-breaking temperatures (up to 12 degrees Celsius higher than normal) that led to severely dry land.',
+                            'The whole Northern Hemisphere experienced much higher than average temperatures in 2010, but Russia was the hardest hit. Between scorching temperatures, extreme drought causing wildfire, and resulting poor air quality, over 10,000 deaths may be attributed to this heatwave in Russia alone.',
+                            'By the end of the heatwave, Russia\'s forests were so desiccated, that wildfire ran rampant through September in the forests to the west, causing $15 billion in damages, and adding to the death-toll started by the heatwaves.',
+                            'All told, over 740,000 acres of forests burned.',
+                            'All told, over 740,000 acres of forests burned.',
+                            'In May 2015, India saw temperatures exceeding 115 degrees Fahrenheit. This map shows hottest daytime high temperature during the week May 24-30, 2015. NOAA Climate.gov map by Fiona Martin, based on interpolated weather station data provided by the India Meterological Department.',
+                            'Sheep being herded across a dried-up pond on the outskirts of Delhi. Farmers and laborers were hottest hit. Crops were ravaged by the heat and thousands of livestock died out in pasture.',
+                            'Temperatures in the cities were high enough to melt the blacktop.',
+                            'Heatwaves disproportionately affect the marginalized in society. Poorer people haven\'t the amenities, such as sufficient shelter, ice water, and air-conditioning, to escape extreme temperatures. Sick and elderly are more susceptible to heat stroke and dehydration. Some reports say that over 2300 people died in India from the heatwave.',
+                            'The U.S.A. has also experienced more frequent and extreme heatwaves in the past few decades. Summer 2017 brought temperatures to southern California and Arizona that exceeded 125 degrees Fahrenheit, bringing brownouts from excessive A/C demand on the grid, buckled roads, temporary business closures, and over 12 deaths.',
+                        ]
+                    }
+                }
+            },
+            {
+                label: 'Climate Change and Air Quality Map Tool',
+                action: 'OPEN_PAGE',
+                payload: {
+                    iframe: 'https://www.nrdc.org/climate-change-and-health-air-quality#/map'
+                }
+            },
+            {
+                label: 'Water Contamination',
+                action: 'OPEN_PAGE',
+                payload: {
+                    iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/human-health#narrative-page-21015'
+                }
+            }
         // {
         //     label: 'Forest Pest Video',
         //     action: 'OPEN_PAGE',
