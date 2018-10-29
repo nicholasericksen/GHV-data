@@ -20306,10 +20306,10 @@
 	        label: 'Agriculture',
 	        action: 'CC_AGRICULTURE_LINKS'
 	    }, {
-	        label: 'Forrest Cover',
+	        label: 'Forest Cover',
 	        action: 'CC_FOREST_COVER_LINKS'
 	    }, {
-	        label: 'Animal Ranges',
+	        label: 'Wild Life',
 	        action: 'CC_SPECIES_RANGES_LINKS'
 	    }, {
 	        label: 'Human Health And Disease',
@@ -20423,6 +20423,12 @@
 	    }, {
 	        label: 'Tracking National Progress',
 	        action: 'TRACKING_PROGRESS'
+	    }, {
+	        label: 'NOAA Resilience Toolkit: Climate Explorer',
+	        action: 'OPEN_PAGE',
+	        payload: {
+	            iframe: 'https://crt-climate-explorer.nemac.org/'
+	        }
 	    }],
 
 	    CARBON_MITIGATION: [{
@@ -20570,7 +20576,7 @@
 	            iframe: 'https://climate.nasa.gov/images-of-change?id=376#376-muir-glacier-melt-alaska'
 	        }
 	    }, {
-	        label: 'Antartic & Greenland Land Ice',
+	        label: 'Antarctic & Greenland Land Ice',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
@@ -20585,7 +20591,7 @@
 	            iframe: 'http://nsidc.org/data/tools/arctic-sea-ice-chart/'
 	        }
 	    }, {
-	        label: 'Artic Sea Ice and Albedo Effect',
+	        label: 'Arctic Sea Ice and Albedo Effect',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
@@ -20825,7 +20831,7 @@
 	            }
 	        }
 	    }, {
-	        label: 'Forrest Pest Video',
+	        label: 'Forest Pest Video',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            iframe: 'https://www.youtube.com/embed/nUilMIKTWmY'
@@ -20838,7 +20844,7 @@
 	        }
 	    }],
 	    CC_SPECIES_RANGES_LINKS: [{
-	        label: 'A Warmer World For Artic Animals',
+	        label: 'A Warmer World For Arctic Animals',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
