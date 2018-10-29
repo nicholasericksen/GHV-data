@@ -68,7 +68,7 @@ export const MENUS = {
             action: 'CC_FOREST_COVER_LINKS',
         },
         {
-            label: 'Wild Life',
+            label: 'Wildlife',
             action: 'CC_SPECIES_RANGES_LINKS',
         },
         {
@@ -274,7 +274,7 @@ DESIGNING_CITIES: [
         action: 'OPEN_PAGE',
         payload: {
             slider: {
-                baseUrl: 'public/imgs/3_3_3_4',
+                baseUrl: 'public/imgs/3_3_3_4/',
                 imgs: [
                     '3_3_3_4_pic1.png',
                     '3_3_3_4_pic2.png'
@@ -816,7 +816,7 @@ CC_SPECIES_RANGES_LINKS: [
                 action: 'OPEN_PAGE',
                 payload: {
                     slider: {
-                        baseUrl: 'public/imgs/2_7_2_Climate_and_Health',
+                        baseUrl: 'public/imgs/2_7_2_Climate_and_Health/',
                         imgs: [
                             '2.7.2_pic1.jpg',
                             '2_7_2_pic2.jpg'
@@ -871,6 +871,12 @@ CC_SPECIES_RANGES_LINKS: [
                 label: 'Water Contamination',
                 action: 'OPEN_PAGE',
                 payload: {
+                    slider: {
+                        baseUrl: 'public/imgs/2.7.5-Water-Contamination/',
+                        imgs: [
+                            '2.7.5.2-pic1.jpg','2.7.5.2-pic2.jpg','2.7.5.2-pic3.png'
+                        ]
+                    }
                     iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/human-health#narrative-page-21015'
                 }
             }
