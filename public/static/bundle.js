@@ -20402,7 +20402,7 @@
 	        label: 'Coastal Resilience',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            video: 'public/img/3_2_2_video.mp4'
+	            video: 'public/imgs/3_2_2_video.mp4'
 	        }
 	    }, {
 	        label: 'NOAA Digital Coast Mapping Tool',
