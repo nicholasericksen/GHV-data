@@ -20396,7 +20396,7 @@
 	        label: 'Estuary Model & Coastal Resilience',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            yotube: 'https://www.youtube.com/embed/jCKYg1NtBnI'
+	            youtube: 'https://www.youtube.com/embed/jCKYg1NtBnI'
 	        }
 	    }, {
 	        label: 'Coastal Resilience',
