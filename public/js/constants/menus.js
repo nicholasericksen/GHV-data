@@ -877,7 +877,6 @@ CC_SPECIES_RANGES_LINKS: [
                             '2.7.5.2-pic1.jpg','2.7.5.2-pic2.jpg','2.7.5.2-pic3.png'
                         ]
                     }
-                    iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/human-health#narrative-page-21015'
                 }
             }
         // {
