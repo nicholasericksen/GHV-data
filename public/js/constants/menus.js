@@ -473,7 +473,7 @@ TRACKING_PROGRESS : [
             label: 'NOVA Impact of Ocean Acidification',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://www.youtube.com/embed/Wo-bHt1bOsw'
+                video: 'public/videos/2.3.2-NOVA-Researching-Impacts-of-Ocean-Acidification.mp4'
             }
         },
         {
@@ -487,7 +487,7 @@ TRACKING_PROGRESS : [
             label: 'Yonkers and the Hudson Valley Coastline',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'http://scenichudson.org/slr/mapper#block-menu-block-1'
+                iframe: 'https://scenichudson.maps.arcgis.com/apps/MapSeries/index.html?appid=9190b7560a574ad69cd91b43e383b203'
             }
         },
         {
@@ -732,6 +732,19 @@ TRACKING_PROGRESS : [
                 }
         },
         {
+                label: 'Projected Shift in Forest Types',
+                action: 'OPEN_PAGE',
+                payload: {
+                    slider: {
+                        baseUrl: 'public/imgs/2.5.4-Projected-Shifts-in-Forest-Types/',
+                        imgs: [
+                            '2.5.4-1.jpg',
+                            '2.5.4-2.jpg'
+                        ]
+                    }
+                }
+        },
+        {
             label: 'Forests: Lungs of the Earth',
             action: 'OPEN_PAGE',
             payload: {
@@ -756,7 +769,7 @@ CC_SPECIES_RANGES_LINKS: [
             label: 'A Warmer World For Arctic Animals',
             action: 'OPEN_PAGE',
             payload: {
-                iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
+                video: 'public/videos/a_warmer_world_for_arctic_animals_pod.MP4'
             }
     },
     {
@@ -770,7 +783,7 @@ CC_SPECIES_RANGES_LINKS: [
          label: 'Bees are Feeling the STING of Climate Change',
          action: 'OPEN_PAGE',
          payload: {
-             iframe: 'https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=10481'
+             video: 'public/videos/2.6.3-Honeybees-Feeling-the-Sting.m4v'
          }
      }
 ],
