@@ -262,13 +262,13 @@ EMERGENCY_PREPAREDNESS: [
     }
 ],
 DESIGNING_CITIES: [
-    {
+/*    {
         label: 'Sustainable Cities: Nature Based Solutions',
         action: 'OPEN_PAGE',
         payload: {
             video: 'public/videos/3_3_3_3_video.mp4'
         }
-    },
+    }, */
     {
         label: 'Be Water Wise',
         action: 'OPEN_PAGE',
@@ -277,20 +277,20 @@ DESIGNING_CITIES: [
                 baseUrl: 'public/imgs/3_3_3_4/',
                 imgs: [
                     '3_3_3_4_pic1.png',
-                    '3_3_3_4_pic2.png'
+                    '3_3_3_4_pic2.jpg'
                 ]
             }
         }
     }
 ],
 TRACKING_PROGRESS : [
-    {
+/*    {
         label: 'Climate Progress by State Google Map',
         action: 'OPEN_PAGE',
         payload: {
             iframe: 'https://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-21081'
         }
-    },
+    }, */
     {
         label: 'National Renewable Energy Sources',
         action: 'OPEN_PAGE',
