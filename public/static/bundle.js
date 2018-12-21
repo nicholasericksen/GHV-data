@@ -20519,32 +20519,45 @@
 	            video: 'public/videos/Drought.mp4'
 	        }
 	    }, {
-	        label: 'Freshwater Availablity and Consumption',
+	        label: 'Freshwater Availability and Consumption',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/water/',
-	                imgs: ['B---Freshwater-Availability-in-US.png', '2_2_2_pic2.png']
+	                imgs: ['B---Freshwater-Availability-in-US.png', '2_2_2_pic2.png'],
+	                captions: ['Climate change is projected to reduce water supplies in some parts of the country. This is true in areas where precipitation is projected to decline, and even in some areas where precipitation is expected to increase. Compared to 10% of counties today, by 2050, 32% of counties will be at high or extreme risk of water shortages. Numbers of counties are in parentheses in key. Projections assume continued increases in greenhouse gas emissions through 2050 and a slow decline thereafter (Source: National Climate Assessment 2014).', 'a) Groundwater aquifers are found throughout the U.S., but they vary widely in terms of ability to store and recharge water. The colors on this map illustrate aquifer location and geology (Figure source: USGS). (b) Ratio of groundwater withdrawals to total water withdrawals from all surface and groundwater sources by county. The map illustrates that aquifers are the main (and often exclusive) water supply source for many U.S. , especially in the Great Plains, Mississippi Valley, east central U.S., Great Lakes region, Florida, and other coastal areas. Groundwater aquifers in these regions are prone to impacts due to combined climate and water-use change. (Data from USGS 2005).']
 	            }
 	        }
 
-	    }, {
-	        label: 'Extreme Precipitation (Interactive Map)',
+	    },
+	    //TODO: the images suggested for this are not available at the website.
+	    {
+	        label: 'Extreme Precipitation',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'https://nca2014.globalchange.gov/report/our-changing-climate/heavy-downpours-increasing#graphic-16692'
+	            slider: {
+	                baseUrl: 'public/imgs/uploads/',
+	                imgs: ['Water_spotlight_on_water_management_V3.png'],
+	                captions: ['']
+	            }
 	        }
 	    }, {
-	        label: 'NOAA The State of The Climate',
+	        label: 'NOAA State of the Climate: Extreme Weather Events 2017',
 	        action: 'OPEN_PAGE',
-	        payload: 'https://www.climate.gov/news-features/featured-images/state-climate-extreme-events'
+	        payload: {
+	            slider: {
+	                baseUrl: 'public/imgs/uploads/',
+	                imgs: ['bigextremes-2017-bams.png']
+	            }
+	        }
 	    }, {
 	        label: 'The Cost of Extreme Weather',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/2_2_5_Extreme_Weather/',
-	                imgs: ['2_2_5_pic1.jpg', '2_2_5_pic2.png', '2_2_5_pic3.png', '2_2_5_pic4.jpg', '2_2_5_pic5.png', '2_2_5_pic6.jpg', '2_2_5_pic7.jpg', '2_2_5_pic8.jpg', '2_2_5_pic9.jpg', '2_2_5_pic10.png', '2_2_5_pic12.jpg', '2_2_5_pic13.jpg']
+	                imgs: ['2_2_5_pic3.png', '2_2_5_pic4.jpg', '2_2_5_pic5.png', '2_2_5_pic6.jpg', '2_2_5_pic7.jpg', '2_2_5_pic8.jpg', '2_2_5_pic9.jpg', '2_2_5_pic10.png', '2_2_5_pic12.jpg'],
+	                captions: ['As extreme precipitation events become more common, so does extreme flooding. Our stormwater infrastructure was not designed for our rapidly changing climate. This slideshow shows the many effects that extreme rain and wind can cause.', 'The map above shows the number of times between 1980 and August 2011 that a U.S. state has been involved in a weather or climate disaster whose region-wide damage totals were at least one billion dollars at the time they occurred. The maps are based on records of economic losses kept by NOAA\'s National Climatic Data Center.', 'It\'s official: 2017 was the costliest year on record for the United States when it comes to natural disasters According to NOAA, the disasters caused $306 billion in total damage in 2017, with 16 events that caused more than $1 billion in damage each. The bulk of the damage, at $265 billion, came from hurricanes Harvey, Irma, and Maria, as well as wildfires on the west coast.', 'Once considered 500-year events, storms like Hurricane Katrina (2005) now occur decades apart or less. Hurricane Katrina destroyed much of the Gulf Coast, especially the city of New Orleans. Severe flooding and inadequate response left many without drinking water, food, or proper first aid for days, if not weeks. Over 1,200 deaths are attributed to Katrina and $161 billion in losses.', 'Flooding in Louisiana has become more common in recent years, even in the absence of a hurricane. In August 2016, prolonged rainfall resulted in catastrophic flooding in the state. Thousands of houses and businesses were submerged.', 'Hurricanes and heavy rain events have different impact depending on where they hit and when. Hurricane Irene (2011) brought 16 inches of rain to upstate New York after an already unseasonably wet August. Saturated soils gave out to erosion and roads and bridges were washed out. It is now considered the most costly Category 1 storm in history.', 'Some storms bring surges along the coast from high winds, instead of heavy rain. This was the case for Superstorm Sandy (2012) Winds swept the peak tide into highly developed areas with great population densities. As a result of the salt-water flooding, economic losses topped $65 billion.', 'As the number of billion dollar weather events continues to rise, what do you think that will mean for the cost of goods and services? For taxes and insurance rates? For equitable access to basic needs?', 'Knowing how vulnerable a location is to costly weather disasters is important to the people who live there, and to emergency planners and insurers. Ultimately, records like this should help scientists figure out if, in addition to the known influence of population growth and development, long-term climate change is contributing to the cost of weather-related disasters.']
 	            }
 	        }
 	        //            {
@@ -20585,7 +20598,8 @@
 	        payload: {
 	            slider: {
 	                imgs: ['Antarctica.png', 'Greenland.png', 'west-antarctica.jpg'],
-	                baseUrl: 'public/imgs/polar-ice/'
+	                baseUrl: 'public/imgs/polar-ice/',
+	                captions: ['Rate of change = -127.0 Gigatonnes/year. Data from NASA\'s GRACE satellites show Antarctica shed approximately 125 gigatons of ice per year, since 2002, causing global sea level to rise by 0.35 millimeters per year.', 'Rate of change = -286.0 Gigatonnes/year. Data from NASA\'s GRACE satellites show that the land ice sheets in both Antarctica and Greenland have been losing mass since 2002. Both ice sheets have seen an acceleration of ice mass loss since 2009. (Source: GRACE satellite data)', 'According to a recent study, Antarctica\'s land ice losses in the last decade were primarily concentrated in West Antarctica\'s Pine Island Bay sector and the northern tip of the Antarctic Peninsula. This is most likely due to ongoing and past acceleration of glaciers into the sea, "a result of warmer ocean waters, which bathe the buttressing floating sections of glaciers, causing them to thin or collapse." (Eric Rignot of NASA\'s Jet Propulsion Laboratory)']
 	            }
 	        }
 	    }, {
@@ -20595,12 +20609,13 @@
 	            iframe: 'http://nsidc.org/data/tools/arctic-sea-ice-chart/'
 	        }
 	    }, {
-	        label: 'Arctic Sea Ice and Albedo Effect',
+	        label: 'Arctic Sea Ice',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
 	                imgs: ['2_1_4_pic2.jpg', '2_1_4_pic4.png'],
-	                baseUrl: 'public/imgs/2_1_4_Sea_Ice/'
+	                baseUrl: 'public/imgs/2_1_4_Sea_Ice/',
+	                captions: ['Arctic sea ice reaches its minimum each September. September Arctic sea ice is now declining at a rate of 13.2% per decade, relative to the 1981 to 2010 average. This graph shows the average monthly Arctic sea ice extent each September since 1979, derived from satellite observations.', 'Could the Arctic be essentially ice-free by mid-century? Model simulations of Arctic sea ice extent for September (1900-2100) based on observed concentrations of heat-trapping gases and particles (through 2005) and four scenarios. These newer model (CMIP5) simulations project more rapid sea ice loss compared to the previous generation of models (CMIP3) under similar forcing scenarios. (Figure source: adapted from Stroeve et al. 2012).']
 	            }
 	        }
 	    }],
@@ -20668,7 +20683,7 @@
 	            iframe: 'https://scenichudson.maps.arcgis.com/apps/MapSeries/index.html?appid=9190b7560a574ad69cd91b43e383b203'
 	        }
 	    }, {
-	        label: 'If Antartica Melted Maps',
+	        label: 'If Antarctica Melted',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
@@ -20779,12 +20794,13 @@
 	            iframe: 'https://www.youtube.com/embed/hjT__OpDn6E'
 	        }
 	    }, {
-	        label: 'USDA Plant Hardiness Zone Map',
+	        label: 'USDA Plant Zone Hardiness Map',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/zone-hardness/',
-	                imgs: ['zone-hardiness-changes.png']
+	                imgs: ['zone-hardiness-changes.png'],
+	                captions: ['USDA Plant Hardiness Zone Map (Past & Present) - Much of the U. S. has been warmer in recent years, and that affects which trees and crops are right for planting, due to the severity and length of winter months (hardiness). The Arbor Day Foundation has recently completed an extensive updating of U.S. Hardiness Zones based upon data from 5,000 National Climatic Data Center cooperative stations across the continental United States. Notice the shift in zones.']
 	            }
 	        }
 	    }, {
@@ -20817,12 +20833,13 @@
 	        */
 	    }],
 	    CC_FOREST_COVER_LINKS: [{
-	        label: 'Increase in Wildfires',
+	        label: 'Increases in Wildfires',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/increase-wildfires/',
-	                imgs: ['A---Increase-in-Forest-Fire.jpg', 'A1---Forest-Fires-are-Getting-Bigger.jpg', 'A2---Acreage-Burned.png']
+	                imgs: ['A---Increase-in-Forest-Fire.jpg', 'A1---Forest-Fires-are-Getting-Bigger.jpg', 'A2---Acreage-Burned.png'],
+	                captions: ['Seasonal and multi-year droughts coupled with higher temperatures can affect wildfire severity. Despite improved techniques by foresters to reduce the number of forest fires, the acreage burned has still increased markedly in the past two decades.', 'For example, persistent drought conditions in the Southwest, combined with wildfire suppression and land management practices, have contributed to wildfires of unprecedented size since 2000. Five western states (Arizona, Colorado, Utah, California, and New Mexico) have experienced their largest fires on record at least once since 2000. Much of the increase in fires larger than 500 acres occurred in the western United States, and the area burned in the Southwest increased more than 300% relative to the area burned during the 1970s and early 1980s.', 'Summer of 2015 began one of the most devastating recent years for wildfire losses. By year\’s end, wildfires would consume more than 10.1 million acres of land in the U.S., especially in Alaska and all along the west coast, destroying 4,500 homes and taking the lives of 13 wildland firefighters.']
 	            }
 	        }
 	    }, {
@@ -20831,7 +20848,8 @@
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/global-deforestation_climate-change/',
-	                imgs: ['B1--Deforestation-and-Climate-Change.jpg', 'B2---deforestation-and-climate-change-mitigation.jpg', 'B3---Deforestation-Effects.jpg', 'B4---Causes-of-Deforestation.jpg']
+	                imgs: ['B1--Deforestation-and-Climate-Change.jpg', 'B2---deforestation-and-climate-change-mitigation.jpg', 'B3---Deforestation-Effects.jpg', 'B4---Causes-of-Deforestation.jpg'],
+	                captions: ['Climate change can cause drought conditions which lead to deforestation through wildfire - but deforestation also releases stored carbon, contributing to future warming and climate change. Deforestation through development and agriculture has the same effect.', 'Left undisturbed, natural forests are a carbon sink, meaning that growing trees in the forest trap more carbon through photosynthesis than dying trees release. Forests continuously stock carbon away in ever-increasing biomass and in the soil. Old growth forests actually remove carbon from the atmosphere faster than new growth forests. This means that avoiding deforestation is better for reducing carbon dioxide than reforestation efforts are at removing carbon dioxide.', 'Deforestation also puts undue environmental pressure on a biosphere already stressed by climate change and pollution. Over 80% of land animals and plants call the shrinking forests their home. Evapo-transpiration over our tropical forests is a key component in the water cycle, moving moisture around. Deforestation leaves once moist, rich soils quickly susceptible to drying out and becoming barren.', 'Agriculture is the leading cause for man-made deforestation. Forests are clear cut to make room for cattle and other grazing animals, palm trees, soybeans and other cash crops. At the current rate of deforestation, the rainforests would be completely gone by the turn of the next century. Developed northern-latitude countries have been clearing their forests for centuries. As a result, about one-third of all human-caused greenhouse gas emissions since 1750 have been from land-use change—mostly deforestation in Europe, North America, and temperate Asia']
 	            }
 	        }
 	    }, {
@@ -20846,7 +20864,8 @@
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/2.5.4-Projected-Shifts-in-Forest-Types/',
-	                imgs: ['2.5.4-1.jpg', '2.5.4-2.jpg']
+	                imgs: ['2.5.4-1.jpg', '2.5.4-2.jpg'],
+	                captions: ['These maps show current and projected forest types. Major changes are projected for many regions. For example, in the Northeast, under a mid-range warming scenario, the currently dominant maple-beech-birch forest type is projected to be completely displaced by predominantly Oak and Hickory in a warmer future.', 'These maps show current and projected forest types. Major changes are projected for many regions. For example, in the Northeast, under a mid-range warming scenario, the currently dominant maple-beech-birch forest type is projected to be completely displaced by predominantly Oak and Hickory in a warmer future.']
 	            }
 	        }
 	    }, {
@@ -20863,10 +20882,15 @@
 	            video: 'public/videos/a_warmer_world_for_arctic_animals_pod.MP4'
 	        }
 	    }, {
-	        label: 'Species Range Change Interactive',
+	        label: 'Species Range',
 	        action: 'OPEN_PAGE',
 	        payload: {
-	            iframe: 'http://nca2014.globalchange.gov/highlights/report-findings/ecosystems-and-biodiversity#graphic-31940'
+	            slider: {
+	                baseUrl: 'public/imgs/uploads/',
+	                imgs: ['map.png'],
+	                captions: ['Map of selected observed and projected biological responses to climate change across the United States. Note: Information about each species\' response can be found in Unit III of our curriculum. (Figure source: Staudinger et al., 20121).']
+	            }
+
 	        }
 	    }, {
 	        label: 'Bees are Feeling the STING of Climate Change',
@@ -20881,7 +20905,8 @@
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/climate-change-human-health/',
-	                imgs: ['A---Climate-Change-&-Human-Health-(CDC-image).jpg']
+	                imgs: ['A---Climate-Change-&-Human-Health-(CDC-image).jpg'],
+	                captions: ['Climate Change & Human Health (CDC image) - The chart depicts the many different ways climate change impacts health. What do they have in common? Their negative health outcomes are preventable.']
 	            }
 	        }
 	    },
@@ -20900,12 +20925,12 @@
 	            },
 	    */
 	    {
-	        label: 'Pathways and Regional Vulnerabilities',
+	        label: 'Regional Vulnerabilities',
 	        action: 'OPEN_PAGE',
 	        payload: {
 	            slider: {
 	                baseUrl: 'public/imgs/2_7_2_Climate_and_Health/',
-	                imgs: ['2.7.2_pic1.jpg', '2_7_2_pic2.jpg']
+	                imgs: ['2_7_2_pic2.jpg']
 	            }
 	        }
 	    }, {
